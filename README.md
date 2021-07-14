@@ -1,1 +1,2 @@
 # algoes
+computer science portal for developers.contains well written algorithms, design patterns, regex, regular expression in javascript, helpful for quizzes and practice/competitive programming company interview questions.computer science algorithms, including searching, sorting, recursion, and graph theory Learn algorithms coding online in javascript, visualizations, quizzes, and coding challenges.
