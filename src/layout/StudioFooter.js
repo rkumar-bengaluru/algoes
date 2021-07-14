@@ -22,7 +22,7 @@ const StudioFooter = props => {
                     <li className="list-inline-item"><a href="https://www.vlocalshop.in/blog/techblogs.html" target="_blank" rel="noopener noreferrer">Blog</a></li>
                     <li className="list-inline-item"><a href="https://www.vlocalshop.in/blog/contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>
                 </ul>
-                <p className="copyright">JavaScript Studio © {new Date().getFullYear()}</p>
+                <p className="copyright">Algoes © {new Date().getFullYear()}</p>
             </footer>
         </div>
     );
