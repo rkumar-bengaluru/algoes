@@ -1,0 +1,12 @@
+.cm-jsstudio {
+    height:450px;background-color:rgba(110, 110, 112, 0.1)
+}
+
+.jsstudio-error {
+    background-color:#fff
+}
+
+
+.jsstudio-results {
+    background-color:rgb(10, 9, 9)
+}
