@@ -1,6 +1,5 @@
 // Dependencies
 import React from 'react';
-import MegaMenu from '../megamenu';
 import { UnControlled as CodeMirror } from 'react-codemirror2'
 import './app.css';
 require('codemirror/lib/codemirror.css');
@@ -120,7 +119,7 @@ class App extends React.Component {
 		console.log('loading...');
 		return (
 			<div className="content">
-				<MegaMenu />
+				
 				<div className="row justify-content-around m-1">
 					<div className="col col-8 overflow-auto border">
 						<h1>let's code to learn algorithm ...</h1>

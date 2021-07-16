@@ -2,6 +2,7 @@
 import React from 'react';
 import SearchBar from './searchbar';
 import DIS from './searchbar/dis.json';
+import MegaMenu from '../megamenu';
 
 class StudioHeader extends React.Component {
 
@@ -30,6 +31,7 @@ class StudioHeader extends React.Component {
                         </div>
                     </div>
                 </nav>
+                <MegaMenu/>
             </div>
         );
     }

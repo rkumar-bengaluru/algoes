@@ -1,1 +1,23 @@
-{"@context":"https://schema.org","@id":"https://www.vlocalshop.in/product/20262","@type":"Product","productID":20262,"name":"Bronson™ Professional Face Trimmer: Buy Bronson Professional Face Trimmer Online at Best Price in India | vlocalshop.in","sku":20262,"mpn":20262,"brand":{"@type":"Brand","name":"Bronson"},"manufacturer":"Bronson","category":" > Fashion > beauty > bronson > ","offers":[{"@type":"Offer","url":"https://www.vlocalshop.in/product/20262","name":"Default","availability":"https://schema.org/InStock","price":" 1075 ","priceCurrency":"INR","images":"https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/d/4/d4365596523125689708__1_.jpg","thumbnail":"https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/d/4/d4365596523125689708__1_.jpg","priceValidUntil":"2030-12-31","itemCondition":"https://schema.org/NewCondition"}],"logo":"https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/d/4/d4365596523125689708__1_.jpg","image":"https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/d/4/d4365596523125689708__1_.jpg","images":["https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/d/4/d4365596523125689708__1_.jpg","https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/d/4/d4365596523125689708__2_.jpg","https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/d/4/d4365596523125689708__3_.jpg","https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/d/4/d4365596523125689708__4_.jpg"],"aggregateRating":{"@type":"AggregateRating","ratingValue":3,"ratingCount":20,"reviewCount":2},"review":[],"vlocal":{"COO":"Thailand","Status":"Active","MOQ":1,"TAX":12,"HSN":9506,"MRP":" 1075 ","keyFeatures":["Facial hair trimmer made to remove peach fuzz","360degree precision head and sharp blades which remove fine hair instantly","Comes with a builtin LED to let you see even the finest hair","Removes hair without any pulling or snagging","Stylish lipsticklike trimmer is easy and comfortable to hold","Compact size fits anywhere making it travelfriendly","Suits all skin types","Ideal for use on the cheeks chin upper lip etc","Box contains 1 x Trimmer and 1 x USB charging wire"],"KEYWORDS":"Bronson™ Professional Face Trimmer: Buy Bronson Professional Face Trimmer Online at Best Price in India | vlocalshop.in","MARKET":{"amazon":"NA","amazonPrice":"NA","flipkart":"NA","flipkartPrice":"NA"},"stock":1}}
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/#/algorithm/20262",
+    "@type": "Product",
+    "productID": 20262,
+    "name": "Quick Sorting Algorithm | rkumar-bengaluru.github.io",
+    "description" : "Quicksort is an in-place sorting algorithm. Developed by British computer scientist Tony Hoare in 1959 and published in 1961, it is still a commonly used algorithm for sorting. When implemented well, it can be somewhat faster than merge sort and about two or three times faster than heapsort.",
+    "title" : "Quick Sorting Algorithm",
+    "sku": 20262,
+    "mpn": 20262,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > sorting > quick sort",
+    "complextyMetrics" : {
+        "Worst-case performance" : "O(n2)",
+        "Best-case performance" : "O(n log n) ",
+        "Average performance" : "O(n log n)",
+        "Worst-case space complexity" : "O(n)"
+    },
+    "code" : "// quick sort algorithm\nfunction quickSort (items) {\n\tconst length = items.length;\n\tif (length <= 1) {\n\t\treturn items;\n\t}\n\tconst PIVOT = items[0];\n\tconst GREATER = [];\n\tconst LESSER = [];\n\tfor (let i = 1; i < length; i++) {\n\t\tif (items[i] > PIVOT) {\n\t\t\tGREATER.push(items[i]);\n\t\t} else {\n\t\t\tLESSER.push(items[i]);\n\t\t}\n\t}\n\tlet sorted = quickSort(LESSER);\n\tsorted.push(PIVOT);\n\tsorted = sorted.concat(quickSort(GREATER));\n\treturn sorted;\n}\nlet ar = [0, 5, 3, 2, 2];\n// Array before Sort\nconsole.log(ar);\nar = quickSort(ar);\n// Array after sort\nconsole.log(ar);"
+}

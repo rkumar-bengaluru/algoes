@@ -1,5 +1,5 @@
 .cm-jsstudio {
-    height:450px;background-color:rgba(110, 110, 112, 0.1)
+    height:600px;background-color:rgba(110, 110, 112, 0.1)
 }
 
 .cm-jsstudio-small {
@@ -15,3 +15,7 @@
 .jsstudio-results {
     background-color:rgb(10, 9, 9)
 }
+.react-cordmirror2 {
+    height : 600px;
+}
+.CodeMirror { min-height: 100% }

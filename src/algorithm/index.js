@@ -1,10 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { UnControlled as CodeMirror } from 'react-codemirror2'
+import './cm.css';
+require('codemirror/lib/codemirror.css');
+require('codemirror/mode/javascript/javascript');
 
 const Algorithm = (props) => {
-    const [name, setName] = useState('');
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [category, setCategory] = useState('');
+    const [metrics, setMetrics] = useState({});
     const [fetching, setFetching] = useState(false);
     const [error, setError] = useState(false);
+    const [cm, setCm] = useState(React.createRef());
+    const [result, setResult] = useState(React.createRef());
     
+    const [code, setCode] = useState('');
+    const [codeRunning, setCodeRunning] = useState(false);
+
     useEffect(() => {
         setFetching(true);
         async function fetchData() {
@@ -15,7 +27,11 @@ const Algorithm = (props) => {
                 .then(response => {
                     console.log(response);
                     if (response.name) {
-                        setName(response.name);
+                        setTitle(response.title);
+                        setCategory(response.category);
+                        setDescription(response.description);
+                        setMetrics(response.complextyMetrics);
+                        setCode(response.code);
                         setFetching(false);
                     } else {
                         setError(true);
@@ -28,14 +44,183 @@ const Algorithm = (props) => {
                     setFetching(false);
                     return e;
                 })
-            
+
         }
         fetchData();
+
     }, [props.match.params.id]);
 
-    
+
+    function renderBreadCumb() {
+        var bc = category.split(' > ');
+        var nbc = [];
+        for (let i = 0; i < bc.length; i++) {
+            if (i !== bc.length - 1) {
+                nbc.push(bc[i]);
+            }
+        }
+        var last = bc[bc.length - 1];
+        return (
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    {nbc.map((b, index) => {
+                        return (
+                            <li class="breadcrumb-item"><a href="/">{b}</a></li>
+                        );
+                    })}
+                    <li class="breadcrumb-item active" aria-current="page">{last}</li>
+                </ol>
+            </nav>
+        );
+    }
+
+    function renderMetrics() {
+        var keys = Object.keys(metrics);
+        return (
+            <div >
+                {keys.map((key, index) => {
+                    return (
+                        <p className="text-primary">{key} : <span className="text-secondary">{metrics[key]}</span></p>
+                    );
+                })
+                }
+            </div >
+        );
+    }
+
+    function togglePromise() {
+        if (codeRunning) {
+            return new Promise(resolve => {
+                setCodeRunning(false);
+                resolve(codeRunning);
+            });
+        } else {
+            return new Promise(resolve => {
+                setCodeRunning(true);
+                resolve(codeRunning);
+            });
+        }
+    }
+
+    function renderCodeMirror() {
+        return (
+            <div className="col overflow-auto border cm-jsstudio">
+                <label>{title}. Click Run to Execute</label>
+                {/* {codeRunning &&
+                    <div id="input-spinner" className="spinner-border text-primary hidden"
+                        role="status">
+                        <span className="sr-only">Loading...</span>
+                    </div>
+                } */}
+                <div id="error-display" className="hidden"></div>
+                <div >
+                    <CodeMirror
+                        value={code}
+                        ref={cm}
+                        options={{
+                            lineNumbers: true,
+                            matchBrackets: true,
+                            continueComments: "Enter",
+                            extraKeys: { "Ctrl-Q": "toggleComment" }
+                        }}
+                        style={{ "height": "800px" }}
+                    />
+                </div>
+            </div>
+        );
+    }
+
+    function getStartScript() {
+        return '<script>document.write("<span>starting execution of the script...</span>");document.write(\'<br/>\');\n</script>';
+    }
+
+    function getEndScript() {
+        return '<script>document.write("<span >end execution of the script...</span>");document.write(\'<br/>\');\n</script>';
+    }
+
+    function getConsoleScript() {
+        return 'console.log = function(m){document.write("<span >" + ">>> " + m + "</span><br>")};';
+    }
+
+    function renderConsole() {
+        return (
+            <div className="col overflow-auto border cm-jsstudio" >
+                <label >Console Log</label>
+                <div id="error_area" className="jsstudio-error"> </div>
+                <div id="results_area" ref={result} className="jsstudio-results"> </div>
+            </div>
+        );
+    }
+
+    function createIFrame() {
+        if (document.getElementById('result')) {
+            document.getElementById('result').remove();
+        }
+
+        var i = document.createElement('IFRAME');
+        i.id = 'result';
+        i.className = 'console-output';
+        i.style.height = '600px';
+        i.style.color = 'red';
+        //  i.style.width = '97%';
+        i.style.width = '100%';
+        var parent = document.getElementById('results_area');
+        parent.appendChild(i);
+        return i.contentDocument;
+    }
+
+    function getCodetoExec() {
+        var code = cm.current.editor.getValue();
+        var code_normalized = code.toLowerCase();
+        var code_without_script_tag = false;
+        if (code_normalized.indexOf('<script') === -1) {
+            code_without_script_tag = true;
+        }
+        if (code_without_script_tag === true) {
+            code = getStartScript()
+                + '<script>\n'
+                + getConsoleScript()
+                + code
+                + '\n</script>\n'
+                + getEndScript();
+        }
+        if (code_normalized.indexOf('onerror') === -1) { // code is without its own error handling, then add one
+            code = '<script>\n' +
+                'window.onerror = function(message, url, linenumber) {' +
+                '  parent.alert_message("error", "<b>JavaScript error:</b> " + message + " on line " + linenumber);' +
+                '};\n</script>\n' + code;
+        }
+        //console.log(code);
+        return code;
+    }
+
+    async function handleClick() {
+        await togglePromise();
+        console.log('handleClick ->' + codeRunning);
+        console.log(cm.current.editor.getValue());
+        document.getElementById('error_area').innerHTML = '';
+        var doc = createIFrame();
+        var code = getCodetoExec();
+        doc.open();
+        doc.write(code); // look mum, no eval
+        doc.close();
+        var spans = doc.getElementsByTagName('SPAN');
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].style.color = "white";
+        }
+        await togglePromise();
+        console.log('handleClick ->' + codeRunning);
+    }
+
+    async function handleReset() {
+        var doc = createIFrame();
+        doc.open();
+        doc.write(''); // look mum, no eval
+        doc.close();
+    }
+
     return (
-        <div className="algorithm">
+        <div className="algorithm ">
 
             {fetching && (
                 <div className="d-flex justify-content-center">
@@ -45,11 +230,31 @@ const Algorithm = (props) => {
                 </div>
             )}
             {!fetching && (
-                <div>
-                    {name}
+                <div className="container algocontainer p-2">
+                    <div className="row justify-content-left">
+                        {renderBreadCumb()}
+                    </div>
+                    <div className="row justify-content-left">
+                        <div className="col col-8 overflow-auto border">
+                            <h1 class="h5 w-100 ml-1">{title}</h1>
+                            <p className="text-justify">{description}</p>
+                        </div>
+                        <div className="col overflow-auto border col-sm">
+                            <h1 class="h6 w-100 ml-1">Peformance Metrics</h1>
+                            {renderMetrics()}
+                        </div>
+                    </div>
+                    <div className="row justify-content-around">
+                        <button onClick={() => handleClick()} type="button" className="btn btn-primary m-1" id="runscript">Run</button>
+                        <button onClick={() => handleReset()} type="button" className="btn btn-primary m-1" id="reset">Reset</button>
+                    </div>
+                    <div className="row justify-content-around border-bottom">
+                        {renderCodeMirror()}
+                        {renderConsole()}
+                    </div>
                 </div>
             )}
-            {!error && (
+            {error && (
                 <div>
                     Error Fetching ....
                 </div>
