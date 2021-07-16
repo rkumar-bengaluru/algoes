@@ -5,6 +5,7 @@ require('codemirror/lib/codemirror.css');
 require('codemirror/mode/javascript/javascript');
 
 const Algorithm = (props) => {
+    const [name, setName] = useState('');
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [category, setCategory] = useState('');
@@ -13,7 +14,7 @@ const Algorithm = (props) => {
     const [error, setError] = useState(false);
     const [cm, setCm] = useState(React.createRef());
     const [result, setResult] = useState(React.createRef());
-    
+
     const [code, setCode] = useState('');
     const [codeRunning, setCodeRunning] = useState(false);
 
@@ -28,6 +29,7 @@ const Algorithm = (props) => {
                     console.log(response);
                     if (response.name) {
                         setTitle(response.title);
+                        setName(response.name);
                         setCategory(response.category);
                         setDescription(response.description);
                         setMetrics(response.complextyMetrics);
@@ -47,8 +49,8 @@ const Algorithm = (props) => {
 
         }
         fetchData();
-
-    }, [props.match.params.id]);
+        document.title = name;
+    }, [props.match.params.id, name]);
 
 
     function renderBreadCumb() {
@@ -62,13 +64,13 @@ const Algorithm = (props) => {
         var last = bc[bc.length - 1];
         return (
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
+                <ol className="breadcrumb">
                     {nbc.map((b, index) => {
                         return (
-                            <li class="breadcrumb-item"><a href="/">{b}</a></li>
+                            <li key={index} className="breadcrumb-item"><a href="/algoes">{b}</a></li>
                         );
                     })}
-                    <li class="breadcrumb-item active" aria-current="page">{last}</li>
+                    <li className="breadcrumb-item active" aria-current="page">{last}</li>
                 </ol>
             </nav>
         );
@@ -80,7 +82,7 @@ const Algorithm = (props) => {
             <div >
                 {keys.map((key, index) => {
                     return (
-                        <p className="text-primary">{key} : <span className="text-secondary">{metrics[key]}</span></p>
+                        <p key={index} className="text-primary">{key} : <span className="text-secondary">{metrics[key]}</span></p>
                     );
                 })
                 }
@@ -236,11 +238,11 @@ const Algorithm = (props) => {
                     </div>
                     <div className="row justify-content-left">
                         <div className="col col-8 overflow-auto border">
-                            <h1 class="h5 w-100 ml-1">{title}</h1>
+                            <h1 className="h5 w-100 ml-1">{title}</h1>
                             <p className="text-justify">{description}</p>
                         </div>
                         <div className="col overflow-auto border col-sm">
-                            <h1 class="h6 w-100 ml-1">Peformance Metrics</h1>
+                            <h1 className="h6 w-100 ml-1">Peformance Metrics</h1>
                             {renderMetrics()}
                         </div>
                     </div>

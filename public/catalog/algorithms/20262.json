@@ -3,9 +3,10 @@
     "@id": "https://rkumar-bengaluru.github.io/algoes/#/algorithm/20262",
     "@type": "Product",
     "productID": 20262,
-    "name": "Quick Sorting Algorithm | rkumar-bengaluru.github.io",
+    "name": "Quicksort Algorithm | rkumar-bengaluru.github.io",
     "description" : "Quicksort is an in-place sorting algorithm. Developed by British computer scientist Tony Hoare in 1959 and published in 1961, it is still a commonly used algorithm for sorting. When implemented well, it can be somewhat faster than merge sort and about two or three times faster than heapsort.",
     "title" : "Quick Sorting Algorithm",
+    "keywords" : "Quick Sorting Online Coding, Quick Sort , Online Editing quick sort",
     "sku": 20262,
     "mpn": 20262,
     "brand": {
