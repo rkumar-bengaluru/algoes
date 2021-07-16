@@ -144,8 +144,8 @@ class App extends React.Component {
 					<div className="col overflow-auto border col-sm">
 						<h2>What's cooking today ...</h2>
 						<span><ol>
-							<li><a href='/algoes/#/algorithm/quick'> quick sort</a></li>
-							<li><a href='/algoes/#/algorithm/factory'> factory pattern</a></li>
+							<li><a href='/algoes/#/algorithm/20262'> quick sort</a></li>
+							<li><a href='/algoes/#/algorithm/20263'> factory pattern</a></li>
 						</ol></span>
 					</div>
 				</div>
