@@ -13,8 +13,8 @@
                     "url" : "/algorithm/sorts/",
                     "links": [
                         {
-                            "name": "Remove Duplicate From Array",
-                            "url" : "/algorithm/sorts/duplicates"
+                            "name": "Quick Sorting Algorithm",
+                            "url" : "/algoes/#/algorithm/20262"
                         },
                         {
                             "name": "Comming Soon...",
