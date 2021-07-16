@@ -122,30 +122,17 @@ class App extends React.Component {
 			<div className="content">
 				<MegaMenu />
 				<div className="row justify-content-around m-1">
-					<h1>let's code to learn algorithm ...</h1>
-					<p>In mathematics and computer science, an <mark className="text-primary font-weight-bold">algorithm</mark>
-						is a finite sequence of	well-defined, computer-implementable instructions, typically to solve a
-						class of specific problems or to <mark className="text-primary font-weight-bold">perform a computation.</mark>
-						hold on so are we discovering something here...
-						No not at all - they are mostly being solved, if there is a completely new
-						algorithms to solve a complex problem like - image compression - to an
-						extent which reduces memory to what is already being discovered then
-						Hurray :), you have made a discovery of new algorithm. the recent discovered one
-						which i use is webp image compression.
-					</p>
-				</div>
-				<div className="row justify-content-left m-1">
-					<p>This tool is a kick-starter for <mark className="text-primary text-light bg-dark">students</mark>,
-						<mark className="text-primary text-light bg-dark">developers</mark> to try writing
-						a piece of code directly in the browser and see the simulative results in
-						terms of <mark className="text-primary text-light bg-dark">time and space complexity.</mark>
-					</p>
-
-				</div>
-				<h2>Below is how this online tool is going to help :- </h2><br />
-				<div className="row justify-content-around m-1">
-
-					<div className="col overflow-auto border">
+					<div className="col col-8 overflow-auto border">
+						<h1>let's code to learn algorithm ...</h1>
+						<p className="text-justify">In mathematics and computer science, an <mark className="text-primary font-weight-bold">algorithm</mark>
+							is a finite sequence of	well-defined, computer-implementable instructions, typically to solve a
+							class of specific problems or to <mark className="text-primary font-weight-bold">perform a computation.</mark>
+							This tool is a kick-starter for <mark className="text-primary text-light bg-dark">students</mark>,
+							<mark className="text-primary text-light bg-dark">developers</mark> to try writing
+							a piece of code directly in the browser and see the simulative results in
+							terms of <mark className="text-primary text-light bg-dark">time and space complexity.</mark>
+						</p>
+						<h3>Below is how this online tool is going to help :- </h3><br />
 						<span><ol>
 							<li><mark className="text-primary font-weight-bold">Instant Search</mark>
 								for an algorithm/regex/patterns for your project.
@@ -154,16 +141,27 @@ class App extends React.Component {
 								and test with your inputs and see the <mark className="text-primary font-weight-bold">time and space complexity of your code.</mark></li>
 						</ol></span>
 					</div>
+					<div className="col overflow-auto border col-sm">
+						<h2>What's cooking today ...</h2>
+						<span><ol>
+							<li><a href='/algoes/#/algorithm/quick'> quick sort</a></li>
+							<li><a href='/algoes/#/algorithm/factory'> factory pattern</a></li>
+						</ol></span>
+					</div>
 				</div>
-				<h2>See the below sample code, run it and see it live in action :- </h2><br />
+
+
 				<div className="row justify-content-around m-1">
 
 					<div className="col overflow-auto border">
 
 					</div>
 				</div>
+				
+				
 				<div className="row justify-content-around m-1">
-					<button onClick={() => this.handleClick()} type="button" className="btn btn-outline-secondary" id="runscript">Run</button>
+				<h5>See the below sample code, run it and see it live in action :- </h5><br />
+					<button onClick={() => this.handleClick()} type="button" className="btn btn-primary" id="runscript">Run</button>
 				</div>
 				<div className="row justify-content-around border-bottom">
 					<div className="col overflow-auto border cm-jsstudio">
