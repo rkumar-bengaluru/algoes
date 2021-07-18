@@ -1,1 +1,24 @@
-{"@context":"https://schema.org","@id":"https://www.vlocalshop.in/product/20263","@type":"Product","productID":20263,"name":"Bronson™ Professional Facial Hair Remover Trimmer: Buy Bronson Professional Facial Hair Remover Trimmer Online at Best Price in India | vlocalshop.in","sku":20263,"mpn":20263,"brand":{"@type":"Brand","name":"Bronson"},"manufacturer":"Bronson","category":" > Fashion > beauty > bronson > ","offers":[{"@type":"Offer","url":"https://www.vlocalshop.in/product/20263","name":"Default","availability":"https://schema.org/InStock","price":"925 ","priceCurrency":"INR","images":"https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/b/0/b07b5596523125689709__1_.jpg","thumbnail":"https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/b/0/b07b5596523125689709__1_.jpg","priceValidUntil":"2030-12-31","itemCondition":"https://schema.org/NewCondition"}],"logo":"https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/b/0/b07b5596523125689709__1_.jpg","image":"https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/b/0/b07b5596523125689709__1_.jpg","images":["https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/b/0/b07b5596523125689709__1_.jpg","https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/b/0/b07b5596523125689709__2_.jpg","https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/b/0/b07b5596523125689709__3_.jpg","https://images-static.nykaa.com/media/catalog/product/tr:w-800,h-800,cm-pad_resize/b/0/b07b5596523125689709__4_.jpg"],"aggregateRating":{"@type":"AggregateRating","ratingValue":4.1,"ratingCount":21,"reviewCount":8},"review":[],"vlocal":{"COO":"Thailand","Status":"Active","MOQ":1,"TAX":12,"HSN":9506,"MRP":"925 ","keyFeatures":["Eyebrow trimmer made to shape and trim brows","360degree precision head makes it easy and convenient to remove unwanted hair","Comes in a builtin LED to let you see even the finest hair","Stylish penlike trimmer making it easy and comfortable to hold","Compact size fits anywhere making it travelfriendly","Ideal for eyebrows nose neck ear hair trimming","Box contains 1 x Trimmer and 1 x USB charging wire"],"KEYWORDS":"Bronson™ Professional Facial Hair Remover Trimmer: Buy Bronson Professional Facial Hair Remover Trimmer Online at Best Price in India | vlocalshop.in","MARKET":{"amazon":"NA","amazonPrice":"NA","flipkart":"NA","flipkartPrice":"NA"},"stock":1}}
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/#/algorithm/20263",
+    "@type": "Product",
+    "productID": 20263,
+    "name": "Remove Duplicate from the array | rkumar-bengaluru.github.io",
+    "description" : "Remove Duplicate from the array.",
+    "title" : "Remove Duplicate from array",
+    "keywords" : "Remove Duplicate from array",
+    "sku": 20263,
+    "mpn": 20263,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > sorting > remove duplicate",
+    "complextyMetrics" : {
+        "Worst-case performance" : "O(n)",
+        "Best-case performance" : "O(n)",
+        "Average performance" : "O(n)",
+        "Worst-case space complexity" : "O(n)"
+    },
+    "code" : "var input = [\"rupak\",\"aryan\",\"rupak\"];\n/**\n * Using map we can achieve this is 1 iteration. Loop over each\n * item in the array and check if the item is present in the\n * map or not. If not present add the item in the new array.\n *\n * Brute force will take O(n2), where each item is iterated \n * over the array 2 times. Example:- take the first item and \n * iterate over the remaining item.\n * **/\n function removeDup() {\n\t // print the input array.\n\t console.log('input : ' + JSON.stringify(input));\n\t const map = new Map();\n\t var output = [];\n\t for(var i = 0; i < input.length; i++) {\n\t\t// check if the item is present or not.\n\t\tif(!map.get(input[i])) {\n\t\t\t// not present and hence add to map\n\t\t\tmap.set(input[i],input[i]);\n\t\t\t// add to output array.\n\t\t\toutput.push(input[i]);\n\t\t}\n\t}\n\t// print the output array.\n\tconsole.log('output : ' + JSON.stringify(output));\n}\n\nremoveDup();"
+}

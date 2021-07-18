@@ -232,7 +232,7 @@ class SearchBar extends React.Component {
     return (
       <div className="input-group" ref={ref => (this.container = ref)}>
         <input placeholder={this.props.placeholder}
-          autoFocus style={{ "height": "45px","width": "500px" }}
+          autoFocus style={{ "height": "45px","width": "400px" }}
           className="form-control ml-5"
           id="ex3"
           type="text"

@@ -236,6 +236,14 @@ const Algorithm = (props) => {
                     <div className="row justify-content-left">
                         {renderBreadCumb()}
                     </div>
+                    <div className="row justify-content-around border">
+                        <button onClick={() => handleClick()} type="button" className="btn btn-primary m-1" id="runscript">Run</button>
+                        <button onClick={() => handleReset()} type="button" className="btn btn-primary m-1" id="reset">Reset</button>
+                    </div>
+                    <div className="row justify-content-around border-bottom">
+                        {renderCodeMirror()}
+                        {renderConsole()}
+                    </div>
                     <div className="row justify-content-left">
                         <div className="col col-8 overflow-auto border">
                             <h1 className="h5 w-100 ml-1">{title}</h1>
@@ -245,14 +253,6 @@ const Algorithm = (props) => {
                             <h1 className="h6 w-100 ml-1">Peformance Metrics</h1>
                             {renderMetrics()}
                         </div>
-                    </div>
-                    <div className="row justify-content-around">
-                        <button onClick={() => handleClick()} type="button" className="btn btn-primary m-1" id="runscript">Run</button>
-                        <button onClick={() => handleReset()} type="button" className="btn btn-primary m-1" id="reset">Reset</button>
-                    </div>
-                    <div className="row justify-content-around border-bottom">
-                        {renderCodeMirror()}
-                        {renderConsole()}
                     </div>
                 </div>
             )}

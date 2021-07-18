@@ -144,7 +144,7 @@ class App extends React.Component {
 						<h2>What's cooking today ...</h2>
 						<span><ol>
 							<li><a href='/algoes/#/algorithm/20262'> quick sort</a></li>
-							<li><a href='/algoes/#/algorithm/20263'> factory pattern</a></li>
+							<li><a href='/algoes/#/algorithm/20263'> remove duplicate</a></li>
 						</ol></span>
 					</div>
 				</div>
