@@ -23,11 +23,11 @@
                     ]
                 },
                 {
-                    "name": "Strings",
+                    "name": "Hash",
                     "links": [
                         {
-                            "name": "Comming Soon...",
-                            "url" : "/"
+                            "name": "32 bit hashing",
+                            "url" : "/algoes/#/algorithm/20264"
                         }
                     ]
                 },

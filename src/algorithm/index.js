@@ -106,7 +106,7 @@ const Algorithm = (props) => {
 
     function renderCodeMirror() {
         return (
-            <div className="col overflow-auto border cm-jsstudio">
+            <div className="col-md-7 overflow-auto border cm-jsstudio">
                 <label>{title}. Click Run to Execute</label>
                 {/* {codeRunning &&
                     <div id="input-spinner" className="spinner-border text-primary hidden"
@@ -197,9 +197,10 @@ const Algorithm = (props) => {
     }
 
     async function handleClick() {
+        var start = window.performance.now();
         await togglePromise();
         console.log('handleClick ->' + codeRunning);
-        console.log(cm.current.editor.getValue());
+        //console.log(cm.current.editor.getValue());
         document.getElementById('error_area').innerHTML = '';
         var doc = createIFrame();
         var code = getCodetoExec();
@@ -211,14 +212,17 @@ const Algorithm = (props) => {
             spans[i].style.color = "white";
         }
         await togglePromise();
-        console.log('handleClick ->' + codeRunning);
+        var end = window.performance.now();
+        var executionTime = (end -start).toFixed(2);
+        document.getElementById('performance-metrics').innerHTML = '<span class="alert alert-success" role="alert"> Execution Time : ' + executionTime + ' ms </span>'; 
+        console.log('execution time ->' + executionTime);
     }
 
     async function handleReset() {
-        var doc = createIFrame();
-        doc.open();
-        doc.write(''); // look mum, no eval
-        doc.close();
+        if (document.getElementById('result')) {
+			document.getElementById('result').remove();
+		}
+        document.getElementById('performance-metrics').innerHTML = '';
     }
 
     return (
@@ -232,12 +236,13 @@ const Algorithm = (props) => {
                 </div>
             )}
             {!fetching && (
-                <div className="container algocontainer p-2">
+                <div className="container-fluid algocontainer p-2">
                     <div className="row justify-content-left">
                         {renderBreadCumb()}
                     </div>
                     <div className="row justify-content-around border">
                         <button onClick={() => handleClick()} type="button" className="btn btn-primary m-1" id="runscript">Run</button>
+                        <div id="performance-metrics"></div>
                         <button onClick={() => handleReset()} type="button" className="btn btn-primary m-1" id="reset">Reset</button>
                     </div>
                     <div className="row justify-content-around border-bottom">
