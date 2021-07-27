@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/#/algorithm/20264",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/#/algorithm/20265",
+    "headline": "binary search",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20265,
+    "name": "binary search | rkumar-bengaluru.github.io",
+    "description": "In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search algorithm that finds the position of a target value within a sorted array",
+    "title": "binary search",
+    "keywords": [
+        "binary search"
+    ],
+    "sku": 20265,
+    "mpn": 20265,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > hash > binary search",
+    "complextyMetrics": {
+        "Worst-case performance": "O(log n)",
+        "Best-case performance": "O(1)",
+        "Average performance": "O(log n)",
+        "Worst-case space complexity": "O(1)"
+    },
+    "code": "\n// JavaScript program to implement recursive Binary Search\n\n// A recursive binary search function. It returns\n// location of x in given array arr[l..r] is present,\n// otherwise -1\nfunction binarySearch(arr, l, r, x){\n\tif (r >= l) {\n\t\tlet mid = l + Math.floor((r - l) / 2);\n\n\t\t// If the element is present at the middle\n\t\t// itself\n\t\tif (arr[mid] == x)\n\t\t\treturn mid;\n\n\t\t// If element is smaller than mid, then\n\t\t// it can only be present in left subarray\n\t\tif (arr[mid] > x)\n\t\t\treturn binarySearch(arr, l, mid - 1, x);\n\n\t\t// Else the element can only be present\n\t\t// in right subarray\n\t\treturn binarySearch(arr, mid + 1, r, x);\n\t}\n\n\t// We reach here when element is not\n\t// present in array\n\treturn -1;\n}\n\nlet arr = [ 2, 3, 4, 10, 40 ];\nlet x = 10;\nlet n = arr.length\nlet result = binarySearch(arr, 0, n - 1, x);\nconsole.log(result);\n\n\n"
+}
