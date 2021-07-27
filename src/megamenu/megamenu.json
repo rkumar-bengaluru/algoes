@@ -45,6 +45,15 @@
                     ]
                 },
                 {
+                    "name": "String",
+                    "links": [
+                        {
+                            "name": "longest prefix.",
+                            "url" : "/algoes/#/algorithm/20267"
+                        }
+                    ]
+                },
+                {
                     "name": "Backtracking",
                     "links": [
                         {
