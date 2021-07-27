@@ -35,8 +35,12 @@
                     "name": "Search",
                     "links": [
                         {
-                            "name": "Comming Soon...",
-                            "url" : "/"
+                            "name": "binary search",
+                            "url" : "/algoes/#/algorithm/20265"
+                        },
+                        {
+                            "name": "linear search",
+                            "url" : "/algoes/#/algorithm/20266"
                         }
                     ]
                 },

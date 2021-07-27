@@ -119,7 +119,7 @@ class App extends React.Component {
 		console.log('loading...');
 		return (
 			<div className="content">
-				
+
 				<div className="row justify-content-around m-1">
 					<div className="col col-8 overflow-auto border">
 						<h1>let's code to learn algorithm ...</h1>
@@ -143,6 +143,9 @@ class App extends React.Component {
 					<div className="col overflow-auto border col-sm">
 						<h2>What's cooking today ...</h2>
 						<span><ol>
+							<li><a href='/algoes/#/algorithm/20265'> binary search</a></li>
+							<li><a href='/algoes/#/algorithm/20266'> linear search</a></li>
+							<li><a href='/algoes/#/algorithm/20264'> 32 bit hashing</a></li>
 							<li><a href='/algoes/#/algorithm/20262'> quick sort</a></li>
 							<li><a href='/algoes/#/algorithm/20263'> remove duplicate</a></li>
 						</ol></span>
@@ -156,10 +159,10 @@ class App extends React.Component {
 
 					</div>
 				</div>
-				
-				
+
+
 				<div className="row justify-content-around m-1">
-				<h5>See the below sample code, run it and see it live in action :- </h5><br />
+					<h5>See the below sample code, run it and see it live in action :- </h5><br />
 					<button onClick={() => this.handleClick()} type="button" className="btn btn-primary" id="runscript">Run</button>
 				</div>
 				<div className="row justify-content-around border-bottom">
