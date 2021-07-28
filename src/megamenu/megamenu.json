@@ -50,6 +50,10 @@
                         {
                             "name": "longest prefix.",
                             "url" : "/algoes/#/algorithm/20267"
+                        },
+                        {
+                            "name": "reverse string",
+                            "url" : "/algoes/#/algorithm/20268"
                         }
                     ]
                 },
