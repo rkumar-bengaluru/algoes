@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/#/algorithm/20264",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/#/algorithm/20265",
+    "headline": "reverse string",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20265,
+    "name": "reverse string | rkumar-bengaluru.github.io",
+    "description": "In computer science, a linear search or sequential search is a method for finding an element within a list. It sequentially checks each element of the list until a match is found or the whole list has been searched.",
+    "title": "reverse string",
+    "keywords": [
+        "reverse string"
+    ],
+    "sku": 20265,
+    "mpn": 20265,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > string > reverse string",
+    "complextyMetrics": {
+        "Worst-case performance": "O(n)",
+        "Best-case performance": "O(1)",
+        "Average performance": "O(n/2)",
+        "Worst-case space complexity": "O(1)"
+    },
+    "code": "var input = ['r','u','p','a','k']\nfunction swap(i,j) {\n\tvar c = input[i];\n \tinput[i] = input[j];\n \tinput[j] = c;\n}\nfunction reverse() {\n\tvar s = 0;\n \tvar e = input.length - 1;\n \n \twhile(s <= e) {\n \tswap(s,e);\n \ts++;\n \te--;\n }\n}\nconsole.log(input);\nreverse();\nconsole.log(input);\n"
+}
