@@ -143,6 +143,7 @@ class App extends React.Component {
 					<div className="col overflow-auto border col-sm">
 						<h2>What's cooking today ...</h2>
 						<span><ol>
+							<li><a href='/algoes/#/algorithm/20270'> Climbing Stair (recursion)</a></li>
 							<li><a href='/algoes/#/algorithm/20269'> N Queen Problem</a></li>
 							<li><a href='/algoes/#/algorithm/20268'> reverse string</a></li>
 							<li><a href='/algoes/#/algorithm/20267'> longest prefix</a></li>

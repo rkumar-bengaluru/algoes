@@ -67,20 +67,11 @@
                     ]
                 },
                 {
-                    "name": "Bit-Manipulation",
+                    "name": "Recursion",
                     "links": [
                         {
-                            "name": "Comming Soon...",
-                            "url" : "/"
-                        }
-                    ]
-                },
-                {
-                    "name": "Cache",
-                    "links": [
-                        {
-                            "name": "Comming Soon...",
-                            "url" : "/#"
+                            "name": "Climbing Stairs",
+                            "url" : "/algoes/#/algorithm/20270"
                         }
                     ]
                 },
@@ -88,26 +79,8 @@
                     "name": "Dynamic-Programming",
                     "links": [
                         {
-                            "name": "Comming Soon...",
-                            "url" : "/#"
-                        }
-                    ]
-                },
-                {
-                    "name": "Trees",
-                    "links": [
-                        {
-                            "name": "Comming Soon...",
-                            "url" : "/#"
-                        }
-                    ]
-                },
-                {
-                    "name": "Timing-Functions",
-                    "links": [
-                        {
-                            "name": "Comming Soon...",
-                            "url" : "/#"
+                            "name": "Climbing Stairs",
+                            "url" : "/algoes/#/algorithm/20270"
                         }
                     ]
                 }
