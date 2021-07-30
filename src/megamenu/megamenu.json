@@ -61,8 +61,8 @@
                     "name": "Backtracking",
                     "links": [
                         {
-                            "name": "Comming Soon...",
-                            "url" : "/"
+                            "name": "N Queen Problem",
+                            "url" : "/algoes/#/algorithm/20269"
                         }
                     ]
                 },
