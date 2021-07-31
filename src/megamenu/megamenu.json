@@ -72,6 +72,10 @@
                         {
                             "name": "Climbing Stairs",
                             "url" : "/algoes/#/algorithm/20270"
+                        },
+                        {
+                            "name": "Reverse a Linked List",
+                            "url" : "/algoes/#/algorithm/20271"
                         }
                     ]
                 },

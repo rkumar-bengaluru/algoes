@@ -2,8 +2,11 @@
 import React from 'react';
 import { UnControlled as CodeMirror } from 'react-codemirror2'
 import './app.css';
+import hiData from './highlight.json';
+
 require('codemirror/lib/codemirror.css');
 require('codemirror/mode/javascript/javascript');
+
 
 class App extends React.Component {
 	constructor(props) {
@@ -143,15 +146,12 @@ class App extends React.Component {
 					<div className="col overflow-auto border col-sm">
 						<h2>What's cooking today ...</h2>
 						<span><ol>
-							<li><a href='/algoes/#/algorithm/20270'> Climbing Stair (recursion)</a></li>
-							<li><a href='/algoes/#/algorithm/20269'> N Queen Problem</a></li>
-							<li><a href='/algoes/#/algorithm/20268'> reverse string</a></li>
-							<li><a href='/algoes/#/algorithm/20267'> longest prefix</a></li>
-							<li><a href='/algoes/#/algorithm/20265'> binary search</a></li>
-							<li><a href='/algoes/#/algorithm/20266'> linear search</a></li>
-							<li><a href='/algoes/#/algorithm/20264'> 32 bit hashing</a></li>
-							<li><a href='/algoes/#/algorithm/20262'> quick sort</a></li>
-							<li><a href='/algoes/#/algorithm/20263'> remove duplicate</a></li>
+							{hiData.itemListElement.map((item, index) => {
+								return (
+									<li><a href={item.item.url}> {item.item.date} - {item.item.name} </a></li>
+								)
+							})}
+							
 						</ol></span>
 					</div>
 				</div>

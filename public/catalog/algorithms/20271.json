@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/#/algorithm/20271",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/#/algorithm/20265",
+    "headline": "Reverse a linked list",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20270,
+    "name": "Reverse a linked list | rkumar-bengaluru.github.io",
+    "description": "Given pointer to the head node of a linked list, the task is to reverse the linked list. We need to reverse the list by changing the links between nodes.",
+    "title": "Reverse a linked list",
+    "keywords": [
+        "Reverse a linked list"
+    ],
+    "sku": 20270,
+    "mpn": 20270,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > linked list > Reverse a linked list",
+    "complextyMetrics": {
+        "Worst-case performance": "O(n)",
+        "Best-case performance": "O(n)",
+        "Average performance": "O(n)",
+        "Worst-case space complexity": "O(n)"
+    },
+    "code": "/**\n * Given pointer to the head node of a linked list, the task \n * is to reverse the linked list. We need to reverse the list \n * by changing the links between nodes.\n */\nclass Node {\n\tconstructor() {\n\t\tthis.data = null;\n\t\tthis.next = null;\n\t}\n\tadd(d) {\n\t\tif (this.next === null) {\n\t\t\tthis.next = new Node();\n\t\t\tthis.next.data = d;\n\t\t\treturn;\n\t\t}\n\t\tvar c = this.next;\n\t\twhile (c.next != null) {\n\t\t\tc = c.next;\n\t\t}\n\t\tc.next = new Node();\n\t\tc.next.data = d;\n\t}\n\treverse() {\n\t\tvar p, c, n;\n\t\tc = this.next;\n\t\twhile (c != null) {\n\t\t\tn = c.next;\n\t\t\tc.next = p;\n\t\t\tp = c;\n\t\t\tc = n;\n\t\t}\n\t\tthis.next = p;\n\t}\n\tprint(message) {\n\t\tvar c = this.next;\n\t\tvar res = '';\n\t\twhile (c != null) {\n\t\t\tres += c.data + '--'\n\t\t\tc = c.next;\n\t\t}\n\t\tconsole.log(message + ' ' + res);\n\t}\n}\n\nvar ll = new Node();\nll.add('d1');\nll.add('d2');\nll.add('d3');\nll.print('input ');\nll.reverse();\nll.print('output');\n\n"
+}
