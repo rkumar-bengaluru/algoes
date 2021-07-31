@@ -5,6 +5,8 @@ import AppLayout from './layout';
 import App from './app';
 import Algorithm from './algorithm';
 
+// http://localhost:3000/algoes/#/regex/
+// <Route exact path="/regex" component={RegEx} />
 ReactDOM.render(
   <HashRouter>
     <AppLayout>

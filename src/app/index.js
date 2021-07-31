@@ -148,7 +148,7 @@ class App extends React.Component {
 						<span><ol>
 							{hiData.itemListElement.map((item, index) => {
 								return (
-									<li><a href={item.item.url}> {item.item.date} - {item.item.name} </a></li>
+									<li key={index} ><a href={item.item.url}> {item.item.date} - {item.item.name} </a></li>
 								)
 							})}
 							
