@@ -19,9 +19,17 @@ const Algorithm = (props) => {
     const [codeRunning, setCodeRunning] = useState(false);
 
     useEffect(() => {
+        const currentURL = window.location.href
+        var paths = currentURL.split('/');
+        var path = paths[paths.length -2];
+        if(path === 'algorithm') {
+            path = paths[paths.length -1];
+        }
+        path = path.split('.')[0];
+        console.log('path-->' + path);
         setFetching(true);
         async function fetchData() {
-            var url = '/algoes/catalog/algorithms/' + props.match.params.id + '.json';
+            var url = '/algoes/catalog/algorithms/' + path + '.json';
             // You can await here
             await fetch(url)
                 .then(data => data.json())
