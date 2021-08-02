@@ -19,8 +19,8 @@ class AlgoesSearch {
                 this.curPageIndex = -1;
                 this.politePolicyInterval = 1000;// 5 seconds interval to load pages.
                 this.productsFolder = this.siteFolder + this.fileSeparator + "catalog" + this.fileSeparator + "algorithms";
-                this.allSitePages = this.siteFolder + this.fileSeparator  + 'algoes.json';
-                this.siteIdxFile = this.siteFolder + this.fileSeparator + 'algoes-index.json';
+                this.allSitePages = 'src/search/algoes.json';
+                this.siteIdxFile = 'src/search/algoes-index.json';
             }
 
             if (opt.loadIndex) {
@@ -161,4 +161,4 @@ const search = async () => {
     console.log(JSON.stringify(mini.search('quicksort')));
 }
 
-startDataPrep();
+search();
