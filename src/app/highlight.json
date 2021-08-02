@@ -6,100 +6,100 @@
             "@type": "ListItem",
             "position": 1,
             "item": {
-                "@id": "/algoes/#/algorithm/20271",
+                "@id": "/algoes/20271/#/",
                 "name": "Reverse a linked list",
                 "date": "31 Jul 2021",
-                "url": "/algoes/#/algorithm/20271"
+                "url": "/algoes/20271/#/"
             }
         },
         {
             "@type": "ListItem",
             "position": 2,
             "item": {
-                "@id": "/algoes/#/algorithm/20270",
+                "@id": "/algoes/20270/#/",
                 "name": "Climbing Stair (recursion)",
                 "date": "30 Jul 2021",
-                "url": "/algoes/#/algorithm/20270"
+                "url": "/algoes/20270/#/"
             }
         },
         {
             "@type": "ListItem",
             "position": 3,
             "item": {
-                "@id": "/algoes/#/algorithm/20269",
+                "@id": "/algoes/20269/#/",
                 "name": "N Queen Problem",
                 "date": "29 Jul 2021",
-                "url": "/algoes/#/algorithm/20269"
+                "url": "/algoes/20269/#/"
             }
         },
         {
             "@type": "ListItem",
             "position": 4,
             "item": {
-                "@id": "/algoes/#/algorithm/20268",
+                "@id": "/algoes/20268/#/",
                 "name": "reverse string",
                 "date": "28 Jul 2021",
-                "url": "/algoes/#/algorithm/20268"
+                "url": "/algoes/20268/#/"
             }
         },
         {
             "@type": "ListItem",
             "position": 5,
             "item": {
-                "@id": "/algoes/#/algorithm/20267",
+                "@id": "/algoes/20267/#/",
                 "name": "longest prefix",
                 "date": "27 Jul 2021",
-                "url": "/algoes/#/algorithm/20267"
+                "url": "/algoes/20267/#/"
             }
         },
         {
             "@type": "ListItem",
             "position": 6,
             "item": {
-                "@id": "/algoes/#/algorithm/20265",
+                "@id": "/algoes/20265/#/",
                 "name": "binary search",
                 "date": "26 Jul 2021",
-                "url": "/algoes/#/algorithm/20265"
+                "url": "/algoes/20265/#/"
             }
         },
         {
             "@type": "ListItem",
             "position": 7,
             "item": {
-                "@id": "/algoes/#/algorithm/20266",
+                "@id": "/algoes/20266/#/",
                 "name": "linear search",
                 "date": "26 Jul 2021",
-                "url": "/algoes/#/algorithm/20266"
+                "url": "/algoes/20266/#/"
             }
         },
         {
             "@type": "ListItem",
             "position": 8,
             "item": {
-                "@id": "/algoes/#/algorithm/20264",
+                "@id": "/algoes/20264/#/",
                 "name": "32 bit hashing",
                 "date": "25 Jul 2021",
-                "url": "/algoes/#/algorithm/20264"
+                "url": "/algoes/20264/#/"
             }
         },
         {
             "@type": "ListItem",
             "position": 9,
             "item": {
-                "@id": "/algoes/#/algorithm/20263",
+                "@id": "/algoes/20263/#/",
                 "name": "remove duplicate",
                 "date": "24 Jul 2021",
-                "url": "/algoes/#/algorithm/20263"
+                "url": "/algoes/20263/#/"
             }
         },
         {
             "@type": "ListItem",
             "position": 10,
             "item": {
-                "@id": "/algoes/#/algorithm/20262",
+                "@id": "/algoes/20262/#/",
                 "name": "quick sorts",
                 "date": "23 Jul 2021",
-                "url": "/algoes/#/algorithm/20262"
+                "url": "/algoes/20262/#/"
             }
         }
     ]

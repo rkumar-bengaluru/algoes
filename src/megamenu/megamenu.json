@@ -14,11 +14,11 @@
                     "links": [
                         {
                             "name": "Quick Sorting Algorithm",
-                            "url" : "/algoes/#/algorithm/20262"
+                            "url" : "/algoes/20262/#/"
                         },
                         {
                             "name": "Remove Duplicate",
-                            "url" : "/algoes/#/algorithm/20263"
+                            "url" : "/algoes/20263/#/"
                         }
                     ]
                 },
@@ -27,7 +27,7 @@
                     "links": [
                         {
                             "name": "32 bit hashing",
-                            "url" : "/algoes/#/algorithm/20264"
+                            "url" : "/algoes/20264/#/"
                         }
                     ]
                 },
@@ -36,11 +36,11 @@
                     "links": [
                         {
                             "name": "binary search",
-                            "url" : "/algoes/#/algorithm/20265"
+                            "url" : "/algoes/20265/#/"
                         },
                         {
                             "name": "linear search",
-                            "url" : "/algoes/#/algorithm/20266"
+                            "url" : "/algoes/20266/#/"
                         }
                     ]
                 },
@@ -49,11 +49,11 @@
                     "links": [
                         {
                             "name": "longest prefix.",
-                            "url" : "/algoes/#/algorithm/20267"
+                            "url" : "/algoes/20267/#/"
                         },
                         {
                             "name": "reverse string",
-                            "url" : "/algoes/#/algorithm/20268"
+                            "url" : "/algoes/20268/#/"
                         }
                     ]
                 },
@@ -62,7 +62,7 @@
                     "links": [
                         {
                             "name": "N Queen Problem",
-                            "url" : "/algoes/#/algorithm/20269"
+                            "url" : "/algoes/20269/#/"
                         }
                     ]
                 },
@@ -71,11 +71,11 @@
                     "links": [
                         {
                             "name": "Climbing Stairs",
-                            "url" : "/algoes/#/algorithm/20270"
+                            "url" : "/algoes/20270/#/"
                         },
                         {
                             "name": "Reverse a Linked List",
-                            "url" : "/algoes/#/algorithm/20271"
+                            "url" : "/algoes/20271/#/"
                         }
                     ]
                 },
@@ -84,7 +84,7 @@
                     "links": [
                         {
                             "name": "Climbing Stairs",
-                            "url" : "/algoes/#/algorithm/20270"
+                            "url" : "/algoes/20270/#/"
                         }
                     ]
                 }

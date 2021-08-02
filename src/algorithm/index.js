@@ -18,6 +18,7 @@ const Algorithm = (props) => {
     const [code, setCode] = useState('');
     const [codeRunning, setCodeRunning] = useState(false);
 
+
     useEffect(() => {
         const currentURL = window.location.href
         var paths = currentURL.split('/');
@@ -26,7 +27,17 @@ const Algorithm = (props) => {
             path = paths[paths.length -1];
         }
         path = path.split('.')[0];
-        console.log('path-->' + path);
+        path = path.replace('#','');
+        const metas = document.getElementsByTagName('meta');
+      
+        for (let i = 0; i < metas.length; i++) {
+          if (metas[i].getAttribute('name') === 'algo-id') {
+            path = metas[i].getAttribute('content');
+            console.log('meta-->' + path);
+          }
+        }
+        
+        
         setFetching(true);
         async function fetchData() {
             var url = '/algoes/catalog/algorithms/' + path + '.json';

@@ -4,11 +4,50 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://rkumar-bengaluru.github.io/algoes/</loc>
+  <lastmod>2021-07-12T06:42:15+00:00</lastmod>
+</url>
+<url>
+  <loc>http://localhost:3000/algoes/20262/</loc>
+  <lastmod>2021-07-12T06:42:15+00:00</lastmod>
+</url>
+<url>
+  <loc>http://localhost:3000/algoes/20263/</loc>
+  <lastmod>2021-07-12T06:42:15+00:00</lastmod>
+</url>
+<url>
+  <loc>http://localhost:3000/algoes/20264/</loc>
+  <lastmod>2021-07-12T06:42:15+00:00</lastmod>
+</url>
+<url>
+  <loc>http://localhost:3000/algoes/20265/</loc>
+  <lastmod>2021-07-12T06:42:15+00:00</lastmod>
+</url>
+<url>
+  <loc>http://localhost:3000/algoes/20266/</loc>
+  <lastmod>2021-07-12T06:42:15+00:00</lastmod>
+</url>
+<url>
+  <loc>http://localhost:3000/algoes/20267/</loc>
+  <lastmod>2021-07-12T06:42:15+00:00</lastmod>
+</url>
+<url>
+  <loc>http://localhost:3000/algoes/20268/</loc>
+  <lastmod>2021-07-12T06:42:15+00:00</lastmod>
+</url>
+<url>
+  <loc>http://localhost:3000/algoes/20269/</loc>
+  <lastmod>2021-07-12T06:42:15+00:00</lastmod>
+</url>
+<url>
+  <loc>http://localhost:3000/algoes/20270/</loc>
+  <lastmod>2021-07-12T06:42:15+00:00</lastmod>
+</url>
+<url>
+  <loc>http://localhost:3000/algoes/20271/</loc>
   <lastmod>2021-07-12T06:42:15+00:00</lastmod>
 </url>
 

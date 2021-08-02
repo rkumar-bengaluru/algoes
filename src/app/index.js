@@ -122,7 +122,6 @@ class App extends React.Component {
 		console.log('loading...');
 		return (
 			<div className="content">
-
 				<div className="row justify-content-around m-1">
 					<div className="col col-8 overflow-auto border">
 						<h1>let's code to learn algorithm ...</h1>

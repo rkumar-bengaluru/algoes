@@ -10,15 +10,15 @@
     "headline": "Reverse a linked list",
     "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
     "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
-    "productID": 20270,
-    "name": "Reverse a linked list | rkumar-bengaluru.github.io",
+    "productID": 20271,
+    "name": "Algoes - Reverse a linked list | rkumar-bengaluru.github.io",
     "description": "Given pointer to the head node of a linked list, the task is to reverse the linked list. We need to reverse the list by changing the links between nodes.",
     "title": "Reverse a linked list",
     "keywords": [
         "Reverse a linked list"
     ],
-    "sku": 20270,
-    "mpn": 20270,
+    "sku": 20271,
+    "mpn": 20271,
     "brand": {
         "@type": "Brand",
         "name": "Rupak Kumar..."
