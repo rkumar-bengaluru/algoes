@@ -12,7 +12,7 @@ class StudioHeader extends React.Component {
                 <nav className="navbar navbar-expand-lg navbar-dark bg-primary static-top">
 
                     <a className="ml-auto" href="https://www.vlocalshop.in" target="_blank" rel="noopener noreferrer">
-                        <img src="/algoes/img/logo.svgs" alt="LocalShop" />
+                        <img src="/algoes/img/logo.svg" alt="LocalShop" />
                     </a>
                     <div className="container">
                         <p className="font-weight-bold text-white ml-auto">JavaScript Algoes</p>
