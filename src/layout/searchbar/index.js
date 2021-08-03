@@ -59,7 +59,7 @@ class Search extends React.Component {
 
   render() {
     const { fireRedirect, searchTerm } = this.state
-    const to = '/search?searchTerm=' + searchTerm;
+    const to = '/#/search?searchTerm=' + searchTerm;
     if (fireRedirect) {
       return (
         <div>
