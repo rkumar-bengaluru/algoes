@@ -17,7 +17,7 @@ const Search = props => {
         var searchTerm = search.split('=');
         console.log(searchTerm[1]);
         setQuery(searchTerm[1]);
-    }, [query]);
+    }, [results,query]);
 
     useEffect(() => {
         console.log('results changed...');
@@ -27,7 +27,7 @@ const Search = props => {
         })
         console.log(JSON.stringify(tmp));
         setToRender(tmp);
-    }, [results]);
+    }, [results,query]);
 
 
     return (
@@ -42,6 +42,9 @@ const Search = props => {
                     </div>
                 )
             })}
+            {toRender.length === 0 &&
+                <div className="row justify-content-around m-3 alert">No Matching Result Found.</div>
+            }
         </div>
     );
 };

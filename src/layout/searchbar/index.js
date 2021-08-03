@@ -2,7 +2,7 @@ import React from 'react';
 import autoBind from 'react-autobind';
 import './search.css';
 import SearchBar from './search-bar';
-import  { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -48,6 +48,10 @@ class Search extends React.Component {
     }
   }
 
+  componentDidMount() {
+		this.setState({ fireRedirect: false });
+	}
+
   suggestionRenderer(suggestion, searchTerm) {
     return (
       <span>
@@ -58,8 +62,16 @@ class Search extends React.Component {
   }
 
   render() {
+    const search = window.location.href;
     const { fireRedirect, searchTerm } = this.state
-    const to = '/#/search?searchTerm=' + searchTerm;
+    var to = '/algoes/#/search?searchTerm=' + searchTerm;
+
+    if(to.includes('algoes/#/algoes/#')) {
+      to = to = '/algoes/#/search?searchTerm=' + searchTerm;
+    }
+   
+    console.log(search);
+    console.log(to);
     if (fireRedirect) {
       return (
         <div>
@@ -77,25 +89,29 @@ class Search extends React.Component {
           />
           <Redirect to={to} />;
           {window.location = to}
+         
+         
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <SearchBar
+            autoFocus
+            renderClearButton
+            renderSearchButton
+            placeholder="Search Algorithm / regex / design patterns ..."
+            onChange={this.handleChange}
+            onClear={this.handleClear}
+            onSelection={this.handleSelection}
+            onSearch={this.handleSearch}
+            suggestions={this.state.suggestions}
+            suggestionRenderer={this.suggestionRenderer}
+          />
         </div>
       );
     }
-    return (
-      <div>
-        <SearchBar
-          autoFocus
-          renderClearButton
-          renderSearchButton
-          placeholder="Search Algorithm / regex / design patterns ..."
-          onChange={this.handleChange}
-          onClear={this.handleClear}
-          onSelection={this.handleSelection}
-          onSearch={this.handleSearch}
-          suggestions={this.state.suggestions}
-          suggestionRenderer={this.suggestionRenderer}
-        />
-      </div>
-    );
+    
   }
 }
 
