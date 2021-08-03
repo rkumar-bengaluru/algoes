@@ -1,19 +1,19 @@
 {
     "@context": "https://schema.org",
-    "@id": "https://rkumar-bengaluru.github.io/algoes/#/algorithm/20266",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20266",
     "@type": "WebSite",
     "additionalType": [
         "CreativeWork",
         "Person"
     ],
-    "url": "https://rkumar-bengaluru.github.io/algoes/#/algorithm/20266",
+    "url": "https://rkumar-bengaluru.github.io/algoes/20266",
     "headline": "linear search",
     "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
     "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
     "productID": 20266,
     "name": "Algoes - linear search | rkumar-bengaluru.github.io",
     "description": "In computer science, a linear search or sequential search is a method for finding an element within a list. It sequentially checks each element of the list until a match is found or the whole list has been searched.",
-    "title": "linear search",
+    "title": "Algoes - linear search | rkumar-bengaluru.github.io",
     "keywords": [
         "linear search"
     ],
