@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20272",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20272",
+    "headline": "Algoes - Backtracking Numbers Generate Mathematical Expression to a given result ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20271,
+    "name": "Algoes - Backtracking Numbers Generate Mathematical Expression to a given result | rkumar-bengaluru.github.io",
+    "description": "Arrange given numbers in a mathematical expression using operators [+, -, *, /] and parentheses to get value 24",
+    "title": "Algoes - Backtracking Numbers Generate Mathematical Expression to a given result | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Backtracking Numbers Generate Mathematical Expression to a given result"
+    ],
+    "sku": 20272,
+    "mpn": 20273,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > backtracking > Mathematical Expression",
+    "complextyMetrics": {
+        "Worst-case performance": "O(n)",
+        "Best-case performance": "O(n)",
+        "Average performance": "O(n)",
+        "Worst-case space complexity": "O(n)"
+    },
+    "code": "/**\n * Arrange given numbers in a mathematical expression using \n * operators [+, -, *, /] and parentheses to get value 24\n */\nvar input = [3, 6, 8, 2];\nvar result = 24;\nvar response = [];\n// operator = (+) (-) (*) (/)\n\nfunction isResultPossible2(one, two, result) {\n\tif (((one + two) === result)) {\n\t\tresponse.push(' + (' + two + '))');\n\t\treturn true;\n\t} else if (((one - two) === result)) {\n\t\tresponse.push(' - (' + two + '))');\n\t\treturn true;\n\t} else if (((one * two) === result)) {\n\t\tresponse.push(' * (' + two + '))');\n\t\treturn true;\n\t} else if (((one / two) === result)) {\n\t\tresponse.push(' / (' + two + '))');\n\t\treturn true;\n\t} else {\n\t\treturn false;\n\t}\n}\n\nfunction isResultPossible3(one, two, three, result) {\n\tif ((isResultPossible2(one + two, three, result))) {\n\t\tresponse.push(' + ' + two + ' ))');\n\t\treturn true;\n\t} else if ((isResultPossible2(one - two, three, result))) {\n\t\tresponse.push(' - ' + two + ' ))');\n\t\treturn true;\n\t} else if ((isResultPossible2(one * two, three, result))) {\n\t\tresponse.push(' * ' + two + ' ))');\n\t\treturn true;\n\t} else if ((isResultPossible2(one / two, three, result))) {\n\t\tresponse.push(' / ' + two + ' ))');\n\t\treturn true;\n\t} else if ((isResultPossible2(one, two + three, result))) {\n\t\tresponse.push(' + ' + two + ' ))');\n\t\treturn true;\n\t} else if ((isResultPossible2(one, two - three, result))) {\n\t\tresponse.push(' + ' + two + ' ))');\n\t\treturn true;\n\t} else if ((isResultPossible2(one, two * three, result))) {\n\t\tresponse.push(' * ' + two + ' ))');\n\t\treturn true;\n\t} else if ((isResultPossible2(one, two / three, result))) {\n\t\tresponse.push(' / ' + two + ' ))');\n\t\treturn true;\n\t} else if ((isResultPossible2(one + three, two, result))) {\n\t\tresponse.push(' + ' + two + ' ))');\n\t\treturn true;\n\t} else if ((isResultPossible2(one - three, two, result))) {\n\t\tresponse.push(' - ' + two + ' ))');\n\t\treturn true;\n\t} else if ((isResultPossible2(one * three, two, result))) {\n\t\tresponse.push(' * ' + two + ' ))');\n\t\treturn true;\n\t} else if ((isResultPossible2(one / three, two, result))) {\n\t\tresponse.push(' / ' + two + ' ))');\n\t\treturn true;\n\t}\n\n\treturn false;\n}\n\nfunction isPossible() {\n\t// check with all operators between first 2 numbers.\n\tvar size = input.length;\n\tif ((isResultPossible3(input[0] + input[1],\n\t\t\tinput[2], input[3], result))) {\n\t\tresponse.push(' (((' + input[0] + ' + ' + input[1] + ')');\n\t\treturn true;\n\t} else if ((isResultPossible3(input[0] - input[1],\n\t\t\tinput[2], input[3], result))) {\n\t\tresponse.push(' (((' + input[0] + ' - ' + input[1] + ')');\n\t\treturn true;\n\t} else if ((isResultPossible3(input[0] * input[1],\n\t\t\tinput[2], input[3], result))) {\n\t\tresponse.push(' (((' + input[0] + ' * ' + input[1] + ')');\n\t\treturn true;\n\t} else if ((isResultPossible3(input[0] / input[1],\n\t\t\tinput[2], input[3], result))) {\n\t\tresponse.push(' (((' + input[0] + ' / ' + input[1] + ')');\n\t\treturn true;\n\t} // next 2 & 3\n\telse if ((isResultPossible3(input[0], input[1] +\n\t\t\tinput[2], input[3], result))) {\n\t\tresponse.push(' (((' + input[0] + ' * ' + input[1] + ')');\n\t\treturn true;\n\t} else if ((isResultPossible3(input[0], input[1] -\n\t\t\tinput[2], input[3], result))) {\n\t\tresponse.push(' (((' + input[0] + ' - ' + input[1] + ')');\n\t\treturn true;\n\t} else if ((isResultPossible3(input[0], input[1] *\n\t\t\tinput[2], input[3], result))) {\n\t\tresponse.push(' (((' + input[0] + ' * ' + input[1] + ')');\n\t\treturn true;\n\t} else if ((isResultPossible3(input[0], input[1] /\n\t\t\tinput[2], input[3], result))) {\n\t\tresponse.push(' (((' + input[0] + ' / ' + input[1] + ')');\n\t\treturn true;\n\t} // next 3 & 4 \n\telse if ((isResultPossible3(input[0], input[1],\n\t\t\tinput[2] + input[3], result))) {\n\t\tresponse.push(' (((' + input[0] + ' + ' + input[1] + ')');\n\t\treturn true;\n\t} else if ((isResultPossible3(input[0], input[1],\n\t\t\tinput[2] - input[3], result))) {\n\t\tresponse.push(' (((' + input[0] + ' - ' + input[1] + ')');\n\t\treturn true;\n\t} else if ((isResultPossible3(input[0], input[1],\n\t\t\tinput[2] * input[3], result))) {\n\t\tresponse.push(' (((' + input[0] + ' * ' + input[1] + ')');\n\t\treturn true;\n\t} else if ((isResultPossible3(input[0], input[1],\n\t\t\tinput[2] / input[3], result))) {\n\t\tresponse.push(' (((' + input[0] + ' / ' + input[1] + ')');\n\t\treturn true;\n\t}\n\treturn false;\n}\n\nconsole.log('input --> ' + input + ', expected result -->' + 24);\nconsole.log('isPossible --> ' + isPossible());\nconsole.log('output --> ' + response[2] + response[1] + response[0]); // This is just a sample script. Paste your real code (javascript or HTML) here.\n"
+}

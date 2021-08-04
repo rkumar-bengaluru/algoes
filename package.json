@@ -31,7 +31,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "search": "node src/search/algoessearch.js"
+    "search": "node src/search/algoessearch.js",
+    "algo": "node src/algorithm/backtracking-numbers.js"
   },
   "eslintConfig": {
     "extends": [

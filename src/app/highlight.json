@@ -4,7 +4,17 @@
     "itemListElement": [
         {
             "@type": "ListItem",
-            "position": 1,
+            "position": 11,
+            "item": {
+                "@id": "/algoes/20272/#/",
+                "name": "Mathematical Expression for numbers",
+                "date": "03 Aug 2021",
+                "url": "/algoes/20272/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 10,
             "item": {
                 "@id": "/algoes/20271/#/",
                 "name": "Reverse a linked list",
@@ -14,7 +24,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 2,
+            "position": 9,
             "item": {
                 "@id": "/algoes/20270/#/",
                 "name": "Climbing Stair (recursion)",
@@ -24,7 +34,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 3,
+            "position": 8,
             "item": {
                 "@id": "/algoes/20269/#/",
                 "name": "N Queen Problem",
@@ -34,7 +44,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 4,
+            "position": 7,
             "item": {
                 "@id": "/algoes/20268/#/",
                 "name": "reverse string",
@@ -44,7 +54,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 5,
+            "position": 6,
             "item": {
                 "@id": "/algoes/20267/#/",
                 "name": "longest prefix",
@@ -54,7 +64,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 6,
+            "position": 5,
             "item": {
                 "@id": "/algoes/20265/#/",
                 "name": "binary search",
@@ -64,7 +74,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 7,
+            "position": 4,
             "item": {
                 "@id": "/algoes/20266/#/",
                 "name": "linear search",
@@ -74,7 +84,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 8,
+            "position": 3,
             "item": {
                 "@id": "/algoes/20264/#/",
                 "name": "32 bit hashing",
@@ -84,7 +94,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 9,
+            "position": 2,
             "item": {
                 "@id": "/algoes/20263/#/",
                 "name": "remove duplicate",
@@ -94,7 +104,7 @@
         },
         {
             "@type": "ListItem",
-            "position": 10,
+            "position": 1,
             "item": {
                 "@id": "/algoes/20262/#/",
                 "name": "quick sorts",
