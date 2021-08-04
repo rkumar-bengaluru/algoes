@@ -158,7 +158,7 @@ const startDataPrep = async () => {
 const search = async () => {
     var options = { root: 'public', loadIndex: true };
     var mini = new AlgoesSearch(options);
-    console.log(JSON.stringify(mini.search('quicksort')));
+    console.log(JSON.stringify(mini.search('backtracking')));
 }
 
 search();

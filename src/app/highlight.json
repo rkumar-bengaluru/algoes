@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 12,
+            "item": {
+                "@id": "/algoes/20273/#/",
+                "name": "Print all permutations of a given string",
+                "date": "03 Aug 2021",
+                "url": "/algoes/20273/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 11,
             "item": {
                 "@id": "/algoes/20272/#/",

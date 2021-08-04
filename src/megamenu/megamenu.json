@@ -67,6 +67,10 @@
                         {
                             "name": "Mathematical Expression for numbers",
                             "url" : "/algoes/20272/#/"
+                        },
+                        {
+                            "name": "Print all permutations of a given string",
+                            "url" : "/algoes/20273/#/"
                         }
                     ]
                 },
