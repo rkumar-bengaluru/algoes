@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20273",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20273",
+    "headline": "Algoes - Print all permutations of a given string ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20273,
+    "name": "Algoes - Print all permutations of a given string | rkumar-bengaluru.github.io",
+    "description": "Print all permutations of a given string",
+    "title": "Algoes - Print all permutations of a given string | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Print all permutations of a given string"
+    ],
+    "sku": 20273,
+    "mpn": 20273,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > backtracking > Permuations",
+    "complextyMetrics": {
+        "Worst-case performance": "O(n*n!)",
+        "Best-case performance": "O(n*n!)",
+        "Average performance": "O(n*n!)",
+        "Worst-case space complexity": "O(n*n!)"
+    },
+    "code": "// Print all permutations of a given string\n// Algorithm Paradigm: Backtracking \n// Time Complexity: O(n*n!) Note that there are n! \n// Permutations and it requires O(n) time to print a \n// permutation.\nvar input = ['A', 'B', 'C'];\nvar output = [];\n\nfunction swap(input, i, j) {\n\tlet tmp = input[i];\n\tinput[i] = input[j];\n\tinput[j] = tmp;\n\treturn input;\n}\n\nfunction findPermutation(input, start, end) {\n\tif (start === end) {\n\t\tvar t = [];\n\t\tfor (let i of input) {\n\t\t\tt.push(i);\n\t\t}\n\t\toutput.push(t);\n\t\treturn;\n\t}\n\tfor (var i = start; i <= end; i++) {\n\t\tinput = swap(input, start, i);\n\t\tfindPermutation(input, start + 1, end);\n\t\tinput = swap(input, start, i);\n\t}\n}\nconsole.log('input - ' + JSON.stringify(input));\nfindPermutation(input, 0, input.length - 1);\nconsole.log('output - ' + JSON.stringify(output));\n"
+}
