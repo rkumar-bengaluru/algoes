@@ -1,35 +1,75 @@
-// Print all permutations of a given string
-// Algorithm Paradigm: Backtracking 
-// Time Complexity: O(n*n!) Note that there are n! 
-// Permutations and it requires O(n) time to print a 
-// permutation.
-var input = ['A', 'B', 'C'];
+var input = ['3', '6', '8','2'];
 var output = [];
+var plus = [];
+var minus = [];
+var star = [];
+var r = 24;
+
+function checkIfValid(a,b,r) {
+  	console.log('f-'+ a + ',s-' + b);
+  	f = parseInt(a);
+  	s = parseInt(b);
+  	plus.push((f+s));
+  	minus.push((f-s));
+  	star.push((f*s));
+  	if( ((f+s) === r)) {
+  		return true;
+    } else if( ((f-s) === r)) {
+  		return true;
+    } else if( ((f*s) === r)) {
+  		return true;
+    }
+    return false;
+}
+
+function findDynamic(input) {
+  	var f = input[0];
+  	var s = input[1];
+  	if(checkIfValid(f,s,r)) {
+    	return true;
+    }
+  	console.log(plus);
+  	console.log(minus);
+ 	 console.log(star);
+  	for(var i = 2;i < input.length;i++) {
+      	if(checkIfValid(plus[i-1],input[i])) {
+        	return true;
+        }
+      	if(checkIfValid(minus[i-1],input[i])) {
+        	return true;
+        }
+      	if(checkIfValid(star[i-1],input[i])) {
+        	return true;
+        }
+    }
+  	return false;
+}
+console.log(findDynamic(input));
+function permutation(input, start, end) {
+  	if(start === end) {
+    	let tmp = [];
+      	for(let c of input) {
+        	tmp.push(c);
+        }
+      	output.push(tmp);
+      	
+      	return;
+    }
+  	for(var i = start; i <= end;i++) {
+    	swap(input,i,start);
+      	permutation(input, start + 1, end);
+      	// backtrack
+      	swap(input,i,start);
+    }
+}
 
 function swap(input, i, j) {
-    let tmp = input[i];
-    input[i] = input[j];
-    input[j] = tmp;
-    return input;
+  	let tmp = input[i];
+  	input[i] = input[j];
+  	input[j] = tmp;
 }
+// driver code
+permutation(input, 0, input.length -1);
+console.log(JSON.stringify(output));
+console.log(output.length);
 
-function findPermutation(input, start, end) {
-    if (start === end) {
-        var t = [];
-        for(let i of input) {
-            t.push(i);
-        }
-        output.push(t);
-        return;
-    }
-    for (var i = start; i <= end; i++) {
-        input = swap(input, start, i);
-        findPermutation(input, start + 1, end);
-        input = swap(input, start, i);
-    }
-}
-console.log('input - ');
-console.log(input);
-findPermutation(input, 0, input.length - 1);
-console.log('output - ');
-console.log(output);
