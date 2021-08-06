@@ -6,6 +6,16 @@
             "@type": "ListItem",
             "position": 12,
             "item": {
+                "@id": "/algoes/20274/#/",
+                "name": "Anagram! - Merge Sort",
+                "date": "06 Aug 2021",
+                "url": "/algoes/20274/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 12,
+            "item": {
                 "@id": "/algoes/20273/#/",
                 "name": "Print all permutations of a given string",
                 "date": "03 Aug 2021",

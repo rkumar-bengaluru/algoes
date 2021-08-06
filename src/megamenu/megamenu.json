@@ -17,6 +17,10 @@
                             "url" : "/algoes/20262/#/"
                         },
                         {
+                            "name": "MergeSort Algorithm",
+                            "url" : "/algoes/20274/#/"
+                        },
+                        {
                             "name": "Remove Duplicate",
                             "url" : "/algoes/20263/#/"
                         }
@@ -54,6 +58,10 @@
                         {
                             "name": "reverse string",
                             "url" : "/algoes/20268/#/"
+                        },
+                        {
+                            "name": "Anagram - Merge Sort",
+                            "url" : "/algoes/20274/#/"
                         }
                     ]
                 },

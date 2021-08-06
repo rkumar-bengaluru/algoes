@@ -1,78 +1,79 @@
-var input = ['3', '6', '8', '2'];
-var output = [];
-var d = [];
-var r = 53;
-var res = '';
+var pf = [2, 3, 5];
+var r = [];
 
-function checkIfValid(a, b, r) {
-    
-    f = parseInt(a);
-    s = parseInt(b);
-    d.push((f + s));
-    d.push((f - s));
-    d.push((f * s));
-    if (((f + s) === r)) {
-        console.log('f-' + a + ',s-' + b);
-        res += 'f-' + a + ',s-' + b;
-        return true;
-    } else if (((f - s) === r)) {
-        console.log('f-' + a + ',s-' + b);
-        res += 'f-' + a + ',s-' + b;
-        return true;
-    } else if (((f * s) === r)) {
-        console.log('f-' + a + ',s-' + b);
-        res += 'f-' + a + ',s-' + b;
-        return true;
+function checkIfPrime(n) {
+    if (n <= 1) {
+        return false;
     }
-    return false;
+    for (let i = 2; i < n; i++) {
+        if (n % i === 0) {
+            return false;
+        }
+    }
+    return true;
 }
 
-function findDynamic(input) {
-    var f = input[0];
-    var s = input[1];
-    if (checkIfValid(f, s, r)) {
-        return true;
-    }
-    console.log(d);
-    for (var i = 2; i < input.length; i++) {
-        for(let k of d) {
-            if (checkIfValid(k, input[i], r)) {
-                //console.log(d);
-                res += 'k-' + k + ',s-' + input[i];
-                return true;
-            }
-        }
-        
-    }
-    return false;
-}
-console.log(findDynamic(input));
-console.log(res);
-function permutation(input, start, end) {
-    if (start === end) {
-        let tmp = [];
-        for (let c of input) {
-            tmp.push(c);
-        }
-        output.push(tmp);
+function checkRecursivePrime(n) {
 
+    while (n > 1) {
+        if (checkIfPrime(n)) {
+            r.push(n);
+        }
+        n--;
+    }
+    r.push(1);
+}
+function primefactors(n) {
+    var res = [];
+    if (n <= 1) {
         return;
     }
-    for (var i = start; i <= end; i++) {
-        swap(input, i, start);
-        permutation(input, start + 1, end);
-        // backtrack
-        swap(input, i, start);
+
+    for (var i = 2; i <= n; i++) {
+        while (n % i === 0) {
+            res.push(i);
+            n = Math.floor(n / i);
+        }
+    }
+    console.log(res);
+    return res;
+}
+
+function checkIfArrayContains(input, expected) {
+    for (let i of input) {
+        var fairPointer = 0;
+        for (var fairPointer = 0; i < expected.length;i++) {
+            console.log(i  + ', expected ' + expected[fairPointer]);
+           if(i === expected[fairPointer]) {
+                return true;
+           }
+        }
+    }
+    return false;
+}
+
+function isUgly(n) {
+    var pfs = primefactors(n);
+    var exp = [2,3,5];
+    if(!checkIfArrayContains(pfs,exp)) {
+        console.log('Not an Ugly Number - ' + n);
+        return false;
+    } else {
+        console.log(' Ugly Number -' + n);
+        return true;
     }
 }
 
-function swap(input, i, j) {
-    let tmp = input[i];
-    input[i] = input[j];
-    input[j] = tmp;
-}
-// driver code
-// permutation(input, 0, input.length - 1);
-// console.log(JSON.stringify(output));
-// console.log(output.length);
+function findUgly(n) {
+    var result = [];
+    result[0] = 1;
+    result[1] = 2;
 
+    for (var i = 2; i <= n; i++) { 
+        result[3] = result[i-1] + result[i-2];
+    }
+    console.log(result);
+}
+
+console.log(findUgly(15));
+console.log(r);
