@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20274",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20274",
+    "headline": "Algoes - Check if a string is an Anagram! - Merge Sort ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20274,
+    "name": "Algoes - Check if a string is an Anagram! - Merge Sort | rkumar-bengaluru.github.io",
+    "description": "Algoes - Check if a string is an Anagram! - Merge Sort",
+    "title": "Algoes - Check if a string is an Anagram! - Merge Sort | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Algoes - Check if a string is an Anagram! - Merge Sort"
+    ],
+    "sku": 20274,
+    "mpn": 20274,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > sorting > Anagram",
+    "complextyMetrics": {
+        "Worst-case performance": "O(n log n)",
+        "Best-case performance": "O(n log n)",
+        "Average performance": "O(n log n)",
+        "Worst-case space complexity": "O(n)"
+    },
+    "code": "var iinput = [5, 4, 3, 2, 1];\nvar tinput = ['r', 'u', 'p', 'a', 'k'];\n\nfunction sort(input, l, r) {\n\tif ((r - l) === 0) {\n\t\tvar x = [];\n\t\tx.push(input[r]);\n\t\treturn x;\n\t}\n\n\tif (r > l) {\n\t\tvar mid = Math.floor((r - l) / 2);\n\t\treturn merge(sort(input, l, l + mid), sort(input, l + mid + 1, r));\n\t}\n}\n\nfunction merge(a, b) {\n\tvar r = [];\n\tvar aPointer = 0,\n\t\tbPointer = 0;\n\twhile ((aPointer < a.length) && (bPointer < b.length)) {\n\t\tif (a[aPointer] > b[bPointer]) {\n\t\t\tr.push(b[bPointer++]);\n\t\t} else {\n\t\t\tr.push(a[aPointer++]);\n\t\t}\n\t}\n\n\twhile (aPointer < a.length) {\n\t\tr.push(a[aPointer++]);\n\t}\n\n\twhile (bPointer < b.length) {\n\t\tr.push(b[bPointer++]);\n\t}\n\treturn r;\n}\n\nfunction getCharArray(s) {\n\tvar r = [];\n\tfor (var i = 0; i < s.length; i++) {\n\t\tr.push(s[i]);\n\t}\n\treturn r;\n}\n\nfunction anagram(a, b) {\n\tif (a.length != b.length) {\n\t\treturn false;\n\t}\n\n\tvar aSorted = sort(getCharArray(a), 0, a.length);\n\tvar bSorted = sort(getCharArray(b), 0, b.length);\n\n\tfor (var i = 0; i < aSorted.length; i++) {\n\t\tif (aSorted[i] != bSorted[i]) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\n\nconsole.log(sort(iinput, 0, iinput.length - 1));\nconsole.log(sort(tinput, 0, tinput.length - 1));\nconsole.log(anagram('rupak', 'kapur'));\n"
+}
