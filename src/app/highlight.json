@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 13,
+            "item": {
+                "@id": "/algoes/20275/#/",
+                "name": "Ugly Numbers - Prime Factors",
+                "date": "07 Aug 2021",
+                "url": "/algoes/20275/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 12,
             "item": {
                 "@id": "/algoes/20274/#/",

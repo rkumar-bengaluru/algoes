@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20275",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20275",
+    "headline": "Algoes - Ugly Numbers! - Prime Factors ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20274,
+    "name": "Algoes - Ugly Numbers! - Prime Factors | rkumar-bengaluru.github.io",
+    "description": "Algoes - Ugly Numbers! - Prime Factors",
+    "title": "Algoes - Ugly Numbers! - Prime Factors | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Algoes - Ugly Numbers! - Prime Factors"
+    ],
+    "sku": 20274,
+    "mpn": 20274,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > sorting > Ugly Numbers",
+    "complextyMetrics": {
+        "Worst-case performance": "-",
+        "Best-case performance": "-",
+        "Average performance": "-",
+        "Worst-case space complexity": "-"
+    },
+    "code": "/**\n * Find if a given number is a prime number.\n * \n * A number is a prime number when it is only\n * divided by 1 or itself.\n * \n * @param {numberToCheck} n \n * @returns \n */\nfunction isPrime(n) {\n\tif (n <= 0) {\n\t\treturn false;\n\t} else if (n === 1) {\n\t\treturn true;\n\t}\n\tfor (var i = 2; i < n; i++) {\n\t\tvar r = n % i;\n\t\tif (r === 0) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\n/**\n * Find all prime number less than or equal to the\n * given number.\n * \n * @param {NumberToCheck} n \n * @returns \n */\nfunction isPrimeRecursive(n) {\n\tvar primes = [];\n\twhile (n >= 1) {\n\t\tif (isPrime(n)) {\n\t\t\tprimes.push(n);\n\t\t}\n\t\tn--;\n\t}\n\treturn primes;\n}\n/**\n * Find the prime factor of a given number.\n * \n * Prime Factors are the prime number which when\n * multiplied outputs the given number.\n * \n * @param {NumberToCheck} n \n * @returns \n */\nfunction primeFactor(n) {\n\tvar factors = [];\n\tfor (var i = 2; i < n; i++) {\n\t\twhile (n % i === 0) {\n\t\t\tn = Math.floor(n / i);\n\t\t\tfactors.push(i);\n\t\t}\n\t}\n\tif (n > 1) {\n\t\tfactors.push(n);\n\t}\n\treturn factors;\n}\n/**\n * check if input array contains only those numbers\n * that are in array b.\n * \n * @param {*} a \n * @param {*} b \n */\nfunction checkIfArrayDirty(a, b) {\n\tvar d = [];\n\td.push(0);\n\tfor (var i = 0; i < a.length; i++) {\n\t\tvar isP = false;\n\t\tfor (let c of b) {\n\t\t\tif (a[i] === c) {\n\t\t\t\tisP = true;\n\t\t\t\t// matched and hence break the inner loop.\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t\tif (isP) {\n\t\t\td.push(d[0] + 0);\n\t\t} else {\n\t\t\td.push(d[0] + 1);\n\t\t}\n\t}\n\n\treturn d;\n}\n// a number is ugly if its prime factors are 2,3,5\n/**\n * Find if a given number is an Ugly Number.\n * \n * A number is ugly when its prime factors are 2,3,5\n * @param {Number} n \n * @returns \n */\nfunction findIfUglyNumber(n) {\n\tvar primeFactors = [2, 3, 5];\n\tvar pfs = primeFactor(n);\n\n\t// if any of the prime factor is not a prime \n\t// then it an ugly number\n\tvar res = checkIfArrayDirty(pfs, primeFactors);\n\tif (res[res.length - 1] === 0) {\n\t\treturn true;\n\t} else {\n\t\treturn false;\n\t}\n}\n/**\n * Find All Ugly Numers less than or equal to\n * the given number.\n * \n * @param {Number} n \n * @returns \n */\nfunction checkUglyRecursive(n) {\n\tvar ugly = [];\n\twhile (n >= 1) {\n\t\tif (findIfUglyNumber(n)) {\n\t\t\tugly.push(n);\n\t\t}\n\t\tn--;\n\t}\n\treturn ugly;\n}\n\n// Drivers for each function.\nconsole.log('All Prime Numbers Less Than 20 :-');\nconsole.log(isPrimeRecursive(20));\nconsole.log('Prime Factors of 315 :-');\nconsole.log(primeFactor(315));\nconsole.log('All Ugly Numbers Less Than 15 :-');\nconsole.log(checkUglyRecursive(15));\nconsole.log('Check If input array a & b contains same numbers :-');\nconsole.log(checkIfArrayDirty([3, 3, 5], [2, 3, 5]));\n"
+}

@@ -1,124 +1,138 @@
-var input = [3, 6, 8, 2];
-var result = 24;
-var response = [];
-// operator = (+) (-) (*) (/)
-
-function isResultPossible2(one, two, result) {
-    if (((one + two) === result)) {
-        response.push(' + (' + two + '))');
+/**
+ * Find if a given number is a prime number.
+ * 
+ * A number is a prime number when it is only
+ * divided by 1 or itself.
+ * 
+ * @param {numberToCheck} n 
+ * @returns 
+ */
+function isPrime(n) {
+    if (n <= 0) {
+        return false;   
+    } else if (n === 1) {
         return true;
-    } else if (((one - two) === result)) {
-        response.push(' - (' + two + '))');
-        return true;
-    } else if (((one * two) === result)) {
-        response.push(' * (' + two + '))');
-        return true;
-    } else if (((one / two) === result)) {
-        response.push(' / (' + two + '))');
+    }
+    for (var i = 2; i < n; i++) {
+        var r = n % i;
+        if (r === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+/**
+ * Find all prime number less than or equal to the
+ * given number.
+ * 
+ * @param {NumberToCheck} n 
+ * @returns 
+ */
+function isPrimeRecursive(n) {
+    var primes = [];
+    while (n >= 1) {
+        if (isPrime(n)) {
+            primes.push(n);
+        }
+        n--;
+    }
+    return primes;
+}
+/**
+ * Find the prime factor of a given number.
+ * 
+ * Prime Factors are the prime number which when
+ * multiplied outputs the given number.
+ * 
+ * @param {NumberToCheck} n 
+ * @returns 
+ */
+function primeFactor(n) {
+    var factors = [];
+    for (var i = 2; i < n; i++) {
+        while (n % i === 0) {
+            n = Math.floor(n / i);
+            factors.push(i);
+        }
+    }
+    if (n > 1) {
+        factors.push(n);
+    }
+    return factors;
+}
+/**
+ * check if input array contains only those numbers
+ * that are in array b.
+ * 
+ * @param {*} a 
+ * @param {*} b 
+ */
+function checkIfArrayDirty(a, b) {
+    var d = [];
+    d.push(0);
+    for (var i = 0; i < a.length; i++) {
+        var isP = false;
+        for (let c of b) {
+            if (a[i] === c) {
+                isP = true;
+                // matched and hence break the inner loop.
+                break;
+            }
+        }
+        if (isP) {
+            d.push(d[0] + 0);
+        } else {
+            d.push(d[0] + 1);
+        }
+    }
+    
+    return d;
+}
+// a number is ugly if its prime factors are 2,3,5
+/**
+ * Find if a given number is an Ugly Number.
+ * 
+ * A number is ugly when its prime factors are 2,3,5
+ * @param {Number} n 
+ * @returns 
+ */
+function findIfUglyNumber(n) {
+    var primeFactors = [2, 3, 5];
+    var pfs = primeFactor(n);
+    
+    // if any of the prime factor is not a prime 
+    // then it an ugly number
+    var res = checkIfArrayDirty(pfs,primeFactors);
+    if(res[res.length -1] === 0) {
         return true;
     } else {
         return false;
     }
-
 }
-function isResultPossible3(one, two, three, result) {
-    if ((isResultPossible2(one + two, three, result))) {
-        response.push(' + ' + two + ' ))');
-        return true;
-    } else if ((isResultPossible2(one - two, three, result))) {
-        response.push(' - ' + two + ' ))');
-        return true;
-    } else if ((isResultPossible2(one * two, three, result))) {
-        response.push(' * ' + two + ' ))');
-        return true;
-    } else if ((isResultPossible2(one / two, three, result))) {
-        response.push(' / ' + two + ' ))');
-        return true;
-    } else if ((isResultPossible2(one, two + three, result))) {
-        response.push(' + ' + two + ' ))');
-        return true;
-    } else if ((isResultPossible2(one, two - three, result))) {
-        response.push(' + ' + two + ' ))');
-        return true;
-    } else if ((isResultPossible2(one, two * three, result))) {
-        response.push(' * ' + two + ' ))');
-        return true;
-    } else if ((isResultPossible2(one, two / three, result))) {
-        response.push(' / ' + two + ' ))');
-        return true;
-    } else if ((isResultPossible2(one + three, two, result))) {
-        response.push(' + ' + two + ' ))');
-        return true;
-    } else if ((isResultPossible2(one - three, two, result))) {
-        response.push(' - ' + two + ' ))');
-        return true;
-    } else if ((isResultPossible2(one * three, two, result))) {
-        response.push(' * ' + two + ' ))');
-        return true;
-    } else if ((isResultPossible2(one / three, two, result))) {
-        response.push(' / ' + two + ' ))');
-        return true;
+/**
+ * Find All Ugly Numers less than or equal to
+ * the given number.
+ * 
+ * @param {Number} n 
+ * @returns 
+ */
+function checkUglyRecursive(n) {
+    var ugly = [];
+    while (n >= 1) {
+        if (findIfUglyNumber(n)) {
+            ugly.push(n);
+        }
+        n--;
     }
-
-    return false;
-}
-function isPossible() {
-    // check with all operators between first 2 numbers.
-    var size = input.length;
-    if ((isResultPossible3(input[0] + input[1],
-        input[2], input[3], result))) {
-        response.push(' (((' + input[0] + ' + ' + input[1] + ')');
-        return true;
-    } else if ((isResultPossible3(input[0] - input[1],
-        input[2], input[3], result))) {
-        response.push(' (((' + input[0] + ' - ' + input[1] + ')');
-        return true;
-    } else if ((isResultPossible3(input[0] * input[1],
-        input[2], input[3], result))) {
-        response.push(' (((' + input[0] + ' * ' + input[1] + ')');
-        return true;
-    } else if ((isResultPossible3(input[0] / input[1],
-        input[2], input[3], result))) {
-        response.push(' (((' + input[0] + ' / ' + input[1] + ')');
-        return true;
-    }// next 2 & 3
-    else if ((isResultPossible3(input[0], input[1] +
-        input[2], input[3], result))) {
-        response.push(' (((' + input[0] + ' * ' + input[1] + ')');
-        return true;
-    } else if ((isResultPossible3(input[0], input[1] -
-        input[2], input[3], result))) {
-        response.push(' (((' + input[0] + ' - ' + input[1] + ')');
-        return true;
-    } else if ((isResultPossible3(input[0], input[1] *
-        input[2], input[3], result))) {
-        response.push(' (((' + input[0] + ' * ' + input[1] + ')');
-        return true;
-    } else if ((isResultPossible3(input[0], input[1] /
-        input[2], input[3], result))) {
-        response.push(' (((' + input[0] + ' / ' + input[1] + ')');
-        return true;
-    } // next 3 & 4 
-    else if ((isResultPossible3(input[0], input[1],
-        input[2] + input[3], result))) {
-        response.push(' (((' + input[0] + ' + ' + input[1] + ')');
-        return true;
-    } else if ((isResultPossible3(input[0], input[1],
-        input[2] - input[3], result))) {
-        response.push(' (((' + input[0] + ' - ' + input[1] + ')');
-        return true;
-    } else if ((isResultPossible3(input[0], input[1],
-        input[2] * input[3], result))) {
-        response.push(' (((' + input[0] + ' * ' + input[1] + ')');
-        return true;
-    } else if ((isResultPossible3(input[0], input[1],
-        input[2] / input[3], result))) {
-        response.push(' (((' + input[0] + ' / ' + input[1] + ')');
-        return true;
-    }
-    return false;
+    return ugly;
 }
 
-console.log('input --> ' + input + ', expected result -->' + 24);
-console.log('isPossible --> ' + isPossible());
-console.log('output --> ' + response[2] + response[1] + response[0]);
+// Drivers for each function.
+console.log('All Prime Numbers Less Than 20 :-');
+console.log(isPrimeRecursive(20));
+console.log('Prime Factors of 315 :-');
+console.log(primeFactor(315));
+console.log('All Ugly Numbers Less Than 15 :-');
+console.log(checkUglyRecursive(15));
+console.log('Check If input array a & b contains same numbers :-');
+console.log(checkIfArrayDirty([3,3,5],[2,3,5]));
