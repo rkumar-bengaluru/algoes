@@ -6,6 +6,16 @@
             "@type": "ListItem",
             "position": 14,
             "item": {
+                "@id": "/algoes/20277/#/",
+                "name": "Decimal 2 Binary & Binary 2 Decimal!",
+                "date": "14 Aug 2021",
+                "url": "/algoes/20277/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 14,
+            "item": {
                 "@id": "/algoes/20276/#/",
                 "name": "Palindrome String!",
                 "date": "11 Aug 2021",

@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20277",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20277",
+    "headline": "Algoes - Decimal 2 Binary & Binary 2 Decimal! ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20277,
+    "name": "Algoes - Decimal 2 Binary & Binary 2 Decimal! | rkumar-bengaluru.github.io",
+    "description": "Algoes - Decimal 2 Binary & Binary 2 Decimal!",
+    "title": "Algoes - Decimal 2 Binary & Binary 2 Decimal! | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Algoes - Decimal 2 Binary & Binary 2 Decimal!"
+    ],
+    "sku": 20277,
+    "mpn": 20277,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > string > Decimal 2 Binary & Binary 2 Decimal",
+    "complextyMetrics": {
+        "Worst-case performance": "-",
+        "Best-case performance": "-",
+        "Average performance": "-",
+        "Worst-case space complexity": "-"
+    },
+    "code": "console.log(decimal2binary(18));\nconsole.log(binary2decimal(decimal2binary(18)));\n\nfunction binary2decimal(n) {\n\tvar dec = 0;\n\tvar l = n.length - 1;\n\tfor (var i = 0; i < n.length - 1; i++) {\n\t\tif (n[i] === 1) {\n\t\t\tdec = dec + Math.pow(2, l);\n\t\t}\n\t\tl--;\n\t}\n\treturn dec;\n}\n\nfunction decimal2binary(n) {\n\tvar r = [];\n\twhile (n != 0) {\n\t\tvar rem = n % 2;\n\t\tr.push(rem);\n\t\tn = Math.floor(n / 2);\n\t}\n\tvar i = 0;\n\tvar j = r.length - 1;\n\twhile (i < j) {\n\t\tvar t = r[i];\n\t\tr[i] = r[j];\n\t\tr[j] = t;\n\t\ti++;\n\t\tj--;\n\t}\n\treturn r;\n}\n"
+}

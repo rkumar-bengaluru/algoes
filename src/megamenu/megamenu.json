@@ -111,6 +111,15 @@
                             "url" : "/algoes/20275/#/"
                         }
                     ]
+                },
+                {
+                    "name": "Other",
+                    "links": [
+                        {
+                            "name": "Decimal 2 Binary & Binary 2 Decimal",
+                            "url" : "/algoes/20277/#/"
+                        }
+                    ]
                 }
             ]
         },
