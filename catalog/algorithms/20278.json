@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20278",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20278",
+    "headline": "Algoes - Find Least Positive Number Missing! ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20278,
+    "name": "Algoes - Find Least Positive Number Missing! | rkumar-bengaluru.github.io",
+    "description": "Algoes - Find Least Positive Number Missing!",
+    "title": "Algoes - Find Least Positive Number Missing! | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Algoes - Find Least Positive Number Missing!"
+    ],
+    "sku": 20278,
+    "mpn": 20278,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > number > Find Least Positive Number Missing",
+    "complextyMetrics": {
+        "Worst-case performance": "-",
+        "Best-case performance": "-",
+        "Average performance": "-",
+        "Worst-case space complexity": "-"
+    },
+    "code": "// Given an input array find the least postive number missing.\nvar A = [\n\t[1, 2, 3],\n\t[-1, -3],\n\t[3, 4, -1, 0, -2, 2, 1, 7, -8],\n\t[2, 3, 7, 8, -1, -2, 0],\n\t[2, 3, 7, 8, -1, -2, 0]\n];\n\nfindAllMissing(A);\n\nfunction findAllMissing(A) {\n\tfor (let a of A) {\n\t\tvar positive = removeNegativeNumbers(a);\n\t\tvar res = findLeastPostiveNumberMissing(positive);\n\t\tconsole.log('Missing Number - ' + res);\n\t}\n}\n\nfunction checkIfSorted(A) {\n\tfor (var i = 1; i <= A.length - 1; i++) {\n\t\tif (A[i] < A[i - 1] || (A[i] - A[i - 1]) != 1) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\n\nfunction findLeastPostiveNumberMissing(A) {\n\tvar size = A.length - 1;\n\tif (size <= 0) {\n\t\treturn 1;\n\t}\n\tif (checkIfSorted(A)) {\n\t\treturn A[A.length - 1] + 1;\n\t}\n\tfor (var i = 0; i <= size; i++) {\n\t\tlet x = Math.abs(A[i]);\n\t\tif ((x - 1) < size && A[x - 1] > 0) {\n\t\t\tA[x - 1] = -A[x - 1];\n\t\t}\n\t}\n\tconsole.log(A);\n\tfor (var i = 0; i <= size; i++) {\n\t\tif (A[i] > 0) {\n\t\t\treturn i + 1;\n\t\t}\n\t}\n\treturn size + 1;\n}\n\nfunction removeNegativeNumbers(A) {\n\tvar res = [];\n\tfor (var i = 0; i <= A.length - 1; i++) {\n\t\tif (A[i] > 0) {\n\t\t\tres.push(A[i]);\n\t\t}\n\t}\n\treturn res;\n}\n"
+}
