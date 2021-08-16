@@ -118,6 +118,14 @@
                         {
                             "name": "Decimal 2 Binary & Binary 2 Decimal",
                             "url" : "/algoes/20277/#/"
+                        },
+                        {
+                            "name": "Find Least Positive Number Missing",
+                            "url" : "/algoes/20278/#/"
+                        },
+                        {
+                            "name": "CyclicRotation",
+                            "url" : "/algoes/20279/#/"
                         }
                     ]
                 }

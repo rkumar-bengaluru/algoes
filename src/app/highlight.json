@@ -4,7 +4,27 @@
     "itemListElement": [
         {
             "@type": "ListItem",
-            "position": 14,
+            "position": 17,
+            "item": {
+                "@id": "/algoes/20279/#/",
+                "name": "CyclicRotation!",
+                "date": "16 Aug 2021",
+                "url": "/algoes/20279/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 16,
+            "item": {
+                "@id": "/algoes/20278/#/",
+                "name": "Find Least Positive Number Missing!",
+                "date": "16 Aug 2021",
+                "url": "/algoes/20278/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 15,
             "item": {
                 "@id": "/algoes/20277/#/",
                 "name": "Decimal 2 Binary & Binary 2 Decimal!",
