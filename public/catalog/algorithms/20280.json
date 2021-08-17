@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20280",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20280",
+    "headline": "Algoes - Password Validation! ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20280,
+    "name": "Algoes - Password Validation! | rkumar-bengaluru.github.io",
+    "description": "Algoes - CyclicRotation!",
+    "title": "Algoes - Password Validation! | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Algoes - Password Validation!"
+    ],
+    "sku": 20280,
+    "mpn": 20280,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > other > Password Validation",
+    "complextyMetrics": {
+        "Worst-case performance": "-",
+        "Best-case performance": "-",
+        "Average performance": "-",
+        "Worst-case space complexity": "-"
+    },
+    "code": "// password validation\n/**\n * Rule 1 - it has to contain only alphanumerical characters (a−z, A−Z, 0−9);\n * Rule 2 - there should be an even number of letters;\n * Rule 3 - there should be an odd number of digits.\n */\n\nconsole.log(solution(\"test 5 a0A pass007 ?xy1\"));\n\nfunction checkValid(p) {\n\tvar letterCount = 0;\n\tvar digitCount = 0;\n\tvar otherCount = 0;\n\tfor (let c of p) {\n\t\tvar ascii = c.charCodeAt();\n\t\tif (ascii >= 65 && ascii <= 90) {\n\t\t\tletterCount = letterCount + 1;\n\t\t} else if (ascii >= 97 && ascii <= 122) {\n\t\t\tletterCount = letterCount + 1;\n\t\t} else if (ascii >= 48 && ascii <= 57) {\n\t\t\tdigitCount = digitCount + 1;\n\t\t} else {\n\t\t\totherCount = otherCount + 1;\n\t\t}\n\t}\n\tvar evenLetter = false;\n\tvar oddDigit = false;\n\tvar otherChar = false;\n\tif (letterCount % 2 === 0) {\n\t\tevenLetter = true;\n\t}\n\tif (digitCount % 2 === 1) {\n\t\toddDigit = true;\n\t}\n\tif (otherCount > 0) {\n\t\totherChar = true;\n\t}\n\tif (letterCount > 0 && evenLetter === true &&\n\t\toddDigit === true && otherChar === false) {\n\t\treturn p;\n\t}\n\treturn null;\n}\n\nfunction solution(passwords) {\n\tvar valid = [];\n\tvar allp = passwords.split(' ');\n\tfor (let p of allp) {\n\t\tif (checkValid(p)) {\n\t\t\tvalid.push(p);\n\t\t}\n\t}\n\tconsole.log(valid);\n\tif (valid.length === 0) {\n\t\treturn 0;\n\t}\n\tvar maxLen = valid[0].length;\n\tfor (var i = 1; i <= valid.length - 1; i++) {\n\t\tif (valid[i].length > maxLen) {\n\t\t\tmaxLen = valid[i].length;\n\t\t}\n\t}\n\treturn maxLen;\n}\n"
+}

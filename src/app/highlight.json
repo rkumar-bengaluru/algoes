@@ -4,6 +4,26 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 19,
+            "item": {
+                "@id": "/algoes/20281/#/",
+                "name": "Compute number of distinct values in an array!",
+                "date": "17 Aug 2021",
+                "url": "/algoes/20281/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 18,
+            "item": {
+                "@id": "/algoes/20280/#/",
+                "name": "Password Validation!",
+                "date": "17 Aug 2021",
+                "url": "/algoes/20280/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 17,
             "item": {
                 "@id": "/algoes/20279/#/",

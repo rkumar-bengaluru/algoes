@@ -23,6 +23,10 @@
                         {
                             "name": "Remove Duplicate",
                             "url" : "/algoes/20263/#/"
+                        },
+                        {
+                            "name": "Compute number of distinct values in an array",
+                            "url" : "/algoes/20281/#/"
                         }
                     ]
                 },
@@ -126,6 +130,10 @@
                         {
                             "name": "CyclicRotation",
                             "url" : "/algoes/20279/#/"
+                        },
+                        {
+                            "name": "Password Validation",
+                            "url" : "/algoes/20280/#/"
                         }
                     ]
                 }

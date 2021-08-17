@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20281",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20281",
+    "headline": "Algoes - Compute number of distinct values in an array! ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20281,
+    "name": "Algoes - Compute number of distinct values in an array! | rkumar-bengaluru.github.io",
+    "description": "Algoes - Compute number of distinct values in an array!",
+    "title": "Algoes - Compute number of distinct values in an array! | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Algoes - Compute number of distinct values in an array!"
+    ],
+    "sku": 20281,
+    "mpn": 20281,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > sort > Compute number of distinct values in an array",
+    "complextyMetrics": {
+        "Worst-case performance": "-",
+        "Best-case performance": "-",
+        "Average performance": "-",
+        "Worst-case space complexity": "-"
+    },
+    "code": "/**\n * Write a function\n *\n * that, given an array A consisting of N integers, returns the number of \n * distinct values in array A. For example, given array A consisting of \n * six elements such that:\n *\n * A[0] = 2 A[1] = 1 A[2] = 1\n * A[3] = 2 A[4] = 3 A[5] = 1\n * \n * the function should return 3, because there are 3 distinct values \n * appearing in array A, namely 1, 2 and 3.\n *\n * Write an efficient algorithm for the following assumptions:\n *\n */\nfunction solution(A) {\n\tif (A.length === 0) {\n\t\treturn 0;\n\t}\n\tvar map = new Map();\n\tfor (let c of A) {\n\t\tif (!map.get(c)) {\n\t\t\tmap.set(c, 1);\n\t\t} else {\n\t\t\tmap.set(c, map.get(c) + 1);\n\t\t}\n\t}\n\tvar keys = map.keys();\n\treturn map.size;\n}\n\nconsole.log(solution(generate_random(20)));\n\nfunction generate_random(size) {\n\tvar a = new Array(size).fill(0);\n\tfor (var i = 0; i < size; i++) {\n\t\ta[i] = Math.floor(Math.random() * 101);\n\t}\n\tconsole.log(a);\n\treturn a;\n}\n"
+}
