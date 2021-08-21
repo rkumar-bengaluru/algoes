@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20282",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20282",
+    "headline": "Algoes - Sum Of 2 Number! ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20282,
+    "name": "Algoes - Sum Of 2 Number! | rkumar-bengaluru.github.io",
+    "description": "Algoes - Sum Of 2 Number!",
+    "title": "Algoes - Sum Of 2 Number! | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Algoes - Sum Of 2 Number!"
+    ],
+    "sku": 20282,
+    "mpn": 20282,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > sort > Sum Of 2 Number",
+    "complextyMetrics": {
+        "Worst-case performance": "-",
+        "Best-case performance": "-",
+        "Average performance": "-",
+        "Worst-case space complexity": "-"
+    },
+    "code": "/**\n * Determine if the sum of two integers is equal to the given value.\n * \n * Given an array of integers and a value, determine if there are any \n * two integers in the array whose sum is equal to the given value. \n * Return true if the sum exists and return false if it does not.\n * \n * Write an efficient algorithm for the following assumptions:\n * Runtime Complexity: Linear, O(n)\n * Memory Complexity: Linear, O(n)\n */\nvar A = [5, 7, 1, 2, 8, 4, 3];\nconsole.log('assertion passed -->' \n + assertEquals(true, findSum(A, 10)));\n\nfunction findSum(A, R) {\n\tvar hash = new Map();\n\tfor (var i = 0; i <= A.length - 1; i++) {\n\t\tvar diff = R - A[i];\n\t\tvar k = hash.get(diff);\n\t\tif (!k) {\n\t\t\thash.set(A[i], A[i]);\n\t\t} else {\n\t\t\tif ((A[i] + k) === R) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\t}\n\treturn false;\n}\n\nfunction assertEquals(E, R) {\n\tif (R != E) {\n\t\tthrow new Error('assertion failed.');\n\t}\n\treturn true;\n}\n"
+}
