@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20283",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20282",
+    "headline": "Algoes - N Coin Change Challenge! ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20283,
+    "name": "Algoes - N Coin Change Challenge! | rkumar-bengaluru.github.io",
+    "description": "Algoes - N Coin Change Challenge!",
+    "title": "Algoes - N Coin Change Challenge! | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Algoes - N Coin Change Challenge!"
+    ],
+    "sku": 20283,
+    "mpn": 20283,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > dnamic > N Coin Change Challenge",
+    "complextyMetrics": {
+        "Worst-case performance": "-",
+        "Best-case performance": "-",
+        "Average performance": "-",
+        "Worst-case space complexity": "-"
+    },
+    "code": "/**\n * Given a value amount, if we want to make change for amount,\n * and we have infinite supply of each of Denominations = \n * { D1, D2, .. , Dm} valued coins, how many ways can we \n * make the change?\n * \n * @param {*} denominations \n * @param {*} amount \n * @returns \n */\nvar solveCoinChange = function (denominations, amount) {\n\tvar table = new Array(amount + 1).fill(0);\n\ttable[0] = 1;\n\tfor (var i = 0; i <= denominations.length - 1; i++) {\n\t\tfor (var j = denominations[i]; j <= amount; j++) {\n\t\t\ttable[j] = table[j] + table[j - denominations[i]];\n\t\t}\n\t}\n\treturn table[amount];\n}\nlet denominations = [1, 2, 5];\nlet amount = 7;\nlet result = solveCoinChange(denominations, amount)\nconsole.log(\"solveCoinChange([\" + String(denominations) +\n\t'], ' + String(amount) + ') = ' + result);\n"
+}
