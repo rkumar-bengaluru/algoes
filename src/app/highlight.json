@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 21,
+            "item": {
+                "@id": "/algoes/20283/#/",
+                "name": "N Coin Change Challenge!",
+                "date": "24 Aug 2021",
+                "url": "/algoes/20283/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 20,
             "item": {
                 "@id": "/algoes/20282/#/",

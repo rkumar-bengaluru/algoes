@@ -117,6 +117,10 @@
                         {
                             "name": "Ugly Numbers",
                             "url" : "/algoes/20275/#/"
+                        },
+                        {
+                            "name": "N Coin Change Challenge",
+                            "url" : "/algoes/20283/#/"
                         }
                     ]
                 },

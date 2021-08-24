@@ -1,27 +1,27 @@
 /**
- * How many ways can you make change with coins and a total amount.
- * var Denomination = [1,2,5]
- * var Change = 7;
+ * Given a value amount, if we want to make change for amount,
+ * and we have infinite supply of each of Denominations = 
+ * { D1, D2, .. , Dm} valued coins, how many ways can we 
+ * make the change?
+ * 
+ * @param {*} denominations 
+ * @param {*} amount 
+ * @returns 
  */
-
-var bills = [1, 2, 3];
-var change = 4;
-var ways = 0;
-var r = [];
-
-function count(A, T, n) {
-    if (T === 0) {
-        return 1;
+var solveCoinChange = function (denominations, amount) {
+    var table = new Array(amount + 1).fill(0);
+    var r = [];
+    table[0] = 1;
+    for (var i = 0; i <= denominations.length - 1; i++) {
+        for (var j = denominations[i]; j <= amount; j++) {
+            table[j] = table[j] + table[j - denominations[i]];
+            r.push(table);
+        }
     }
-
-    if (n < 0 || T < 0) {
-        return 0;
-    }
-    var include = count(A, T - A[n], n);
-    var exclude = count(A, T, n - 1);
-    console.log(include + ',' + exclude);
-    return include + exclude;
-
+    return table[amount];
 }
-var ways = count(bills, change, bills.length - 1);
-console.log(r);
+let denominations = [1, 2, 5];
+let amount = 7;
+let result = solveCoinChange(denominations, amount)
+console.log("solveCoinChange([" + String(denominations) +
+    '], ' + String(amount) + ') = ' + result);
