@@ -6,7 +6,7 @@
         "CreativeWork",
         "Person"
     ],
-    "url": "https://rkumar-bengaluru.github.io/algoes/20282",
+    "url": "https://rkumar-bengaluru.github.io/algoes/20283",
     "headline": "Algoes - N Coin Change Challenge! ",
     "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
     "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
@@ -23,7 +23,7 @@
         "@type": "Brand",
         "name": "Rupak Kumar..."
     },
-    "category": " > home > algorithm > dnamic > N Coin Change Challenge",
+    "category": " > home > algorithm > dynamic > N Coin Change Challenge",
     "complextyMetrics": {
         "Worst-case performance": "-",
         "Best-case performance": "-",

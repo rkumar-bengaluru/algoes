@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20284",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/202824",
+    "headline": "Algoes - Staircase Challenge! ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20284,
+    "name": "Algoes - Staircase Challenge! | rkumar-bengaluru.github.io",
+    "description": "Algoes - Staircase Challenge!",
+    "title": "Algoes - Staircase Challenge! | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Algoes - Staircase Challenge!"
+    ],
+    "sku": 20284,
+    "mpn": 20284,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > recursion > Staircase Challenge",
+    "complextyMetrics": {
+        "Worst-case performance": "-",
+        "Best-case performance": "-",
+        "Average performance": "-",
+        "Worst-case space complexity": "-"
+    },
+    "code": "/**\n * This is a staircase of size : N = 4\n * !!!#\n * !!##\n * !###\n * ####\n * Its base and height are both equal to n. It is drawn \n * using # symbols and !. The last line is not preceded \n * by any !.\n *\n * Write a program that prints a staircase of size .\n * \n * @param {*} height \n * @param {*} base \n */\nfunction printStairs(height, base) {\n\tif (height > 0) {\n\t\tprintStairs(height - 1, base + 1);\n\t\tvar output = '';\n\t\tfor (var i = 0; i <= base; i++) {\n\t\t\toutput += '!';\n\t\t}\n\t\tfor (var j = base; j < base + height; j++) {\n\t\t\toutput += '#'\n\t\t}\n\t\tconsole.log(output);\n\t}\n}\nprintStairs(6, 0);\n"
+}

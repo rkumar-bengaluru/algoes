@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 22,
+            "item": {
+                "@id": "/algoes/20284/#/",
+                "name": "Staircase Challenge!",
+                "date": "24 Aug 2021",
+                "url": "/algoes/20284/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 21,
             "item": {
                 "@id": "/algoes/20283/#/",

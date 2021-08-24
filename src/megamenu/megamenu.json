@@ -104,6 +104,10 @@
                         {
                             "name": "Reverse a Linked List",
                             "url" : "/algoes/20271/#/"
+                        },
+                        {
+                            "name": "Staircase Challenge",
+                            "url" : "/algoes/20284/#/"
                         }
                     ]
                 },
