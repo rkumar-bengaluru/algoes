@@ -3,7 +3,7 @@ import React from 'react';
 import { UnControlled as CodeMirror } from 'react-codemirror2'
 import './app.css';
 import hiData from './highlight.json';
-
+import Home from './home'
 require('codemirror/lib/codemirror.css');
 require('codemirror/mode/javascript/javascript');
 
@@ -16,7 +16,7 @@ class App extends React.Component {
 		this.result = React.createRef();
 		// This binding is necessary to make `this` work in the callback
 		this.handleClick = this.handleClick.bind(this);
-		this.code = '// quick sort algorithm\nfunction quickSort (items) {\n\tconst length = items.length;\n\tif (length <= 1) {\n\t\treturn items;\n\t}\n\tconst PIVOT = items[0];\n\tconst GREATER = [];\n\tconst LESSER = [];\n\tfor (let i = 1; i < length; i++) {\n\t\tif (items[i] > PIVOT) {\n\t\t\tGREATER.push(items[i]);\n\t\t} else {\n\t\t\tLESSER.push(items[i]);\n\t\t}\n\t}\n\tlet sorted = quickSort(LESSER);\n\tsorted.push(PIVOT);\n\tsorted = sorted.concat(quickSort(GREATER));\n\treturn sorted;\n}\nlet ar = [0, 5, 3, 2, 2];\n// Array before Sort\nconsole.log(ar);\nar = quickSort(ar);\n// Array after sort\nconsole.log(ar);'
+		this.code = "/**\n * This is a staircase of size : N = 4\n * !!!#\n * !!##\n * !###\n * ####\n * Its base and height are both equal to n. It is drawn \n * using # symbols and !. The last line is not preceded \n * by any !.\n *\n * Write a program that prints a staircase of size .\n * \n * @param {*} height \n * @param {*} base \n */\nfunction printStairs(height, base) {\n\tif (height > 0) {\n\t\tprintStairs(height - 1, base + 1);\n\t\tvar output = '';\n\t\tfor (var i = 0; i <= base; i++) {\n\t\t\toutput += '!';\n\t\t}\n\t\tfor (var j = base; j < base + height; j++) {\n\t\t\toutput += '#'\n\t\t}\n\t\tconsole.log(output);\n\t}\n}\nprintStairs(6, 0);\n";
 	}
 
 	componentDidMount() {
@@ -122,6 +122,9 @@ class App extends React.Component {
 		console.log('loading...');
 		return (
 			<div className="content">
+				<div className="row justify-content-around m-1">
+					<Home/>
+				</div>
 				<div className="row justify-content-around m-1">
 					<div className="col col-8 overflow-auto border">
 						<h1>let's code to learn algorithm ...</h1>

@@ -1,13 +1,14 @@
 // Dependencies
 import React from 'react';
-
-import './app.css';
 import { UnControlled as CodeMirror } from 'react-codemirror2'
+import './app.css';
+import hiData from './highlight.json';
+
 require('codemirror/lib/codemirror.css');
 require('codemirror/mode/javascript/javascript');
 
-class App extends React.Component {
 
+class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { isRunning: false };
@@ -15,7 +16,7 @@ class App extends React.Component {
 		this.result = React.createRef();
 		// This binding is necessary to make `this` work in the callback
 		this.handleClick = this.handleClick.bind(this);
-		this.code = 'function sayHello() {\n\tconsole.log(\'hello to browser\');\n}\nsayHello();'
+		this.code = '// quick sort algorithm\nfunction quickSort (items) {\n\tconst length = items.length;\n\tif (length <= 1) {\n\t\treturn items;\n\t}\n\tconst PIVOT = items[0];\n\tconst GREATER = [];\n\tconst LESSER = [];\n\tfor (let i = 1; i < length; i++) {\n\t\tif (items[i] > PIVOT) {\n\t\t\tGREATER.push(items[i]);\n\t\t} else {\n\t\t\tLESSER.push(items[i]);\n\t\t}\n\t}\n\tlet sorted = quickSort(LESSER);\n\tsorted.push(PIVOT);\n\tsorted = sorted.concat(quickSort(GREATER));\n\treturn sorted;\n}\nlet ar = [0, 5, 3, 2, 2];\n// Array before Sort\nconsole.log(ar);\nar = quickSort(ar);\n// Array after sort\nconsole.log(ar);'
 	}
 
 	componentDidMount() {
@@ -63,8 +64,8 @@ class App extends React.Component {
 
 		var i = document.createElement('IFRAME');
 		i.id = 'result';
-		i.className = 'beauty-input';
-		i.style.height = '300px';
+		i.className = 'console-output';
+		i.style.height = '600px';
 		i.style.color = 'red';
 		//  i.style.width = '97%';
 		i.style.width = '100%';
@@ -116,12 +117,56 @@ class App extends React.Component {
 		console.log('handleClick ->' + this.state.isRunning);
 	}
 
+
 	render() {
 		console.log('loading...');
 		return (
 			<div className="content">
 				<div className="row justify-content-around m-1">
-					<button onClick={() => this.handleClick()} type="button" className="btn btn-outline-secondary" id="runscript">Run</button>
+					<div className="col col-8 overflow-auto border">
+						<h1>let's code to learn algorithm ...</h1>
+						<p className="text-justify">In mathematics and computer science, an <mark className="text-primary font-weight-bold">algorithm</mark>
+							is a finite sequence of	well-defined, computer-implementable instructions, typically to solve a
+							class of specific problems or to <mark className="text-primary font-weight-bold">perform a computation.</mark>
+							This tool is a kick-starter for <mark className="text-primary text-light bg-dark">students</mark>,
+							<mark className="text-primary text-light bg-dark">developers</mark> to try writing
+							a piece of code directly in the browser and see the simulative results in
+							terms of <mark className="text-primary text-light bg-dark">time and space complexity.</mark>
+						</p>
+						<h3>Below is how this online tool is going to help :- </h3><br />
+						<span><ol>
+							<li><mark className="text-primary font-weight-bold">Instant Search</mark>
+								for an algorithm/regex/patterns for your project.
+								(Example Search - <mark className="text-primary">Remove Duplicates from Array)</mark></li>
+							<li>You can <mark className="text-primary font-weight-bold">write your code here</mark>
+								and test with your inputs and see the <mark className="text-primary font-weight-bold">time and space complexity of your code.</mark></li>
+						</ol></span>
+					</div>
+					<div className="col overflow-auto border col-sm">
+						<h2>What's cooking today ...</h2>
+						<span><ol>
+							{hiData.itemListElement.map((item, index) => {
+								return (
+									<li key={index} ><a href={item.item.url}> {item.item.date} - {item.item.name} </a></li>
+								)
+							})}
+							
+						</ol></span>
+					</div>
+				</div>
+
+
+				<div className="row justify-content-around m-1">
+
+					<div className="col overflow-auto border">
+
+					</div>
+				</div>
+
+
+				<div className="row justify-content-around m-1">
+					<h5>See the below sample code, run it and see it live in action :- </h5><br />
+					<button onClick={() => this.handleClick()} type="button" className="btn btn-primary" id="runscript">Run</button>
 				</div>
 				<div className="row justify-content-around border-bottom">
 					<div className="col overflow-auto border cm-jsstudio">
@@ -144,17 +189,16 @@ class App extends React.Component {
 									continueComments: "Enter",
 									extraKeys: { "Ctrl-Q": "toggleComment" }
 								}}
-								onChange={(editor, data, value) => {
-								}}
 							/>
 						</div>
 					</div>
-					<div className="col overflow-auto border cm-jsstudio" >
+					<div className="col overflow-auto border cm-jsstudio-small" >
 						<label >Console Log</label>
 						<div id="error_area" className="jsstudio-error"> </div>
 						<div id="results_area" ref={this.result} className="jsstudio-results"> </div>
 					</div>
 				</div>
+
 			</div>
 		);
 	}
