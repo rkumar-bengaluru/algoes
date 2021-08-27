@@ -4,6 +4,26 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 24,
+            "item": {
+                "@id": "/algoes/20286/#/",
+                "name": "Palindrome Partitioning!",
+                "date": "27 Aug 2021",
+                "url": "/algoes/20286/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 23,
+            "item": {
+                "@id": "/algoes/20285/#/",
+                "name": "N gas stations!",
+                "date": "27 Aug 2021",
+                "url": "/algoes/20285/#/"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 22,
             "item": {
                 "@id": "/algoes/20284/#/",

@@ -74,6 +74,10 @@
                         {
                             "name": "Palindrome String!",
                             "url" : "/algoes/20276/#/"
+                        },
+                        {
+                            "name": "Palindrome Partitioning!",
+                            "url" : "/algoes/20286/#/"
                         }
                     ]
                 },
@@ -146,6 +150,10 @@
                         {
                             "name": "Password Validation",
                             "url" : "/algoes/20280/#/"
+                        },
+                        {
+                            "name": "N gas stations",
+                            "url" : "/algoes/20285/#/"
                         }
                     ]
                 }
