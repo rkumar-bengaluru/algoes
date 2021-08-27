@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20285",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20285",
+    "headline": "Algoes -  N gas stations! ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20285,
+    "name": "Algoes -  N gas stations! | rkumar-bengaluru.github.io",
+    "description": "Algoes -  N gas stations!",
+    "title": "Algoes -  N gas stations! | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Algoes -  N gas stations!"
+    ],
+    "sku": 20285,
+    "mpn": 20285,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > other >  N gas stations",
+    "complextyMetrics": {
+        "Worst-case performance": "-",
+        "Best-case performance": "-",
+        "Average performance": "-",
+        "Worst-case space complexity": "-"
+    },
+    "code": "/**\n * There are N gas stations along a circular route, where the \n * amount of gas at station i is arr[i]. You have a car with \n * an unlimited gas tank and it costs cost[i] of gas to travel \n * from station i to its next station (i+1). At the beginning \n * of the journey, the tank is empty at one of the gas stations.\n * \n * Return the minimum starting gas station’s index if you need \n * to travel around the circuit once, otherwise return -1\n * Input: \n * arr[] = [1,2,3,4,5]\n * cost[] = [3,4,5,1,2]\n * Output: 3\n * @param {*} gas \n * @param {*} cost \n */\nfunction solveGasStationProblem(gas, cost) {\n\tif (gas.length != cost.length) {\n\t\tthrow new Error('unexpected input');\n\t}\n\tvar start = 0;\n\tvar end = 1;\n\tvar tank = gas[0] - cost[0];\n\t// if you start from the 0, then the end is 4\n\t// if you start from 1, then end is 0\n\twhile (start != end) {\n\t\twhile (tank < 0 && start != end) {\n\t\t\t// roll back the balance because you \n\t\t\t// cannnot reach to next stattion \n\t\t\t// with -ve fuel tank.\n\t\t\ttank = tank - (gas[start] - cost[start]);\n\t\t\t// start fresh from next gas station.\n\t\t\tstart = (start + 1) % gas.length;\n\t\t\tif (start === 0) {\n\t\t\t\t// there is no gas station through which one\n\t\t\t\t// can complete the circuit.\n\t\t\t\treturn -1;\n\t\t\t}\n\t\t}\n\t\t// refuel at tank with next gas station (which is end)\n\t\ttank = tank + (gas[end] - cost[end]);\n\t\tend = (end + 1) % gas.length;\n\t}\n\tif (tank < 0) {\n\t\t// still no way to complete the circuit.\n\t\treturn -1;\n\t}\n\treturn start;\n}\n\nvar gas = [1, 2, 3, 4, 5];\nvar cost = [3, 4, 5, 1, 2];\nconsole.log('Circuit Complete with starting Gas Station at : ' \n + solveGasStationProblem(gas, cost));\n/**\n * Cyclic rotate an array by 1.\n * \n * Input :- [1,3,5,6,7]\n * Ouput :- [7,1,3,5,6]\n * \n * @param {} A \n */\nfunction rotate(A) {\n\tvar start = 0;\n\tvar end = 1;\n\tvar curr = A[0];\n\tvar last = A[A.length - 1];\n\twhile (start != end) {\n\t\tvar t = A[end];\n\t\tA[end] = curr;\n\t\tcurr = t;\n\t\tstart = (start + 1) % A.length;\n\t\tif (end != 0)\n\t\t\tend = (end + 1) % A.length;\n\t}\n\tA[0] = last;\n}\n\nvar A = [1, 3, 5, 6, 7];\n\nrotate(A);\nconsole.log(A);\n"
+}
