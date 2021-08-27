@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20286",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20286",
+    "headline": "Algoes -  Palindrome Partitioning! ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20286,
+    "name": "Algoes -  Palindrome Partitioning! | rkumar-bengaluru.github.io",
+    "description": "Algoes -  Palindrome Partitioning!",
+    "title": "Algoes -  Palindrome Partitioning! | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Algoes -  Palindrome Partitioning!"
+    ],
+    "sku": 20286,
+    "mpn": 20286,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > string >  Palindrome Partitioning",
+    "complextyMetrics": {
+        "Worst-case performance": "-",
+        "Best-case performance": "-",
+        "Average performance": "-",
+        "Worst-case space complexity": "-"
+    },
+    "code": "/**\n * Given a string, a partitioning of the string is a palindrome \n * partitioning if every substring of the partition is a \n * palindrome. For example, “aba|b|bbabb|a|b|aba” is a palindrome \n * partitioning of “ababbbabbababa”. Determine the fewest cuts \n * needed for a palindrome partitioning of a given string. \n * For example, minimum of 3 cuts are needed for “ababbbabbababa”. \n * The three cuts are “a|babbbab|b|ababa”. If a string is a \n * palindrome, then minimum 0 cuts are needed. If a string of \n * length n containing all different characters, \n * then minimum n-1 cuts are needed. \n */\nvar A = \"ababbbabbababa\";\nconsole.log(minPalPartion(A));\n\nfunction minPalPartion(A) {\n\tvar chars = [...A];\n\tconsole.log(chars);\n\tvar start = 0;\n\tvar end = A.length - 1;\n\tvar count = 0;\n\twhile (end > start) {\n\t\tvar l = findLongestMatchingPalindrome(A, start, end);\n\t\tif (l > 0) {\n\t\t\tconsole.log(A.substring(l, end + 1));\n\t\t\tstart = 0;\n\t\t\tend = l - 1;\n\t\t\tcount++;\n\t\t} else {\n\t\t\tstart = start + 1;\n\t\t}\n\t}\n\treturn count;\n}\n\nfunction findLongestMatchingPalindrome(A, l, r) {\n\tif (l < r) {\n\t\tvar i = l;\n\t\tvar j = r;\n\t\twhile (i < j) {\n\t\t\tif (A[i] != A[j]) {\n\t\t\t\t//console.log(i + ':-' + j + ':' + A[i] + ':' + A[j]);\n\t\t\t\treturn findLongestMatchingPalindrome(A, l + 1, r);\n\t\t\t} else {\n\t\t\t\t//console.log(i + ':' + j + ':' + A[i] + ':' + A[j]);\n\t\t\t\ti++;\n\t\t\t\tj--;\n\t\t\t}\n\t\t}\n\t\treturn l;\n\t}\n}\n"
+}
