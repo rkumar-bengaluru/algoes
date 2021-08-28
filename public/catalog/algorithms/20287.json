@@ -1,0 +1,34 @@
+{
+    "@context": "https://schema.org",
+    "@id": "https://rkumar-bengaluru.github.io/algoes/20287",
+    "@type": "WebSite",
+    "additionalType": [
+        "CreativeWork",
+        "Person"
+    ],
+    "url": "https://rkumar-bengaluru.github.io/algoes/20287",
+    "headline": "Algoes -  PassingCars! ",
+    "image": "https://rkumar-bengaluru.github.io/algoes/img/icon.svg",
+    "specialty": "algorithms, data structures, design patterns, regular expresssion, interview questions",
+    "productID": 20287,
+    "name": "Algoes -  PassingCars! | rkumar-bengaluru.github.io",
+    "description": "Algoes -  PassingCars!",
+    "title": "Algoes -  PassingCars! | rkumar-bengaluru.github.io",
+    "keywords": [
+        "Algoes -  PassingCars!"
+    ],
+    "sku": 20287,
+    "mpn": 20287,
+    "brand": {
+        "@type": "Brand",
+        "name": "Rupak Kumar..."
+    },
+    "category": " > home > algorithm > other >  PassingCars",
+    "complextyMetrics": {
+        "Worst-case performance": "-",
+        "Best-case performance": "-",
+        "Average performance": "-",
+        "Worst-case space complexity": "-"
+    },
+    "code": "/**\n * A non-empty array A consisting of N integers is given. \n * The consecutive elements of array A represent consecutive \n * cars on a road.\n * The goal is to count passing cars. We say that a pair of \n * cars (P, Q), where 0 ≤ P < Q < N, is passing when P is \n * traveling to the east and Q is traveling to the west.\n * For example, consider array A such that:\n *\n * A[0] = 0\n * A[1] = 1\n * A[2] = 0\n * A[3] = 1\n * A[4] = 1\n * We have five pairs of passing cars: (0, 1), (0, 3), (0, 4), (2, 3), (2, 4).\n */\n\nvar A = [0, 1, 0, 1, 1];\nconsole.log(findPassingCars(A));\n\nfunction findPassingCars(A) {\n\tvar counter = 0;\n\tvar factor = 1;\n\tvar dir = A[0];\n\tfor (var i = 1; i <= A.length - 1; i++) {\n\t\tif (A[i] === dir) {\n\t\t\tfactor = factor + 1;\n\t\t} else {\n\t\t\tcounter = counter + factor * 1;\n\t\t}\n\t}\n\tif (counter > 1000000000) {\n\t\treturn -1;\n\t}\n\treturn counter;\n}\n"
+}
