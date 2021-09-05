@@ -11,7 +11,7 @@ require('codemirror/mode/javascript/javascript');
 class App extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { isRunning: false };
+		this.state = { isRunning: false, oldChallenges: [] };
 		this.cm = React.createRef();
 		this.result = React.createRef();
 		// This binding is necessary to make `this` work in the callback
@@ -21,6 +21,17 @@ class App extends React.Component {
 
 	componentDidMount() {
 		this.cm.current.editor.setSize(600, "100%");
+		this.setState({
+			oldChallenges: this.findOld()
+		});
+	}
+
+	findOld() {
+		var res = [];
+		for (var i = 11; i <= hiData.itemListElement.length - 1; i++) {
+			res.push(hiData.itemListElement[i]);
+		}
+		return res;
 	}
 
 	async toggle() {
@@ -123,7 +134,7 @@ class App extends React.Component {
 		return (
 			<div className="content">
 				<div className="row justify-content-around m-1">
-					<Home/>
+					<Home />
 				</div>
 				<div className="row justify-content-around m-1">
 					<div className="col col-8 overflow-auto border">
@@ -146,14 +157,14 @@ class App extends React.Component {
 						</ol></span>
 					</div>
 					<div className="col overflow-auto border col-sm">
-						<h2>What's cooking today ...</h2>
+						<h2>Old ...</h2>
 						<span><ol>
-							{hiData.itemListElement.map((item, index) => {
+							{this.state.oldChallenges.map((item, index) => {
 								return (
 									<li key={index} ><a href={item.item.url}> {item.item.date} - {item.item.name} </a></li>
 								)
 							})}
-							
+
 						</ol></span>
 					</div>
 				</div>

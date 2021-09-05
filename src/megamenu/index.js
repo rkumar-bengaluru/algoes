@@ -21,7 +21,7 @@ class MegaMenu extends React.Component {
                         {menuData.offers.map((offer, index) => {
                             return (
                                 <li className="top-level-link" key={index}>
-                                    <a href='/' className="mega-menu text-secondary"><span>{offer.name}</span></a>
+                                    <a href={offer.url} className="mega-menu text-secondary"><span>{offer.name}</span></a>
                                     <div className="sub-menu-block">
                                         <div className="row">
                                             {offer.subMenus.map((subMenu, index) => {

@@ -6,7 +6,7 @@
             "@type": "Offer",
             "name": "Algorithms",
             "availability": "https://schema.org/InStock",
-            "url": "/algorithm",
+            "url": "/algoes/#/algorithm/",
             "subMenus": [
                 {
                     "name": "Sorts",
@@ -167,7 +167,75 @@
             "@type": "Offer",
             "name": "Design Patterns",
             "availability": "https://schema.org/InStock",
-            "url": "/designpatterns/",
+            "url": "/algoes/#/designpatterns/",
+            "subMenus": [
+                {
+                    "name": "Comming Soon...",
+                    "links": [
+                        {
+                            "name": "Comming Sooon...",
+                            "url" : "/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Offer",
+            "name": "Java 8",
+            "availability": "https://schema.org/InStock",
+            "url": "/algoes/#/java8/",
+            "subMenus": [
+                {
+                    "name": "Comming Soon...",
+                    "links": [
+                        {
+                            "name": "Comming Sooon...",
+                            "url" : "/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Offer",
+            "name": "React",
+            "availability": "https://schema.org/InStock",
+            "url": "/algoes/#/react/",
+            "subMenus": [
+                {
+                    "name": "Comming Soon...",
+                    "links": [
+                        {
+                            "name": "Comming Sooon...",
+                            "url" : "/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Offer",
+            "name": "NodeJs",
+            "availability": "https://schema.org/InStock",
+            "url": "/algoes/#/nodejs/",
+            "subMenus": [
+                {
+                    "name": "Comming Soon...",
+                    "links": [
+                        {
+                            "name": "Comming Sooon...",
+                            "url" : "/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Offer",
+            "name": "AWS",
+            "availability": "https://schema.org/InStock",
+            "url": "/algoes/#/aws/",
             "subMenus": [
                 {
                     "name": "Comming Soon...",
