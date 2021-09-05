@@ -7,6 +7,7 @@ import Algorithm from './algorithm';
 import Search from './search';
 import Algo from './algo';
 import DesignPatternHome from './dp';
+import singleton from './dp/singleton'
 import Java8Home from './java8';
 import ReactHome from './react';
 import NodeJsHome from './nodejs';
@@ -21,6 +22,7 @@ ReactDOM.render(
         <Route exact path="/" component={App} />
         <Route exact path="/algorithm/" component={Algo} />
         <Route exact path="/designpatterns/" component={DesignPatternHome} />
+        <Route exact path="/designpatterns/singleton" component={singleton} />
         <Route exact path="/java8/" component={Java8Home} />
         <Route exact path="/react/" component={ReactHome} />
         <Route exact path="/nodejs/" component={NodeJsHome} />
