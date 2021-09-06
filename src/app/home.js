@@ -7,88 +7,127 @@ class Home extends React.Component {
 
     constructor(props) {
         super(props);
-        this.handleClick = this.handleClick.bind(this);
-        this.state = { currentChallenges: [], news: [] };
-
+        this.state = {
+            category: [],
+            currentCategory: 'Algorithms',
+            blogs: [],
+            currentBlog: 'Sorts',
+            subBlogs: [],
+            new: []
+        }
     }
 
     componentDidMount() {
-        this.setState({
-            currentChallenges: this.findTarget("Sorts"),
-            news : this.findNews()
-        });
+        this.fetchAllCategory();
+        this.fetchNew();
     }
 
-    findNews() {
+    fetchNew() {
         var res = [];
         for (var i = 0; i <= 10; i++) {
             res.push(hiData.itemListElement[i]);
         }
-        return res;
+        this.setState({ new: res });
     }
 
-    findTarget(name) {
-        var r = [];
-        for (var i = 0; i <= menuData.offers[0].subMenus.length - 1; i++) {
-            var offer = menuData.offers[0].subMenus[i];
-            if (offer.name.trim().toLowerCase() === name.trim().toLowerCase()) {
-                r = offer.links;
+    fetchAllCategory() {
+        this.setState({ category: menuData.offers }, () => {
+            this.fetchBlogs(this.state.currentCategory);
+        })
+    }
+
+    fetchBlogs(blog) {
+        for (let c of this.state.category) {
+            if (c.name === blog) {
+                this.setState({ blogs: c.subMenus }, () => {
+                    this.fetchSubBlogs(this.state.currentBlog);
+                });
+                return c;
             }
         }
+    }
 
-        return r;
+    fetchSubBlogs(blog) {
+        for (let c of this.state.blogs) {
+            if (c.name === blog) {
+                this.setState({ subBlogs: c.links });
+            }
+        }
     }
 
     handleClick(e) {
         e.preventDefault();
         var target = e.target.textContent;
         target = target.substring(0, target.length - 1);
-        this.setState({ currentChallenges: this.findTarget(target) });
+        this.setState({ currentCategory: target });
+        var current = this.fetchBlogs(target);
+
+        this.setState({ subBlogs: current.subMenus[0].links });
+        console.log(current.subMenus[0].links);
     }
 
-    renderChallangesMenu() {
+    handleSubCat(e) {
+        e.preventDefault();
+        var target = e.target.textContent;
+        target = target.substring(0, target.length - 1);
+        this.setState({ currentBlog: target });
+        this.fetchSubBlogs(target);
+    }
+
+    renderBlogs() {
         return (
             <ul className="list-group">
-                {menuData.offers[0].subMenus.map((offer, index) => {
+                {this.state.blogs.map((blog, index) => {
                     return (
-                        <div key={index} className="">
-                            <a href='#'>
-                                <li onClick={this.handleClick.bind(this)} className="list-group-item d-flex justify-content-between align-items-center shadow  mb-2 bg-white rounded ">
-                                    {offer.name}
-                                    <span className="badge badge-primary badge-pill">{offer.links.length}</span>
-                                </li>
-                            </a>
-                        </div>
+                        <a href='#' key={index}>
+                            <li onClick={this.handleSubCat.bind(this)} className="list-group-item d-flex justify-content-between align-items-center shadow  mb-2 bg-white rounded ">
+                                {blog.name}
+                                <span className="badge badge-primary badge-pill">{blog.links.length}</span>
+                            </li>
+                        </a>
                     )
                 })}
             </ul>
-        );
+        )
     }
 
-    renderChallanges() {
+    renderSubBlogs() {
         return (
             <ul className="list-group">
-                {this.state.currentChallenges.map((offer, index) => {
+                {this.state.subBlogs.map((blog, index) => {
                     return (
-                        <div key={index} className="">
-                            <a href={offer.url}>
-                                <li className="list-group-item d-flex justify-content-between align-items-center shadow  mb-2 bg-white rounded ">
-                                    {offer.name}
-                                </li>
-                            </a>
-                        </div>
+                        <a href={blog.url} key={index}>
+                            <li className="list-group-item d-flex justify-content-between align-items-center shadow  mb-2 bg-white rounded ">{blog.name}</li>
+                        </a>
                     )
                 })}
             </ul>
-        );
+        )
     }
 
-    renderHighLight() {
+    renderAllCategory() {
+        return (
+            <ul className="list-group">
+                {this.state.category.map((offer, index) => {
+                    return (
+                        <a href="#" key={index}>
+                            <li onClick={this.handleClick.bind(this)} className="list-group-item d-flex justify-content-between align-items-center shadow  mb-2 bg-white rounded ">
+                                {offer.name}
+                                <span className="badge badge-primary badge-pill">{offer.subMenus.length}</span>
+                            </li>
+                        </a>
+                    )
+                })}
+            </ul>
+        )
+    }
+
+    renderNew() {
         return (
             <div className="col overflow-auto border col-sm">
                 <h2>What's New ...</h2>
                 <span><ol>
-                    {this.state.news.map((item, index) => {
+                    {this.state.new.map((item, index) => {
                         return (
                             <li key={index} ><a href={item.item.url}> {item.item.date} - {item.item.name} </a></li>
                         )
@@ -99,19 +138,23 @@ class Home extends React.Component {
         );
     }
 
+
     render() {
         console.log('loading...');
         return (
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-sm-4">
-                        {this.renderChallangesMenu()}
+                    <div className="col-sm-3">
+                        {this.renderAllCategory()}
                     </div>
-                    <div className="col-sm-4" >
-                        {this.renderChallanges()}
+                    <div className="col-sm-3" >
+                        {this.renderBlogs()}
                     </div>
-                    <div className="col-sm-4" >
-                        {this.renderHighLight()}
+                    <div className="col-sm-3" >
+                        {this.renderSubBlogs()}
+                    </div>
+                    <div className="col-sm-3">
+                        {this.renderNew()}
                     </div>
                 </div>
             </div>

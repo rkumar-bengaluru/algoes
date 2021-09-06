@@ -9,6 +9,7 @@ import Algo from './algo';
 import DesignPatternHome from './dp';
 import singleton from './dp/singleton'
 import Java8Home from './java8';
+import Lambda from './java8/lambda'
 import ReactHome from './react';
 import NodeJsHome from './nodejs';
 import AwsHome from './aws';
@@ -24,6 +25,7 @@ ReactDOM.render(
         <Route exact path="/designpatterns/" component={DesignPatternHome} />
         <Route exact path="/designpatterns/singleton" component={singleton} />
         <Route exact path="/java8/" component={Java8Home} />
+        <Route exact path="/java8/lambda" component={Lambda} />
         <Route exact path="/react/" component={ReactHome} />
         <Route exact path="/nodejs/" component={NodeJsHome} />
         <Route exact path="/aws/" component={AwsHome} />
