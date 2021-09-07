@@ -300,11 +300,11 @@
                     ]
                 },
                 {
-                    "name": "Advanced",
+                    "name": "Hooks",
                     "links": [
                         {
-                            "name": "Hooks",
-                            "url" : "/algoes/#/react/advanced/hooks/"
+                            "name": "useState",
+                            "url" : "/algoes/#/react/useState"
                         }
                     ]
                 },

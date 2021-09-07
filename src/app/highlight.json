@@ -4,7 +4,17 @@
     "itemListElement": [
         {
             "@type": "ListItem",
-            "position": 25,
+            "position": 26,
+            "item": {
+                "@id": "/algoes/#/react/useState/",
+                "name": "React useState!",
+                "date": "07 Seps 2021",
+                "url": "/algoes/#/react/useState/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 26,
             "item": {
                 "@id": "/algoes/#/java8/lambda/",
                 "name": "Java 8 Lambda!",

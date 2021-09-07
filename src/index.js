@@ -11,6 +11,7 @@ import singleton from './dp/singleton'
 import Java8Home from './java8';
 import Lambda from './java8/lambda'
 import ReactHome from './react';
+import ReactUseStateHooks from './react/hooks';
 import NodeJsHome from './nodejs';
 import AwsHome from './aws';
 
@@ -27,6 +28,7 @@ ReactDOM.render(
         <Route exact path="/java8/" component={Java8Home} />
         <Route exact path="/java8/lambda" component={Lambda} />
         <Route exact path="/react/" component={ReactHome} />
+        <Route exact path="/react/useState" component={ReactUseStateHooks} />
         <Route exact path="/nodejs/" component={NodeJsHome} />
         <Route exact path="/aws/" component={AwsHome} />
         <Route exact path="/algorithm/:id" component={Algorithm} />
