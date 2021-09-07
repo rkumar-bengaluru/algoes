@@ -6,6 +6,16 @@
             "@type": "ListItem",
             "position": 25,
             "item": {
+                "@id": "/algoes/#/java8/lambda/",
+                "name": "Java 8 Lambda!",
+                "date": "07 Seps 2021",
+                "url": "/algoes/#/java8/lambda/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 25,
+            "item": {
                 "@id": "/algoes/20287/#/",
                 "name": "Passing Cars!",
                 "date": "28 Aug 2021",
