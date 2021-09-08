@@ -181,19 +181,13 @@
                 {
                     "name": "Structural Design Patterns",
                     "links": [
-                        {
-                            "name": "Comming Sooon...S",
-                            "url" : "/"
-                        }
+                        
                     ]
                 },
                 {
                     "name": "Behavioral Design Patterns",
                     "links": [
-                        {
-                            "name": "Comming Sooon...B",
-                            "url" : "/"
-                        }
+                       
                     ]
                 }
             ]
@@ -210,75 +204,6 @@
                         {
                             "name": "Lambda expressions",
                             "url" : "/algoes/#/java8/lambda/"
-                        },
-                        {
-                            "name": "Method references",
-                            "url" : "/algoes/#/java8/mref/"
-                        },
-                        {
-                            "name": "Functional interfaces",
-                            "url" : "/algoes/#/java8/funci/"
-                        },
-                        {
-                            "name": "Stream API",
-                            "url" : "/algoes/#/java8/stream/"
-                        },
-                        {
-                            "name": "Default methods",
-                            "url" : "/algoes/#/java8/defmeth/"
-                        },
-                        {
-                            "name": "Base64 Encode Decode",
-                            "url" : "/algoes/#/java8/base64/"
-                        },
-                        {
-                            "name": "Static methods in interface",
-                            "url" : "/algoes/#/java8/statici/"
-                        },
-                        {
-                            "name": "Optional class",
-                            "url" : "/algoes/#/java8/optc/"
-                        },
-                        {
-                            "name": "Collectors class",
-                            "url" : "/algoes/#/java8/collec/"
-                        },
-                        {
-                            "name": "ForEach() method",
-                            "url" : "/algoes/#/java8/foreach/"
-                        },
-                        {
-                            "name": "Parallel array sorting",
-                            "url" : "/algoes/#/java8/psort/"
-                        },
-                        {
-                            "name": "Nashorn JavaScript Engine",
-                            "url" : "/algoes/#/java8/nashorn/"
-                        },
-                        {
-                            "name": "Type and Repating Annotations",
-                            "url" : "/algoes/#/java8/typerepa/"
-                        },
-                        {
-                            "name": "IO Enhancements",
-                            "url" : "/algoes/#/java8/ioe/"
-                        },
-                        {
-                            "name": "Concurrency Enhancements",
-                            "url" : "/algoes/#/java8/cone/"
-                        },
-                        {
-                            "name": "JDBC Enhancements",
-                            "url" : "/algoes/#/java8/jdbc/"
-                        }
-                    ]
-                },
-                {
-                    "name": "Util",
-                    "links": [
-                        {
-                            "name": "Deque",
-                            "url" : "/algoes/#/java8/deque/"
                         }
                     ]
                 }
@@ -291,11 +216,11 @@
             "url": "/algoes/#/react/",
             "subMenus": [
                 {
-                    "name": "Intro",
+                    "name": "JavaScript",
                     "links": [
                         {
-                            "name": "JSX",
-                            "url" : "/algoes/#/react/intro/jsx/"
+                            "name": "Asynch Await",
+                            "url" : "/algoes/#/react/asyncAwait"
                         }
                     ]
                 },
@@ -305,23 +230,6 @@
                         {
                             "name": "useState",
                             "url" : "/algoes/#/react/useState"
-                        }
-                    ]
-                },
-                {
-                    "name": "Testing",
-                    "links": [
-                        {
-                            "name": "Overview",
-                            "url" : "/algoes/#/react/testing/overview/"
-                        },
-                        {
-                            "name": "Recipes",
-                            "url" : "/algoes/#/react/testing/recipes/"
-                        },
-                        {
-                            "name": "Environment",
-                            "url" : "/algoes/#/react/testing/environment/"
                         }
                     ]
                 }
@@ -337,72 +245,8 @@
                     "name": "Stage 0",
                     "links": [
                         {
-                            "name": "Console",
-                            "url" : "/algoes/#/nodejs/console"
-                        },
-                        {
-                            "name": "REPL",
-                            "url" : "/algoes/#/nodejs/repl"
-                        },
-                        {
-                            "name": "Events",
-                            "url" : "/algoes/#/nodejs/events"
-                        },
-                        {
                             "name": "Streams",
                             "url" : "/algoes/#/nodejs/streams"
-                        }
-                    ]
-                },
-                {
-                    "name": "Stage 1",
-                    "links": [
-                        {
-                            "name": "DNS",
-                            "url" : "/algoes/#/nodejs/dns"
-                        },
-                        {
-                            "name": "NET",
-                            "url" : "/algoes/#/nodejs/net"
-                        }
-                    ]
-                },
-                {
-                    "name": "Stage 2",
-                    "links": [
-                        {
-                            "name": "Buffers",
-                            "url" : "/algoes/#/nodejs/buffers"
-                        },
-                        {
-                            "name": "Streams",
-                            "url" : "/algoes/#/nodejs/streams"
-                        }
-                    ]
-                },
-                {
-                    "name": "Stage 3",
-                    "links": [
-                        {
-                            "name": "ZLib",
-                            "url" : "/algoes/#/nodejs/zlib"
-                        },
-                        {
-                            "name": "Callback",
-                            "url" : "/algoes/#/nodejs/callback"
-                        }
-                    ]
-                },
-                {
-                    "name": "Stage 4",
-                    "links": [
-                        {
-                            "name": "MongoDB",
-                            "url" : "/algoes/#/nodejs/mongodb"
-                        },
-                        {
-                            "name": "MySQL",
-                            "url" : "/algoes/#/nodejs/mysql"
                         }
                     ]
                 }
@@ -420,56 +264,6 @@
                         {
                             "name": "Instance",
                             "url" : "/algoes/#/aws/instance"
-                        },
-                        {
-                            "name": "Types",
-                            "url" : "/algoes/#/aws/instance/types"
-                        },
-                        {
-                            "name": "Templates",
-                            "url" : "/algoes/#/aws/instance/templates"
-                        },
-                        {
-                            "name": "Spot Request",
-                            "url" : "/algoes/#/aws/instance/spot"
-                        },
-                        {
-                            "name": "Plans",
-                            "url" : "/algoes/#/aws/instance/plans"
-                        },
-                        {
-                            "name": "Reserved",
-                            "url" : "/algoes/#/aws/instance/reserved"
-                        },
-                        {
-                            "name": "Capacity",
-                            "url" : "/algoes/#/aws/instance/capacity"
-                        }
-                    ]
-                },
-                {
-                    "name": "Images",
-                    "links": [
-                        {
-                            "name": "AMIs",
-                            "url" : "/algoes/#/aws/amis"
-                        }
-                    ]
-                },
-                {
-                    "name": "Elastic Block Storage",
-                    "links": [
-                        {
-                            "name": "Volume",
-                            "url" : "/algoes/#/aws/volume"
-                        },
-                        {
-                            "name": "Snapshots",
-                            "url" : "/algoes/#/aws/snapshots"
-                        },
-                        {
-                            "name": "Life Cycle Manager",
-                            "url" : "/algoes/#/aws/lcm"
                         }
                     ]
                 }

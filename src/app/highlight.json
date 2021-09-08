@@ -4,11 +4,21 @@
     "itemListElement": [
         {
             "@type": "ListItem",
-            "position": 26,
+            "position": 28,
+            "item": {
+                "@id": "/algoes/#/react/asyncAwait",
+                "name": "JavaScript Async Await!",
+                "date": "08 Sep 2021",
+                "url": "/algoes/#/react/asyncAwait"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 27,
             "item": {
                 "@id": "/algoes/#/react/useState/",
                 "name": "React useState!",
-                "date": "07 Seps 2021",
+                "date": "07 Sep 2021",
                 "url": "/algoes/#/react/useState/"
             }
         },
@@ -18,7 +28,7 @@
             "item": {
                 "@id": "/algoes/#/java8/lambda/",
                 "name": "Java 8 Lambda!",
-                "date": "07 Seps 2021",
+                "date": "07 Sep 2021",
                 "url": "/algoes/#/java8/lambda/"
             }
         },
