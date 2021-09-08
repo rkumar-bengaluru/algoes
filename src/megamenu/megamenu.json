@@ -204,6 +204,10 @@
                         {
                             "name": "Lambda expressions",
                             "url" : "/algoes/#/java8/lambda/"
+                        },
+                        {
+                            "name": "Streams",
+                            "url" : "/algoes/#/java8/stream/"
                         }
                     ]
                 }

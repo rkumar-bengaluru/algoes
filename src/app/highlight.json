@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 29,
+            "item": {
+                "@id": "/algoes/#/java8/stream",
+                "name": "Java 8 Stream!",
+                "date": "08 Sep 2021",
+                "url": "/algoes/#/java8/stream"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 28,
             "item": {
                 "@id": "/algoes/#/react/asyncAwait",
