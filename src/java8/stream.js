@@ -10,7 +10,7 @@ const Java8Stream = (props) => {
     const [cm, setCm] = useState(React.createRef());
     const [countDemo, setCountDemo] = useState([5, 2, 6, 1, 0]);
     const [showCount, setShowCount] = useState(false);
-    const [totalCount, setTotalCount] = useState(false);
+    const [totalCount, setTotalCount] = useState(5);
 
     useEffect(() => {
         cm.current.editor.display.wrapper.style.height = "200px";
@@ -30,13 +30,57 @@ const Java8Stream = (props) => {
     }
 
     function createRandomStream() {
-        var howMany = getRandomInt(2,10);
+        var howMany = getRandomInt(2, 10);
         var nos = [];
-        for(var i = 0; i <= howMany;i++) {
-            nos.push(getRandomInt(0,100));
+        for (var i = 0; i <= howMany; i++) {
+            nos.push(getRandomInt(0, 100));
         }
         setCountDemo(nos);
         setTotalCount(nos.length);
+    }
+
+    function msort(A, l, r) {
+        if (l < r) {
+            var m = l + Math.floor((r - l) / 2);
+            msort(A, l, m);
+            msort(A, m + 1, r);
+            merge(A, l, m, r);
+        }
+    }
+
+    function merge(A, l, m, r) {
+        var i = l;
+        var j = m + 1;
+        while ((i <= m) && (j <= r)) {
+            if (A[i] > A[j]) {
+                swap(A, i, j);
+                // make sure the right array is still sorted.
+                i++; j++;
+                for (var k = j; k <= r; k++) {
+                    if (A[k - 1] > A[k]) {
+                        swap(A, k - 1, k);
+                    }
+                }
+                j = m + 1;
+            } else {
+                i++;
+            }
+        }
+    }
+
+    function swap(A, i, j) {
+        var t = A[i];
+        A[i] = A[j];
+        A[j] = t;
+    }
+
+    function sort() {
+        var data = [...countDemo];
+        msort(data, 0, data.length - 1);
+        setCountDemo(data);
+        // var func = setInterval(function () {
+
+        // }, 3000);
     }
 
     return (
@@ -75,8 +119,13 @@ const Java8Stream = (props) => {
                         <div className="col-sm-4">
                             <button onClick={() => countClick()}>Show Count</button>
                         </div>
+                        <div className="col-sm-4">
+                            <button onClick={() => sort()}>Sort Demo</button>
+                        </div>
+                    </div>
+                    <div className="row m-2">
                         {showCount &&
-                            <div className="col-sm-4" style={{ color: "red" }}>{totalCount}</div>
+                            <div className="col-sm-12" style={{ color: "red" }}>Stream Count = {totalCount}</div>
                         }
                     </div>
                 </div>
