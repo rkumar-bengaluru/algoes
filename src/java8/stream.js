@@ -23,10 +23,10 @@ const Java8Stream = (props) => {
 
     const allLambdas = [
         {
-            id: 0, value: "Predicate<T> p = (t) = > { t > 49}", type: 'predicate'
+            id: 0, value: "Predicate<Integer> GT15 = (p) -> {return p > 15;};", type: 'predicate'
         },
         {
-            id: 1, value: "Predicate<T> p = (t) = { t < 49}", type: 'predicate'
+            id: 1, value: "Predicate<Integer> LT40 = (p) -> {return p < 40;};", type: 'predicate'
         },
         {
             id: 2, value: "Function<T,R> f = (t) = { Arrays.asList(t,t*t);}", type: 'function'
@@ -60,6 +60,15 @@ const Java8Stream = (props) => {
         },
         {
             id: 11, value: "Comparator<T> c = ", type: 'compare'
+        },
+        {
+            id: 12, value: "Predicate<T> p3 = gr15.and(lt40)", type: 'predicate'
+        },
+        {
+            id: 13, value: "Predicate<Integer> p4 = (p) -> { return p == 10; };", type: 'predicate'
+        },
+        {
+            id: 14, value: "Predicate<Integer> p5 = GT15.and(LT40).or(p4);", type: 'predicate'
         }
     ]
 
@@ -83,6 +92,7 @@ const Java8Stream = (props) => {
         setTexpression(9);
         setIntermediateStream([]);
         setTerminalResponse([]);
+        createRandomStream(10, 25);
     }, [countCode]);
 
 
@@ -202,13 +212,36 @@ const Java8Stream = (props) => {
     function applyInterMediateStep() {
         if (parseInt(iexpression) === 0) {
             var intermediateStream = countDemo.filter((p) => {
-                return p > 49;
+                return p > 15;
             });
             setIntermediateStream(intermediateStream);
         } else if (parseInt(iexpression) === 1) {
             var intermediateStream = countDemo.filter((p) => {
                 return p < 49;
             });
+            setIntermediateStream(intermediateStream);
+        } else if (parseInt(iexpression) === 12) {
+            var intermediateStream = countDemo.filter((p) => {
+                return p > 15;
+            }).filter((p) => {
+                return p < 40;
+            });
+            setIntermediateStream(intermediateStream);
+        } else if (parseInt(iexpression) === 13) {
+            var intermediateStream = countDemo.filter((p) => {
+                return p === 10;
+            });
+            console.log(intermediateStream);
+            setIntermediateStream(intermediateStream);
+        } else if (parseInt(iexpression) === 14) {
+            var intermediateStream = countDemo.filter((p) => {
+                return p === 15;
+            }).filter((p) => {
+                return p > 15;
+            }).filter( (p) => {
+                return p < 20;
+            } );
+            console.log(intermediateStream);
             setIntermediateStream(intermediateStream);
         }
     }
@@ -283,8 +316,8 @@ const Java8Stream = (props) => {
                             })}
                         </div>
                         <div className="row m-2">
-                            <div className="col-sm-3 border p-2">
-                                <span className="h6">Select Intermediate Operation</span>
+                            <div className="col-sm-2 border p-2">
+                                <span className="h6">Select Intermediate</span>
                                 <div>
                                     <select value={intermediate}
                                         onChange={handleIntermediateFunctionChange.bind(this)} className="form-control form-control-sm">
@@ -298,8 +331,8 @@ const Java8Stream = (props) => {
                                     </select>
                                 </div>
                             </div>
-                            <div className="col-sm-3 border p-2">
-                                <span className="h6">Select Lamda </span>
+                            <div className="col-sm-4 border p-2">
+                                <span className="h6">Select Function </span>
                                 <div>
                                     <select value={iexpression} onChange={expressionIChange.bind(this)}
                                         className="form-control-sm">
@@ -311,7 +344,7 @@ const Java8Stream = (props) => {
                                     </select>
                                 </div>
                             </div>
-                            <div className="cold-sm-3 border p-2">
+                            <div className="cold-sm-2 border p-2">
                                 <span className="h6">Select Terminal Operation</span>
                                 <div>
                                     <select value={terminal} onChange={handleTerminalOperationChange.bind(this)}
