@@ -198,6 +198,14 @@ const Java8Stream = (props) => {
                 return lambda.type === 'compare'
             });
             setTlamdas(functions);
+        } else if (e.target.value === 'allMatch' || e.target.value === 'anyMatch') {
+            var functions = allLambdas.filter((lambda, index) => {
+                return lambda.type === 'predicate'
+            });
+            setTlamdas(functions);
+            setTexpression(0);
+        } else if (e.target.value === 'count' || e.target.value === 'toArray') {
+            setTlamdas([]);
         }
     }
     function expressionIChange(e) {
@@ -238,14 +246,39 @@ const Java8Stream = (props) => {
                 return p === 15;
             }).filter((p) => {
                 return p > 15;
-            }).filter( (p) => {
+            }).filter((p) => {
                 return p < 20;
-            } );
+            });
             console.log(intermediateStream);
             setIntermediateStream(intermediateStream);
         }
     }
     function applyTerminalStep() {
+        if (terminal === 'count') {
+            setTerminalResponse([intermediateStream.length]);
+            return;
+        } else if (terminal === 'toArray') {
+            setTerminalResponse(intermediateStream);
+            return;
+        } else if (terminal === 'anyMatch') {
+            if (parseInt(texpression) === 0) {
+                var res = intermediateStream.some((p) => {
+                    return p > 15;
+                });
+                console.log('terminal:' + terminal + ',' + res);
+                setTerminalResponse([res,res]);
+                return;
+            } else if (parseInt(texpression) === 1) {
+                setTerminalResponse([intermediateStream.every((p) => {
+                    return p > 15;
+                })]);
+                return;
+            } else if (parseInt(texpression) === 12) {
+            } else if (parseInt(texpression) === 13) {
+            } else if (parseInt(texpression) === 14) {
+            }
+            return;
+        }
         console.log(texpression);
         var res = [];
         if (parseInt(texpression) === 9) {
