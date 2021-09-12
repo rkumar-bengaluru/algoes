@@ -29,7 +29,7 @@ const Java8Stream = (props) => {
             id: 1, value: "Predicate<Integer> LT40 = (p) -> {return p < 40;};", type: 'predicate'
         },
         {
-            id: 2, value: "Function<T,R> f = (t) = { Arrays.asList(t,t*t);}", type: 'function'
+            id: 2, value: "Function<Integer,Integer> square = (r) -> {return r*r;}", type: 'function'
         },
         {
             id: 3, value: "1", type: 'number'
@@ -47,19 +47,16 @@ const Java8Stream = (props) => {
             id: 7, value: "", type: 'sorted'
         },
         {
-            id: 8, value: "Comparator<T> c = ", type: 'compare'
+            id: 8, value: "max = (a,b) -> {if(a == b) return 0;return a > b ? 1 : -1;};", type: 'compare'
         },
         {
-            id: 9, value: "Consumer<T> c = (t) => {System.out.println(t)}", type: 'consumer'
+            id: 9, value: "Consumer<Integer> consume = (e) -> {System.out.println(e);};", type: 'consumer'
         },
         {
-            id: 8, value: "Consumer<T> c = ", type: 'consumer'
+            id: 20, value: "Consumer<Integer> check = (e) -> {if(e == 4) {System.out.println(\"found ->\" + e);}};", type: 'consumer'
         },
         {
-            id: 10, value: "Comparator<T> c = ", type: 'compare'
-        },
-        {
-            id: 11, value: "Comparator<T> c = ", type: 'compare'
+            id: 10, value: "min = (a,b) -> {if(a == b) return 0;return a > b ? -1 : 1;};", type: 'compare'
         },
         {
             id: 12, value: "Predicate<T> p3 = gr15.and(lt40)", type: 'predicate'
@@ -69,6 +66,21 @@ const Java8Stream = (props) => {
         },
         {
             id: 14, value: "Predicate<Integer> p5 = GT15.and(LT40).or(p4);", type: 'predicate'
+        },
+        {
+            id: 15, value: "Function<Integer,Integer> plus1 = (r) -> {return r+1;}", type: 'function'
+        },
+        {
+            id: 16, value: "forFlatMap = (r) -> Arrays.asList(r,r*r).stream()", type: 'flatMap'
+        },
+        {
+            id: 17, value: "Collectors.toList()", type: 'collect'
+        },
+        {
+            id: 18, value: "Collectors.joining(\",\")", type: 'collect'
+        },
+        {
+            id: 19, value: "BinaryOperator<Integer> sum = (t, u) -> t + u;", type: 'reduce'
         }
     ]
 
@@ -167,11 +179,13 @@ const Java8Stream = (props) => {
                 return lambda.type === 'predicate'
             });
             setIlamdas(functions);
-        } else if (e.target.value === 'map' || e.target.value === 'flatMap') {
+            setIexpression(0);
+        } else if (e.target.value === 'map') {
             var functions = allLambdas.filter((lambda, index) => {
                 return lambda.type === 'function'
             });
             setIlamdas(functions);
+            setIexpression(2);
         } else if (e.target.value === 'distinct') {
             setIlamdas([]);
         } else if (e.target.value === 'limit' || e.target.value === 'skip') {
@@ -179,11 +193,24 @@ const Java8Stream = (props) => {
                 return lambda.type === 'number'
             });
             setIlamdas(functions);
+            setIexpression(3);
         } else if (e.target.value === 'compare') {
             var functions = allLambdas.filter((lambda, index) => {
                 return lambda.type === 'compare'
             });
             setIlamdas(functions);
+        } else if (e.target.value === 'sorted') {
+            var functions = allLambdas.filter((lambda, index) => {
+                return lambda.type === 'compare'
+            });
+            setIlamdas(functions);
+            setIexpression(8);
+        } else if (e.target.value === 'flatMap') {
+            var functions = allLambdas.filter((lambda, index) => {
+                return lambda.type === 'flatMap'
+            });
+            setIlamdas(functions);
+            setIexpression(16);
         }
     }
     function handleTerminalOperationChange(e) {
@@ -193,19 +220,34 @@ const Java8Stream = (props) => {
                 return lambda.type === 'consumer'
             });
             setTlamdas(functions);
+            setIexpression(9);
         } else if (e.target.value === 'min' || e.target.value === 'max') {
             var functions = allLambdas.filter((lambda, index) => {
                 return lambda.type === 'compare'
             });
             setTlamdas(functions);
-        } else if (e.target.value === 'allMatch' || e.target.value === 'anyMatch') {
+            setIexpression(8);
+        } else if (e.target.value === 'allMatch' || e.target.value === 'anyMatch' || e.target.value === 'noneMatch') {
             var functions = allLambdas.filter((lambda, index) => {
                 return lambda.type === 'predicate'
             });
             setTlamdas(functions);
             setTexpression(0);
-        } else if (e.target.value === 'count' || e.target.value === 'toArray') {
+        } else if (e.target.value === 'count' || e.target.value === 'toArray'
+            || e.target.value === 'findFirst' || e.target.value === 'findAny') {
             setTlamdas([]);
+        } else if (e.target.value === 'collect') {
+            var functions = allLambdas.filter((lambda, index) => {
+                return lambda.type === 'collect'
+            });
+            setTlamdas(functions);
+            setTexpression(17);
+        } else if (e.target.value === 'reduce') {
+            var functions = allLambdas.filter((lambda, index) => {
+                return lambda.type === 'reduce'
+            });
+            setTlamdas(functions);
+            setTexpression(19);
         }
     }
     function expressionIChange(e) {
@@ -217,7 +259,7 @@ const Java8Stream = (props) => {
         console.log('expression changed ' + e.target.value);
     }
 
-    function applyInterMediateStep() {
+    function filterPredicate() {
         if (parseInt(iexpression) === 0) {
             var intermediateStream = countDemo.filter((p) => {
                 return p > 15;
@@ -253,47 +295,188 @@ const Java8Stream = (props) => {
             setIntermediateStream(intermediateStream);
         }
     }
+
+    function applyMapFunction() {
+        // 2,15
+        if (parseInt(iexpression) === 2) {
+            var intermediateStream = countDemo.map((p) => {
+                return p * p;
+            });
+            setIntermediateStream(intermediateStream);
+        } else if (parseInt(iexpression) === 15) {
+            var intermediateStream = countDemo.map((p) => {
+                return p + 1;
+            });
+            setIntermediateStream(intermediateStream);
+        }
+    }
+    function applyFlatMapFunction() {
+        if (parseInt(iexpression) === 16) {
+            var i = countDemo.flatMap((p) => {
+                return [p, p * p];
+            });
+            setIntermediateStream(i);
+        }
+    }
+
+    function applyInterMediateStep() {
+        console.log('intermediate method -' + intermediate + ', expression ' + iexpression);
+        if (intermediate === 'filter') {
+            filterPredicate();
+        } else if (intermediate === 'map') {
+            applyMapFunction();
+        } else if (intermediate === 'flatMap') {
+            applyFlatMapFunction();
+        } else if (intermediate === 'distinct') {
+            const uniqueAges = countDemo.filter((value, index, self) => self.indexOf(value) === index);
+            setIntermediateStream([uniqueAges.length]);
+        } else if (intermediate === 'limit') {
+            const i = countDemo.slice(0, parseInt(iexpression) - 1);
+            setIntermediateStream(i);
+        } else if (intermediate === 'skip') {
+            const i = countDemo.slice(parseInt(iexpression) - 1, countDemo.length - 1);
+            setIntermediateStream(i);
+        } else if (intermediate === 'sorted') {
+            // 8 max, 10 min
+            if (parseInt(iexpression) === 8) {
+                const i = countDemo.sort((a, b) => {
+                    return (a - b);
+                });
+                setIexpression(8);
+                setIntermediateStream(i);
+            } else if (parseInt(iexpression) === 10) {
+                const i = countDemo.sort((a, b) => {
+                    return (b - a);
+                });
+                setIexpression(10);
+                setIntermediateStream(i);
+            }
+
+        }
+    }
     function applyTerminalStep() {
-        if (terminal === 'count') {
+        if (terminal === 'forEach' || terminal === 'forEachOrdered') {
+            if (parseInt(texpression) === 9) {
+                var res = [];
+                intermediateStream.map((e) => {
+                    res.push(e);
+                    setTerminalResponse(res);
+                });
+            } else if (parseInt(texpression) === 20) {
+                var res = [];
+                intermediateStream.map((e) => {
+                    if (e === 4) {
+                        res.push(e);
+                        setTerminalResponse(res);
+                    }
+                });
+            }
+        } else if (terminal === 'count') {
             setTerminalResponse([intermediateStream.length]);
-            return;
+        } else if (terminal === 'min') {
+            var min = Math.min(...intermediateStream)
+            setTerminalResponse([min]);
+        } else if (terminal === 'max') {
+            var min = Math.max(...intermediateStream)
+            setTerminalResponse([min]);
+        } else if (terminal === 'collect') {
+            if (parseInt(texpression) === 17) {
+                setTerminalResponse(intermediateStream);
+            } else if (parseInt(texpression) === 18) {
+                var newMap = intermediateStream.join(',');
+                setTerminalResponse([newMap]);
+            }
+        } else if (terminal === 'reduce') {
+            var sum = intermediateStream.reduce((a, b) => a + b);
+            setTerminalResponse([sum]);
         } else if (terminal === 'toArray') {
             setTerminalResponse(intermediateStream);
-            return;
         } else if (terminal === 'anyMatch') {
             if (parseInt(texpression) === 0) {
                 var res = intermediateStream.some((p) => {
                     return p > 15;
                 });
                 console.log('terminal:' + terminal + ',' + res);
-                setTerminalResponse([res,res]);
-                return;
+                if (res) {
+                    setTerminalResponse(["Found"]);
+                } else {
+                    setTerminalResponse(["Not Found"]);
+                }
             } else if (parseInt(texpression) === 1) {
-                setTerminalResponse([intermediateStream.every((p) => {
+                var res = intermediateStream.some((p) => {
                     return p > 15;
-                })]);
-                return;
+                });
+                if (res) {
+                    setTerminalResponse(["Found"]);
+                } else {
+                    setTerminalResponse(["Not Found"]);
+                }
             } else if (parseInt(texpression) === 12) {
             } else if (parseInt(texpression) === 13) {
             } else if (parseInt(texpression) === 14) {
             }
-            return;
+        } else if (terminal === 'allMatch') {
+            if (parseInt(texpression) === 0) {
+                var res = intermediateStream.every((p) => {
+                    return p > 15;
+                });
+                console.log('terminal:' + terminal + ',' + res);
+                if (res) {
+                    setTerminalResponse(["Found"]);
+                } else {
+                    setTerminalResponse(["Not Found"]);
+                }
+            } else if (parseInt(texpression) === 1) {
+
+            } else if (parseInt(texpression) === 12) {
+            } else if (parseInt(texpression) === 13) {
+            } else if (parseInt(texpression) === 14) {
+            }
+        } else if (terminal === 'noneMatch') {
+            if (parseInt(texpression) === 0) {
+                var nonMatch = 'false';
+                var res = intermediateStream.some((p) => {
+                    return p > 15;
+                });
+                if (!res) {
+                    nonMatch = 'true';
+                }
+                setTerminalResponse([nonMatch]);
+            } else if (parseInt(texpression) === 1) {
+                var nonMatch = 'false';
+                var res = intermediateStream.some((p) => {
+                    return p < 40;
+                });
+                if (!res) {
+                    nonMatch = 'true';
+                }
+                setTerminalResponse([nonMatch]);
+            } else if (parseInt(texpression) === 12) {
+                var i = intermediateStream.filter(e => e > 15).filter(e => e < 40);
+                setTerminalResponse(i);
+            } else if (parseInt(texpression) === 13) {
+                var nonMatch = 'false';
+                var res = intermediateStream.some((p) => {
+                    return p === 10;
+                });
+                if (!res) {
+                    nonMatch = 'true';
+                }
+                setTerminalResponse([nonMatch]);
+            } else if (parseInt(texpression) === 14) {
+            }
+        } else if (terminal === 'findFirst') {
+            setTerminalResponse([intermediateStream[0]]);
+        }else if (terminal === 'findAny') {
+            setTerminalResponse([intermediateStream[0]]);
         }
-        console.log(texpression);
-        var res = [];
-        if (parseInt(texpression) === 9) {
-            intermediateStream.map((e) => {
-                console.log(e);
-                res.push(e);
-                setTerminalResponse(res);
-            });
-        }
+
     }
 
     return (
         <div className="container-fluid">
-            <h1>Java 8 Stream</h1>
-            <h2 className="m-3">Java Stream Demo</h2>
+            <h1>Java 8 Stream Demo</h1>
+           
             <div className="row border">
                 {/* <div className="col-sm-4">
                     <CodeMirror
@@ -355,7 +538,7 @@ const Java8Stream = (props) => {
                                     <select value={intermediate}
                                         onChange={handleIntermediateFunctionChange.bind(this)} className="form-control form-control-sm">
                                         <option value="map">map()</option>
-                                        <option value="map">flatMap()</option>
+                                        <option value="flatMap">flatMap()</option>
                                         <option value="filter">filter()</option>
                                         <option value="distinct">distinct()</option>
                                         <option value="sorted">sorted()</option>
