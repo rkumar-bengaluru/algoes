@@ -311,6 +311,59 @@
                             "url" : "/algoes/#/java9/"
                         }
                     ]
+                },
+                {
+                    "name": "Java 16",
+                    "links": [
+                        {
+                            "name": "Java 16 Features",
+                            "url" : "/algoes/#/java16/"
+                        },
+                        {
+                            "name": "Vector API (Incubator)",
+                            "url" : "/algoes/#/java16/"
+                        },
+                        {
+                            "name": "Enable C++14 Language Features",
+                            "url" : "/algoes/#/java16/"
+                        },
+                        {
+                            "name": "Concurrent Thread-Stack Processing",
+                            "url" : "/algoes/#/java16/"
+                        },
+                        {
+                            "name": "Elastic Metaspace",
+                            "url" : "/algoes/#/java16/"
+                        },
+                        {
+                            "name": "Warnings for Value-Based Classes",
+                            "url" : "/algoes/#/java16/"
+                        },
+                        {
+                            "name": "Foreign-Memory Access API (Third Incubator)",
+                            "url" : "/algoes/#/java16/"
+                        },
+                        {
+                            "name": "Foreign Linker API (Incubator)",
+                            "url" : "/algoes/#/java16/"
+                        },
+                        {
+                            "name": "Pattern Matching for instanceof",
+                            "url" : "/algoes/#/java16/"
+                        },
+                        {
+                            "name": "Records",
+                            "url" : "/algoes/#/java16/"
+                        },
+                        {
+                            "name": "Sealed Classes (Second Preview)",
+                            "url" : "/algoes/#/java16/"
+                        },
+                        {
+                            "name": "Encapsulating JDK Internals by default",
+                            "url" : "/algoes/#/java16/"
+                        }
+                    ]
                 }
             ]
         },

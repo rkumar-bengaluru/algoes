@@ -6,6 +6,16 @@
             "@type": "ListItem",
             "position": 20,
             "item": {
+                "@id": "/algoes/#/java16/",
+                "name": "Java 16!",
+                "date": "13 Sep 2021",
+                "url": "/algoes/#/java16/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 20,
+            "item": {
                 "@id": "/algoes/#/java9/",
                 "name": "Java 9!",
                 "date": "13 Sep 2021",

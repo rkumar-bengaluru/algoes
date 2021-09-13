@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer, useState } from "react";
-import menus from '../megamenu/megamenu.json';
+import menus from '../../megamenu/megamenu.json';
 
 const Java8Home = (props) => {
     const initial = { current: '', prev: '' };

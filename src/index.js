@@ -8,10 +8,11 @@ import Search from './search';
 import Algo from './algo';
 import DesignPatternHome from './dp';
 import singleton from './dp/singleton'
-import Java8Home from './java8';
-import Java9Home from './java9';
-import Lambda from './java8/lambda';
-import Java8Stream from './java8/stream'
+import Java8Home from './java/java8';
+import Java9Home from './java/java9';
+import Java16Home from './java/java16';
+import Lambda from './java/java8/lambda';
+import Java8Stream from './java/java8/stream'
 import ReactHome from './react';
 import ReactUseStateHooks from './react/hooks';
 import JavaScriptASynchAwait from './react/javascript/asynchawait'
@@ -32,6 +33,7 @@ ReactDOM.render(
         <Route exact path="/java8/lambda" component={Lambda} />
         <Route exact path="/java8/stream" component={Java8Stream} />
         <Route exact path="/java9/" component={Java9Home} />
+        <Route exact path="/java16/" component={Java16Home} />
         <Route exact path="/react/" component={ReactHome} />
         <Route exact path="/react/useState" component={ReactUseStateHooks} />
         <Route exact path="/react/asyncAwait" component={JavaScriptASynchAwait} />
