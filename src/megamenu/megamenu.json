@@ -202,12 +202,113 @@
                     "name": "Java 8",
                     "links": [
                         {
+                            "name": "Java 8 Features",
+                            "url" : "/algoes/#/java8/"
+                        },
+                        {
                             "name": "Lambda expressions",
                             "url" : "/algoes/#/java8/lambda/"
                         },
                         {
                             "name": "Streams",
                             "url" : "/algoes/#/java8/stream/"
+                        },
+                        {
+                            "name": "Method references",
+                            "url" : "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "Functional interfaces",
+                            "url" : "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "Default methods",
+                            "url" : "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "Base64 Encode Decode",
+                            "url" : "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "Date/Time API",
+                            "url" : "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "Optional class",
+                            "url" : "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "Collectors class",
+                            "url" : "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "ForEach() method",
+                            "url" : "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "Parallel array sorting",
+                            "url" : "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "Stream Filter",
+                            "url" : "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "IO Enhancements",
+                            "url" : "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "Concurrency Enhancements",
+                            "url" : "/algoes/#/java8/"
+                        }
+                    ]
+                },
+                {
+                    "name": "Java 9",
+                    "links": [
+                        {
+                            "name": "Java 9 Features",
+                            "url" : "/algoes/#/java9/"
+                        },
+                        {
+                            "name": "Platform Module System (Project Jigsaw)",
+                            "url" : "/algoes/#/java9/"
+                        },
+                        {
+                            "name": "Interface Private Methods",
+                            "url" : "/algoes/#/java9/"
+                        },
+                        {
+                            "name": "Try With Resouces",
+                            "url" : "/algoes/#/java9/"
+                        },
+                        {
+                            "name": "Anonymous Classes Improvement",
+                            "url" : "/algoes/#/java9/"
+                        },
+                        {
+                            "name": "Java @SafeVarargs Annotation",
+                            "url" : "/algoes/#/java9/"
+                        },
+                        {
+                            "name": "Java Collection Factory Methods",
+                            "url" : "/algoes/#/java9/"
+                        },
+                        {
+                            "name": "Java Process API Improvement",
+                            "url" : "/algoes/#/java9/"
+                        },
+                        {
+                            "name": "Java New Version-String Scheme",
+                            "url" : "/algoes/#/java9/"
+                        },
+                        {
+                            "name": "JShell: The Java Shell (REPL)",
+                            "url" : "/algoes/#/java9/"
+                        },
+                        {
+                            "name": "Java 9 Stream API Improvements",
+                            "url" : "/algoes/#/java9/"
                         }
                     ]
                 }

@@ -48,8 +48,9 @@ class Home extends React.Component {
     }
 
     fetchSubBlogs(blog) {
+        
         for (let c of this.state.blogs) {
-            if (c.name === blog) {
+            if (blog.includes(c.name)) {
                 this.setState({ subBlogs: c.links });
             }
         }
@@ -63,7 +64,6 @@ class Home extends React.Component {
         var current = this.fetchBlogs(target);
 
         this.setState({ subBlogs: current.subMenus[0].links });
-        console.log(current.subMenus[0].links);
     }
 
     handleSubCat(e) {

@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 20,
+            "item": {
+                "@id": "/algoes/#/java9/",
+                "name": "Java 9!",
+                "date": "13 Sep 2021",
+                "url": "/algoes/#/java9/"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 29,
             "item": {
                 "@id": "/algoes/#/java8/stream",
