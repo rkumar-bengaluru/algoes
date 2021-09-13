@@ -10,23 +10,23 @@
             "subMenus": [
                 {
                     "name": "Sorts",
-                    "url" : "/algorithm/sorts/",
+                    "url": "/algorithm/sorts/",
                     "links": [
                         {
                             "name": "Quick Sorting Algorithm",
-                            "url" : "/algoes/20262/#/"
+                            "url": "/algoes/20262/#/"
                         },
                         {
                             "name": "MergeSort Algorithm",
-                            "url" : "/algoes/20274/#/"
+                            "url": "/algoes/20274/#/"
                         },
                         {
                             "name": "Remove Duplicate",
-                            "url" : "/algoes/20263/#/"
+                            "url": "/algoes/20263/#/"
                         },
                         {
                             "name": "Compute number of distinct values in an array",
-                            "url" : "/algoes/20281/#/"
+                            "url": "/algoes/20281/#/"
                         }
                     ]
                 },
@@ -35,11 +35,11 @@
                     "links": [
                         {
                             "name": "32 bit hashing",
-                            "url" : "/algoes/20264/#/"
+                            "url": "/algoes/20264/#/"
                         },
                         {
                             "name": "Sum Of 2 Number",
-                            "url" : "/algoes/20282/#/"
+                            "url": "/algoes/20282/#/"
                         }
                     ]
                 },
@@ -48,11 +48,11 @@
                     "links": [
                         {
                             "name": "binary search",
-                            "url" : "/algoes/20265/#/"
+                            "url": "/algoes/20265/#/"
                         },
                         {
                             "name": "linear search",
-                            "url" : "/algoes/20266/#/"
+                            "url": "/algoes/20266/#/"
                         }
                     ]
                 },
@@ -61,27 +61,27 @@
                     "links": [
                         {
                             "name": "longest prefix.",
-                            "url" : "/algoes/20267/#/"
+                            "url": "/algoes/20267/#/"
                         },
                         {
                             "name": "reverse string",
-                            "url" : "/algoes/20268/#/"
+                            "url": "/algoes/20268/#/"
                         },
                         {
                             "name": "Anagram - Merge Sort",
-                            "url" : "/algoes/20274/#/"
+                            "url": "/algoes/20274/#/"
                         },
                         {
                             "name": "Palindrome String!",
-                            "url" : "/algoes/20276/#/"
+                            "url": "/algoes/20276/#/"
                         },
                         {
                             "name": "Palindrome Partitioning!",
-                            "url" : "/algoes/20286/#/"
+                            "url": "/algoes/20286/#/"
                         },
                         {
                             "name": "Passing Cars!",
-                            "url" : "/algoes/20287/#/"
+                            "url": "/algoes/20287/#/"
                         }
                     ]
                 },
@@ -90,15 +90,15 @@
                     "links": [
                         {
                             "name": "N Queen Problem",
-                            "url" : "/algoes/20269/#/"
+                            "url": "/algoes/20269/#/"
                         },
                         {
                             "name": "Mathematical Expression for numbers",
-                            "url" : "/algoes/20272/#/"
+                            "url": "/algoes/20272/#/"
                         },
                         {
                             "name": "Print all permutations of a given string",
-                            "url" : "/algoes/20273/#/"
+                            "url": "/algoes/20273/#/"
                         }
                     ]
                 },
@@ -107,15 +107,15 @@
                     "links": [
                         {
                             "name": "Climbing Stairs",
-                            "url" : "/algoes/20270/#/"
+                            "url": "/algoes/20270/#/"
                         },
                         {
                             "name": "Reverse a Linked List",
-                            "url" : "/algoes/20271/#/"
+                            "url": "/algoes/20271/#/"
                         },
                         {
                             "name": "Staircase Challenge",
-                            "url" : "/algoes/20284/#/"
+                            "url": "/algoes/20284/#/"
                         }
                     ]
                 },
@@ -124,15 +124,15 @@
                     "links": [
                         {
                             "name": "Climbing Stairs",
-                            "url" : "/algoes/20270/#/"
+                            "url": "/algoes/20270/#/"
                         },
                         {
                             "name": "Ugly Numbers",
-                            "url" : "/algoes/20275/#/"
+                            "url": "/algoes/20275/#/"
                         },
                         {
                             "name": "N Coin Change Challenge",
-                            "url" : "/algoes/20283/#/"
+                            "url": "/algoes/20283/#/"
                         }
                     ]
                 },
@@ -141,23 +141,23 @@
                     "links": [
                         {
                             "name": "Decimal 2 Binary & Binary 2 Decimal",
-                            "url" : "/algoes/20277/#/"
+                            "url": "/algoes/20277/#/"
                         },
                         {
                             "name": "Find Least Positive Number Missing",
-                            "url" : "/algoes/20278/#/"
+                            "url": "/algoes/20278/#/"
                         },
                         {
                             "name": "CyclicRotation",
-                            "url" : "/algoes/20279/#/"
+                            "url": "/algoes/20279/#/"
                         },
                         {
                             "name": "Password Validation",
-                            "url" : "/algoes/20280/#/"
+                            "url": "/algoes/20280/#/"
                         },
                         {
                             "name": "N gas stations",
-                            "url" : "/algoes/20285/#/"
+                            "url": "/algoes/20285/#/"
                         }
                     ]
                 }
@@ -174,21 +174,17 @@
                     "links": [
                         {
                             "name": "Singleton",
-                            "url" : "/algoes/#/designpatterns/singleton/"
+                            "url": "/algoes/#/designpatterns/singleton/"
                         }
                     ]
                 },
                 {
                     "name": "Structural Design Patterns",
-                    "links": [
-                        
-                    ]
+                    "links": []
                 },
                 {
                     "name": "Behavioral Design Patterns",
-                    "links": [
-                       
-                    ]
+                    "links": []
                 }
             ]
         },
@@ -199,67 +195,162 @@
             "url": "/algoes/#/java8/",
             "subMenus": [
                 {
-                    "name": "Java 8",
+                    "name": "Java 16",
                     "links": [
                         {
-                            "name": "Java 8 Features",
-                            "url" : "/algoes/#/java8/"
+                            "name": "Java 16 Features",
+                            "url": "/algoes/#/java16/"
                         },
                         {
-                            "name": "Lambda expressions",
-                            "url" : "/algoes/#/java8/lambda/"
+                            "name": "Vector API (Incubator)",
+                            "url": "/algoes/#/java16/"
                         },
                         {
-                            "name": "Streams",
-                            "url" : "/algoes/#/java8/stream/"
+                            "name": "Enable C++14 Language Features",
+                            "url": "/algoes/#/java16/"
                         },
                         {
-                            "name": "Method references",
-                            "url" : "/algoes/#/java8/"
+                            "name": "Concurrent Thread-Stack Processing",
+                            "url": "/algoes/#/java16/"
                         },
                         {
-                            "name": "Functional interfaces",
-                            "url" : "/algoes/#/java8/"
+                            "name": "Elastic Metaspace",
+                            "url": "/algoes/#/java16/"
                         },
                         {
-                            "name": "Default methods",
-                            "url" : "/algoes/#/java8/"
+                            "name": "Warnings for Value-Based Classes",
+                            "url": "/algoes/#/java16/"
                         },
                         {
-                            "name": "Base64 Encode Decode",
-                            "url" : "/algoes/#/java8/"
+                            "name": "Foreign-Memory Access API (Third Incubator)",
+                            "url": "/algoes/#/java16/"
                         },
                         {
-                            "name": "Date/Time API",
-                            "url" : "/algoes/#/java8/"
+                            "name": "Foreign Linker API (Incubator)",
+                            "url": "/algoes/#/java16/"
                         },
                         {
-                            "name": "Optional class",
-                            "url" : "/algoes/#/java8/"
+                            "name": "Pattern Matching for instanceof",
+                            "url": "/algoes/#/java16/"
                         },
                         {
-                            "name": "Collectors class",
-                            "url" : "/algoes/#/java8/"
+                            "name": "Records",
+                            "url": "/algoes/#/java16/"
                         },
                         {
-                            "name": "ForEach() method",
-                            "url" : "/algoes/#/java8/"
+                            "name": "Sealed Classes (Second Preview)",
+                            "url": "/algoes/#/java16/"
                         },
                         {
-                            "name": "Parallel array sorting",
-                            "url" : "/algoes/#/java8/"
+                            "name": "Encapsulating JDK Internals by default",
+                            "url": "/algoes/#/java16/"
+                        }
+                    ]
+                },
+                {
+                    "name": "Java 15",
+                    "links": [
+                        {
+                            "name": "Java 15 Features",
+                            "url": "/algoes/#/java15/"
                         },
                         {
-                            "name": "Stream Filter",
-                            "url" : "/algoes/#/java8/"
+                            "name": "Edwards-Curve Digital Signature Algorithm (EdDSA)",
+                            "url": "/algoes/#/java15/"
                         },
                         {
-                            "name": "IO Enhancements",
-                            "url" : "/algoes/#/java8/"
+                            "name": "Hidden Classes",
+                            "url": "/algoes/#/java15/"
                         },
                         {
-                            "name": "Concurrency Enhancements",
-                            "url" : "/algoes/#/java8/"
+                            "name": "A Scalable Low-Latency Garbage Collector",
+                            "url": "/algoes/#/java15/"
+                        },
+                        {
+                            "name": "Text Blocks",
+                            "url": "/algoes/#/java15/"
+                        },
+                        {
+                            "name": "A Low-Pause-Time Garbage Collector",
+                            "url": "/algoes/#/java15/"
+                        }
+                    ]
+                },
+                {
+                    "name": "Java 14",
+                    "links": [
+                        {
+                            "name": "Java 14 Features",
+                            "url": "/algoes/#/java14/"
+                        },
+                        {
+                            "name": "NUMA-Aware Memory Allocation for G1",
+                            "url": "/algoes/#/java14/"
+                        },
+                        {
+                            "name": "JFR Event Streaming",
+                            "url": "/algoes/#/java14/"
+                        },
+                        {
+                            "name": "Non-Volatile Mapped Byte Buffers",
+                            "url": "/algoes/#/java14/"
+                        },
+                        {
+                            "name": "Helpful NullPointerExceptions",
+                            "url": "/algoes/#/java14/"
+                        },
+                        {
+                            "name": "Switch Expressions (Standard)",
+                            "url": "/algoes/#/java14/"
+                        }
+                    ]
+                },
+                {
+                    "name": "Java 11",
+                    "links": [
+                        {
+                            "name": "Java 11 Features",
+                            "url": "/algoes/#/java11/"
+                        },
+                        {
+                            "name": "Nest-Based Access Control",
+                            "url": "/algoes/#/java11/"
+                        },
+                        {
+                            "name": "Dynamic Class-File Constants",
+                            "url": "/algoes/#/java11/"
+                        },
+                        {
+                            "name": " HTTP Client (Standard)",
+                            "url": "/algoes/#/java11/"
+                        },
+                        {
+                            "name": "Local-Variable Syntax for Lambda Parameters",
+                            "url": "/algoes/#/java11/"
+                        },
+                        {
+                            "name": "Key Agreement with Curve25519 and Curve448",
+                            "url": "/algoes/#/java11/"
+                        },
+                        {
+                            "name": "Unicode 10",
+                            "url": "/algoes/#/java11/"
+                        },
+                        {
+                            "name": "Flight Recorder",
+                            "url": "/algoes/#/java11/"
+                        },
+                        {
+                            "name": "ChaCha20 and Poly1305 Cryptographic Algorithms",
+                            "url": "/algoes/#/java11/"
+                        },
+                        {
+                            "name": "Launch Single-File Source-Code Programs",
+                            "url": "/algoes/#/java11/"
+                        },
+                        {
+                            "name": "A Scalable Low-Latency Garbage Collector (Experimental)",
+                            "url": "/algoes/#/java11/"
                         }
                     ]
                 },
@@ -268,100 +359,112 @@
                     "links": [
                         {
                             "name": "Java 9 Features",
-                            "url" : "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/"
                         },
                         {
                             "name": "Platform Module System (Project Jigsaw)",
-                            "url" : "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/"
                         },
                         {
                             "name": "Interface Private Methods",
-                            "url" : "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/"
                         },
                         {
                             "name": "Try With Resouces",
-                            "url" : "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/"
                         },
                         {
                             "name": "Anonymous Classes Improvement",
-                            "url" : "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/"
                         },
                         {
                             "name": "Java @SafeVarargs Annotation",
-                            "url" : "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/"
                         },
                         {
                             "name": "Java Collection Factory Methods",
-                            "url" : "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/"
                         },
                         {
                             "name": "Java Process API Improvement",
-                            "url" : "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/"
                         },
                         {
                             "name": "Java New Version-String Scheme",
-                            "url" : "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/"
                         },
                         {
                             "name": "JShell: The Java Shell (REPL)",
-                            "url" : "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/"
                         },
                         {
                             "name": "Java 9 Stream API Improvements",
-                            "url" : "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/"
                         }
                     ]
                 },
                 {
-                    "name": "Java 16",
+                    "name": "Java 8",
                     "links": [
                         {
-                            "name": "Java 16 Features",
-                            "url" : "/algoes/#/java16/"
+                            "name": "Java 8 Features",
+                            "url": "/algoes/#/java8/"
                         },
                         {
-                            "name": "Vector API (Incubator)",
-                            "url" : "/algoes/#/java16/"
+                            "name": "Lambda expressions",
+                            "url": "/algoes/#/java8/lambda/"
                         },
                         {
-                            "name": "Enable C++14 Language Features",
-                            "url" : "/algoes/#/java16/"
+                            "name": "Streams",
+                            "url": "/algoes/#/java8/stream/"
                         },
                         {
-                            "name": "Concurrent Thread-Stack Processing",
-                            "url" : "/algoes/#/java16/"
+                            "name": "Method references",
+                            "url": "/algoes/#/java8/"
                         },
                         {
-                            "name": "Elastic Metaspace",
-                            "url" : "/algoes/#/java16/"
+                            "name": "Functional interfaces",
+                            "url": "/algoes/#/java8/"
                         },
                         {
-                            "name": "Warnings for Value-Based Classes",
-                            "url" : "/algoes/#/java16/"
+                            "name": "Default methods",
+                            "url": "/algoes/#/java8/"
                         },
                         {
-                            "name": "Foreign-Memory Access API (Third Incubator)",
-                            "url" : "/algoes/#/java16/"
+                            "name": "Base64 Encode Decode",
+                            "url": "/algoes/#/java8/"
                         },
                         {
-                            "name": "Foreign Linker API (Incubator)",
-                            "url" : "/algoes/#/java16/"
+                            "name": "Date/Time API",
+                            "url": "/algoes/#/java8/"
                         },
                         {
-                            "name": "Pattern Matching for instanceof",
-                            "url" : "/algoes/#/java16/"
+                            "name": "Optional class",
+                            "url": "/algoes/#/java8/"
                         },
                         {
-                            "name": "Records",
-                            "url" : "/algoes/#/java16/"
+                            "name": "Collectors class",
+                            "url": "/algoes/#/java8/"
                         },
                         {
-                            "name": "Sealed Classes (Second Preview)",
-                            "url" : "/algoes/#/java16/"
+                            "name": "ForEach() method",
+                            "url": "/algoes/#/java8/"
                         },
                         {
-                            "name": "Encapsulating JDK Internals by default",
-                            "url" : "/algoes/#/java16/"
+                            "name": "Parallel array sorting",
+                            "url": "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "Stream Filter",
+                            "url": "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "IO Enhancements",
+                            "url": "/algoes/#/java8/"
+                        },
+                        {
+                            "name": "Concurrency Enhancements",
+                            "url": "/algoes/#/java8/"
                         }
                     ]
                 }
@@ -378,7 +481,7 @@
                     "links": [
                         {
                             "name": "Asynch Await",
-                            "url" : "/algoes/#/react/asyncAwait"
+                            "url": "/algoes/#/react/asyncAwait"
                         }
                     ]
                 },
@@ -387,7 +490,7 @@
                     "links": [
                         {
                             "name": "useState",
-                            "url" : "/algoes/#/react/useState"
+                            "url": "/algoes/#/react/useState"
                         }
                     ]
                 }
@@ -404,7 +507,7 @@
                     "links": [
                         {
                             "name": "Streams",
-                            "url" : "/algoes/#/nodejs/streams"
+                            "url": "/algoes/#/nodejs/streams"
                         }
                     ]
                 }
@@ -421,7 +524,7 @@
                     "links": [
                         {
                             "name": "Instance",
-                            "url" : "/algoes/#/aws/instance"
+                            "url": "/algoes/#/aws/instance"
                         }
                     ]
                 }

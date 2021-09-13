@@ -4,21 +4,51 @@
     "itemListElement": [
         {
             "@type": "ListItem",
-            "position": 20,
+            "position": 34,
+            "item": {
+                "@id": "/algoes/#/java11/",
+                "name": "Java 11!",
+                "date": "13 Sep 2021",
+                "url": "/algoes/#/java11/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 33,
+            "item": {
+                "@id": "/algoes/#/java14/",
+                "name": "Java 14!",
+                "date": "12 Sep 2021",
+                "url": "/algoes/#/java14/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 32,
+            "item": {
+                "@id": "/algoes/#/java15/",
+                "name": "Java 15!",
+                "date": "11 Sep 2021",
+                "url": "/algoes/#/java15/"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 31,
             "item": {
                 "@id": "/algoes/#/java16/",
                 "name": "Java 16!",
-                "date": "13 Sep 2021",
+                "date": "10 Sep 2021",
                 "url": "/algoes/#/java16/"
             }
         },
         {
             "@type": "ListItem",
-            "position": 20,
+            "position": 30,
             "item": {
                 "@id": "/algoes/#/java9/",
                 "name": "Java 9!",
-                "date": "13 Sep 2021",
+                "date": "09 Sep 2021",
                 "url": "/algoes/#/java9/"
             }
         },
