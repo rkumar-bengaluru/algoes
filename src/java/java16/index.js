@@ -1,5 +1,6 @@
 import { useReducer, useEffect } from 'react';
 import Java16VectorApi from './vectorapi';
+import Java16LinkerApi from './linkerapi';
 
 const Java16Home = (props) => {
     const initialState = { current: '', prev: '' };
@@ -97,8 +98,7 @@ const Java16Home = (props) => {
     function renderForeignLinkerApi() {
         return (
             <div>
-                <h6>Foreign Linker API (Incubator)</h6>
-                <div>TODO</div>
+                <Java16LinkerApi/>
             </div>
         )
     }

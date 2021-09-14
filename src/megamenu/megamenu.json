@@ -227,7 +227,7 @@
                         },
                         {
                             "name": "Foreign Linker API (Incubator)",
-                            "url": "/algoes/#/java16/"
+                            "url": "/algoes/#/java16/linkerapi"
                         },
                         {
                             "name": "Pattern Matching for instanceof",
