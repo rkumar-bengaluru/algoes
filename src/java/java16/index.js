@@ -1,6 +1,7 @@
 import { useReducer, useEffect } from 'react';
 import Java16VectorApi from './vectorapi';
 import Java16LinkerApi from './linkerapi';
+import Java16ForeignMemoryApi from './memoryapi'
 
 const Java16Home = (props) => {
     const initialState = { current: '', prev: '' };
@@ -89,8 +90,7 @@ const Java16Home = (props) => {
     function renderForreignMemoryApi() {
         return (
             <div>
-                <h6>Foreign-Memory Access API (Third Incubator)</h6>
-                <div>TODO</div>
+                <Java16ForeignMemoryApi/>
             </div>
         )
     }

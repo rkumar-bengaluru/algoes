@@ -223,7 +223,7 @@
                         },
                         {
                             "name": "Foreign-Memory Access API (Third Incubator)",
-                            "url": "/algoes/#/java16/"
+                            "url": "/algoes/#/java16/memoryapi"
                         },
                         {
                             "name": "Foreign Linker API (Incubator)",
