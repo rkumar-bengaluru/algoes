@@ -1,4 +1,5 @@
 import { useReducer, useEffect } from 'react';
+import Java16VectorApi from './vectorapi';
 
 const Java16Home = (props) => {
     const initialState = { current: '', prev: '' };
@@ -43,8 +44,7 @@ const Java16Home = (props) => {
     function renderVectorApi() {
         return (
             <div>
-                <h6>Vector API (Incubator)</h6>
-                <div>TODO</div>
+                <Java16VectorApi/>
             </div>
         )
     }
