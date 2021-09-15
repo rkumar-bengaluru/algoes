@@ -1,7 +1,9 @@
 import { useReducer, useEffect } from 'react';
 import Java16VectorApi from './vectorapi';
 import Java16LinkerApi from './linkerapi';
-import Java16ForeignMemoryApi from './memoryapi'
+import Java16ForeignMemoryApi from './memoryapi';
+import Java16SealedInterface from './sealed';
+import Java16RecordClass from './record';
 
 const Java16Home = (props) => {
     const initialState = { current: '', prev: '' };
@@ -116,7 +118,7 @@ const Java16Home = (props) => {
         return (
             <div>
                 <h6>Records</h6>
-                <div>TODO</div>
+                <Java16RecordClass/>
             </div>
         )
     }
@@ -125,7 +127,7 @@ const Java16Home = (props) => {
         return (
             <div>
                 <h6>Sealed Classes (Second Preview)</h6>
-                <div>TODO</div>
+                <Java16SealedInterface/>
             </div>
         )
     }
@@ -196,7 +198,7 @@ const Java16Home = (props) => {
                     </li>
                     <li>
                         <a href={"javascript:void(0)"} onClick={() => dispatch({ type: '9' })}>
-                            Records
+                            Records 
                         </a>
                         <p>The record is finalized and becomes a standard feature.</p>
                     </li>

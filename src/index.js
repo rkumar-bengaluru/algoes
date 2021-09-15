@@ -17,6 +17,11 @@ import Java16Home from './java/java16';
 import Java16VectorApi from './java/java16/vectorapi';
 import Java16LinkerApi from './java/java16/linkerapi';
 import Java16ForeignMemoryApi from './java/java16/memoryapi';
+import Java16RecordClass from './java/java16/record';
+import Java16SealedInterface from './java/java16/sealed';
+import Java15HiddenClass from './java/java15/hidden';
+import Java15TextBlock from './java/java15/textblock';
+import Java14RecordClass from './java/java14/record';
 import Lambda from './java/java8/lambda';
 import Java8Stream from './java/java8/stream'
 import ReactHome from './react';
@@ -46,6 +51,11 @@ ReactDOM.render(
         <Route exact path="/java16/vectorapi" component={Java16VectorApi} />
         <Route exact path="/java16/linkerapi" component={Java16LinkerApi} />
         <Route exact path="/java16/memoryapi" component={Java16ForeignMemoryApi} />
+        <Route exact path="/java15/textblock" component={Java15TextBlock} />
+        <Route exact path="/java15/hidden" component={Java15HiddenClass} />
+        <Route exact path="/java16/sealed" component={Java16SealedInterface} />
+        <Route exact path="/java16/record" component={Java16RecordClass} />
+        <Route exact path="/java14/record" component={Java14RecordClass} />
         <Route exact path="/react/" component={ReactHome} />
         <Route exact path="/react/useState" component={ReactUseStateHooks} />
         <Route exact path="/react/asyncAwait" component={JavaScriptASynchAwait} />

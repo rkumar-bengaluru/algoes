@@ -1,5 +1,8 @@
 import { useEffect, useReducer } from "react";
 
+import Java15HiddenClass from './hidden';
+import Java15TextBlock from "./textblock";
+
 const Java15Home = (props) => {
     const initialState = { current: '', prev: '' };
     const [state, dispatch] = useReducer(reducer, initialState);
@@ -41,7 +44,7 @@ const Java15Home = (props) => {
         return (
             <div>
                 <h6>Hidden Classes</h6>
-                <div>TODO</div>
+                <Java15HiddenClass/>
             </div>
         )
     }
@@ -59,7 +62,7 @@ const Java15Home = (props) => {
         return (
             <div>
                 <h6>Text Blocks</h6>
-                <div>TODO</div>
+                <Java15TextBlock/>
             </div>
         )
     }

@@ -1,4 +1,5 @@
 import { useEffect, useReducer } from "react";
+import Java14RecordClass from './record';
 
 const Java14Home = (props) => {
     const java14State = { prev: '', current: '' };
@@ -18,6 +19,8 @@ const Java14Home = (props) => {
                 return { prev: state.current, current: render04() };
             case '5':
                 return { prev: state.current, current: render05() };
+            case '6':
+                return { prev: state.current, current: render06() };
             default:
                 throw new Error('Unexpected...');
         }
@@ -67,6 +70,15 @@ const Java14Home = (props) => {
             </div>
         )
     }
+
+    function render06() {
+        return (
+            <div>
+                <h6>Record (Preview)</h6>
+                <Java14RecordClass/>
+            </div>
+        )
+    }
     function renderHomePage() {
         return (
             <div>
@@ -102,6 +114,12 @@ const Java14Home = (props) => {
                             Switch Expressions (Standard)
                         </a>
                         <p>The switch expression was a preview feature in Java 12 and Java 13; now it is officially JDK standard feature, it means from Java 14 and onward, we can return value via switch expressions without specifying the --enable-preview option.</p>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" onClick={() => dispatch({ type: '6' })}>
+                            Record (Preview)
+                        </a>
+                        <p>A new class called record (aka data class), it is a final class, not abstract, and all of its fields are final as well. The record will automatically generate the tedious constructors, public get, equals(), hashCode(), toString() during compile time.</p>
                     </li>
                 </ul>
             </div>
@@ -142,6 +160,11 @@ const Java14Home = (props) => {
                             <a href="javascript:void(0)" onClick={() => dispatch({ type: '5' })}>
                                 Switch Expressions (Standard)
                             </a>
+                        </li>
+                        <li>
+                        <a href="javascript:void(0)" onClick={() => dispatch({ type: '6' })}>
+                            Record (Preview)
+                        </a>
                         </li>
                     </ul>
                 </div>
