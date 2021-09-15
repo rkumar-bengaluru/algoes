@@ -57,7 +57,8 @@ const Java16Home = (props) => {
         return (
             <div>
                 <h6>Enable C++14 Language Features</h6>
-                <div>TODO</div>
+                <p>This JEP allows the [C++ 14 features]((https://en.wikipedia.org/wiki/C%2B%2B14) to be used in the C++ source code within the JDK.</p>
+                <p>This feature has no programming API implication for java developers.</p>
             </div>
         )
     }
@@ -66,7 +67,13 @@ const Java16Home = (props) => {
         return (
             <div>
                 <h6>Concurrent Thread-Stack Processing</h6>
-                <div>TODO</div>
+                <p>This JEP improves the Z Garbage Collector (ZGC) by moving the ZGC thread-stack processing from safepoints to a concurrent phase.</p>
+                <h7>History</h7>
+                <ul>
+                    <li>Java 11 <a href="https://openjdk.java.net/jeps/333" target="_blank">JEP 333 </a>introduced the Z Garbage Collector (ZGC) as a experimental garbage collector.</li>
+                    <li>Java 15 <a href="https://openjdk.java.net/jeps/377" target="_blank">JEP 377</a>, the ZGC became a product feature.</li>
+                </ul>
+                <p>This feature has no programming API implication for java developers.</p>
             </div>
         )
     }
@@ -75,7 +82,9 @@ const Java16Home = (props) => {
         return (
             <div>
                 <h6>Elastic Metaspace</h6>
-                <div>TODO</div>
+                <p>Java 8 <a href="https://openjdk.java.net/jeps/122" target="_blank">JEP 122</a> removed the PermGen (Permanent Generation), and introduced Metaspace, a native off-heap memory manager in the hotspot.</p>
+                <p>This JEP improves the metaspace memory management by returning unused HotSpot class-metadata or metaspace memory to the operating system more promptly, reducing the metaspace footprint, and simplifying the metaspace code.</p>
+                <p>This feature has no programming API implication for java developers.</p>
             </div>
         )
     }
@@ -136,7 +145,9 @@ const Java16Home = (props) => {
         return (
             <div>
                 <h6>Encapsulating JDK Internals by default</h6>
-                <div>TODO</div>
+                <p>Java 9 <a href="https://openjdk.java.net/jeps/261" target="_blank">JEP 261</a> introduced the --illegal-access option to control the access of the internal APIs and packaged of the JDK.</p>
+                <p>This JEP change the default mode of --illegal-access option from permit to deny. With this change, the internal packages and APIs (except the critical internal APIs) of the JDK will no longer open by default.</p>
+                <p>This JEP’s motivation is to discourage the third-party libraries, frameworks, and tools from using the internal APIs and packages of the JDK.</p>
             </div>
         )
     }

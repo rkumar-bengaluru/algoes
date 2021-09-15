@@ -34,7 +34,7 @@ const Java14Home = (props) => {
         return (
             <div>
                 <h6>NUMA-Aware Memory Allocation for G1</h6>
-                <div>TODO</div>
+                <p>New NUMA-aware memory allocation mode, improves the G1 performance on large machines. Add +XX:+UseNUMA option to enable it.</p>
             </div>
         )
     }
@@ -42,7 +42,9 @@ const Java14Home = (props) => {
         return (
             <div>
                 <h6>JFR Event Streaming</h6>
-                <div>TODO</div>
+                <p>Improved the existing JFR to support event streaming, it means now we can stream the JFR events in real-time, without the need to dump the recorded events to disk and parse it manually.</p>
+                <p>The JDK Flight Recorder (JFR) is a tool for collecting diagnostic and profiling data about a running Java application. Normally, we start a recording, stop it, dump the recorded events to disk for parsing, it works well for profiling, analysis, or debugging.</p>
+                <p>Check Java 11 <a href="/algoes/#/java11/">Flight Recorder</a></p>
             </div>
         )
     }
@@ -50,7 +52,7 @@ const Java14Home = (props) => {
         return (
             <div>
                 <h6> Non-Volatile Mapped Byte Buffers</h6>
-                <div>TODO</div>
+                <p>Improved FileChannel API to create MappedByteBuffer that access to non-volatile memory (NVM) – a memory that can retrieve stored data even after having been power cycled. For example, this feature ensures that any changes which might still be in the cache are written back to memory.</p>
             </div>
         )
     }

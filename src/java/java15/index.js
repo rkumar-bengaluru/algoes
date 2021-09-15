@@ -53,7 +53,12 @@ const Java15Home = (props) => {
         return (
             <div>
                 <h6>A Scalable Low-Latency Garbage Collector</h6>
-                <div>TODO</div>
+                <p>Java 11 <a href="https://openjdk.java.net/jeps/333">JEP 333</a> introduced the ZGC garbage collector as an experimental feature.</p>
+                <ul>
+                    <li>This JEP fixed some bugs, added some features and enhancements, and now supported major platforms like Linux/x86_64, Linux/aarch64, Windows, and macOS.</li>
+                    <li>This JEP also changes the Z Garbage Collector from an experimental feature into a product feature. However, the default garbage collector remains G1.</li>
+                </ul>
+                <code>java -XX:+UseZGC className</code>
             </div>
         )
     }
@@ -71,7 +76,11 @@ const Java15Home = (props) => {
         return (
             <div>
                 <h6>A Low-Pause-Time Garbage Collector</h6>
-                <div>TODO</div>
+                <p>Java 12 <a href="https://openjdk.java.net/jeps/189">JEP 189</a> introduced the Shenandoah garbage collector as an experimental feature, and now become a product feature in Java 15.</p>
+                <p>Before Java 15, we need -XX:+UnlockExperimentalVMOptions -XX:+UseShenandoahGC to enable the Shenandoah GC.</p>
+                <code>java -XX:+UnlockExperimentalVMOptions -XX:+UseShenandoahGC</code>
+                <p>In Java 15, we only need -XX:+UseShenandoahGC to enable the Shenandoah GC.</p>
+                <code>java -XX:+UseShenandoahGC</code>
             </div>
         )
     }

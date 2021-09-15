@@ -50,7 +50,8 @@ const Java11Home = (props) => {
         return (
             <div>
                 <h6>Dynamic Class-File Constants</h6>
-                <div>TODO</div>
+                <p>Extends class-file format to support a new constant-pool form, CONSTANT_Dynamic, target language designers and compiler implementors.</p>
+                <p>Check <a href="https://openjdk.java.net/jeps/309" target="_blank">JEP 309</a></p>
             </div>
         )
     }

@@ -206,18 +206,6 @@
                             "url": "/algoes/#/java16/vectorapi"
                         },
                         {
-                            "name": "Enable C++14 Language Features",
-                            "url": "/algoes/#/java16/"
-                        },
-                        {
-                            "name": "Concurrent Thread-Stack Processing",
-                            "url": "/algoes/#/java16/"
-                        },
-                        {
-                            "name": "Elastic Metaspace",
-                            "url": "/algoes/#/java16/"
-                        },
-                        {
                             "name": "Warnings for Value-Based Classes",
                             "url": "/algoes/#/java16/"
                         },
@@ -235,15 +223,11 @@
                         },
                         {
                             "name": "Records",
-                            "url": "/algoes/#/java16/"
+                            "url": "/algoes/#/java16/record"
                         },
                         {
                             "name": "Sealed Classes (Second Preview)",
-                            "url": "/algoes/#/java16/"
-                        },
-                        {
-                            "name": "Encapsulating JDK Internals by default",
-                            "url": "/algoes/#/java16/"
+                            "url": "/algoes/#/java16/sealed"
                         }
                     ]
                 },
@@ -260,19 +244,11 @@
                         },
                         {
                             "name": "Hidden Classes",
-                            "url": "/algoes/#/java15/"
-                        },
-                        {
-                            "name": "A Scalable Low-Latency Garbage Collector",
-                            "url": "/algoes/#/java15/"
+                            "url": "/algoes/#/java15/hidden"
                         },
                         {
                             "name": "Text Blocks",
-                            "url": "/algoes/#/java15/"
-                        },
-                        {
-                            "name": "A Low-Pause-Time Garbage Collector",
-                            "url": "/algoes/#/java15/"
+                            "url": "/algoes/#/java15/textblock"
                         }
                     ]
                 },
@@ -281,10 +257,6 @@
                     "links": [
                         {
                             "name": "Java 14 Features",
-                            "url": "/algoes/#/java14/"
-                        },
-                        {
-                            "name": "NUMA-Aware Memory Allocation for G1",
                             "url": "/algoes/#/java14/"
                         },
                         {
@@ -302,6 +274,10 @@
                         {
                             "name": "Switch Expressions (Standard)",
                             "url": "/algoes/#/java14/"
+                        },
+                        {
+                            "name": "Record (Preview)",
+                            "url": "/algoes/#/java14/record"
                         }
                     ]
                 },
@@ -346,10 +322,6 @@
                         },
                         {
                             "name": "Launch Single-File Source-Code Programs",
-                            "url": "/algoes/#/java11/"
-                        },
-                        {
-                            "name": "A Scalable Low-Latency Garbage Collector (Experimental)",
                             "url": "/algoes/#/java11/"
                         }
                     ]
