@@ -6,7 +6,7 @@ require('codemirror/lib/codemirror.css');
 require('codemirror/mode/javascript/javascript');
 require('codemirror/mode/markdown/markdown');
 
-const Lambda = (props) => {
+const J8Lambda = (props) => {
     const [basic, setBasic] = useState('');
     const [predicate, setPredicate] = useState('');
     const [cm, setCm] = useState(React.createRef());
@@ -107,4 +107,4 @@ const Lambda = (props) => {
         </div>
     )
 }
-export default Lambda;
+export default J8Lambda;

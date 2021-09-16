@@ -1,10 +1,11 @@
 import { useReducer, useEffect } from 'react';
-import Java16VectorApi from './vectorapi';
-import Java16LinkerApi from './linkerapi';
-import Java16ForeignMemoryApi from './memoryapi';
-import Java16SealedInterface from './sealed';
-import Java16RecordClass from './record';
-
+import Java16VectorApi from './j16vectorapi';
+import Java16LinkerApi from './j16linkerapi';
+import Java16ForeignMemoryApi from './j16memoryapi';
+import Java16SealedInterface from './j16sealed';
+import Java16RecordClass from './j16record';
+import J16ValueBased from './j16valuebased';
+import J16PatternMatch from './j16patternmatch';
 const Java16Home = (props) => {
     const initialState = { current: '', prev: '' };
     const [state, dispatch] = useReducer(reducer, initialState);
@@ -92,8 +93,7 @@ const Java16Home = (props) => {
     function renderValueBasedClasses() {
         return (
             <div>
-                <h6>Warnings for Value-Based Classes</h6>
-                <div>TODO</div>
+                <J16ValueBased/>
             </div>
         )
     }
@@ -117,8 +117,7 @@ const Java16Home = (props) => {
     function renderPatternMatching() {
         return (
             <div>
-                <h6> Pattern Matching for instanceof</h6>
-                <div>TODO</div>
+                <J16PatternMatch/>
             </div>
         )
     }

@@ -1,6 +1,12 @@
 import React, { useEffect, useReducer, useState } from "react";
 import menus from '../../megamenu/megamenu.json';
-
+import J8Lambda from "./j8lambda";
+import J8Functional from "./j8functional";
+import J8MethodRef from "./j8methodref";
+import J8Optional from "./j8optional";
+import Java8Stream from "./j8stream";
+import J9PrivateInterface from '../java9/j9privateinterface';
+import Java15HiddenClass from '../java15/j15hidden';
 const Java8Home = (props) => {
     const initial = { current: '', prev: '' };
     const [state, dispatch] = useReducer(reducer, initial);
@@ -18,21 +24,11 @@ const Java8Home = (props) => {
             case '4':
                 return { prev: state.current, current: renderBase64EncodeDecode() };
             case '5':
-                return { prev: state.current, current: renderDateTime() };
-            case '6':
                 return { prev: state.current, current: renderOptionalClass() };
-            case '7':
-                return { prev: state.current, current: renderCollectorClass() };
-            case '8':
-                return { prev: state.current, current: renderForEach() };
-            case '9':
-                return { prev: state.current, current: renderParallelArraySort() };
-            case '10':
-                return { prev: state.current, current: renderFilter() };
-            case '11':
-                return { prev: state.current, current: renderIO() };
-            case '12':
-                return { prev: state.current, current: renderConcurency() };
+                case '6':
+                return { prev: state.current, current: renderLambda() };
+                case '7':
+                return { prev: state.current, current: renderStream() };
             default:
                 throw new Error('Unexpected...');
         }
@@ -49,13 +45,13 @@ const Java8Home = (props) => {
                 <p>Oracle released a new version of Java as Java 8 in March 18, 2014. It was a revolutionary release of the Java for software development platform. It includes various upgrades to the Java programming, JVM, Tools and libraries.</p>
                 <ul>
                     <li>
-                        <a href="/algoes/#/java8/lambda/">
+                        <a href="javascript:void(0)" onClick={() => dispatch({ type: '6' })}>
                             Lambda Expression
                         </a>
                         <p>Lambda expression helps us to write our code in functional style. It provides a clear and concise way to implement SAM interface(Single Abstract Method) by using an expression. It is very useful in collection library in which it helps to iterate, filter and extract data.</p>
                     </li>
                     <li>
-                        <a href="/algoes/#/java8/stream/">
+                        <a href="javascript:void(0)" onClick={() => dispatch({ type: '7' })}>
                             Stream API
                         </a>
                         <p>Java 8 java.util.stream package consists of classes, interfaces and an enum to allow functional-style operations on the elements. It performs lazy computation. So, it executes only when it requires.</p>
@@ -86,51 +82,9 @@ const Java8Home = (props) => {
                     </li>
                     <li>
                         <a href="javascript:void(0)" onClick={() => dispatch({ type: '5' })}>
-                            Date/Time API
-                        </a>
-                        <p>Java has introduced a new Date and Time API since Java 8. The java.time package contains Java 8 Date and Time classes.</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)" onClick={() => dispatch({ type: '6' })}>
                             Optional class
                         </a>
                         <p>Java introduced a new class Optional in Java 8. It is a public final class which is used to deal with NullPointerException in Java application. We must import java.util package to use this class. It provides methods to check the presence of value for particular variable.</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)" onClick={() => dispatch({ type: '7' })}>
-                            Collectors class
-                        </a>
-                        <p>Collectors is a final class that extends Object class. It provides reduction operations, such as accumulating elements into collections, summarizing elements according to various criteria etc.</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)" onClick={() => dispatch({ type: '8' })}>
-                            ForEach() method
-                        </a>
-                        <p>Java provides a new method forEach() to iterate the elements. It is defined in Iterable and Stream interfaces.</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)" onClick={() => dispatch({ type: '9' })}>
-                            Parallel array sorting
-                        </a>
-                        <p>Java provides a new additional feature in Arrays class which is used to sort array elements parallelly. The parallelSort() method has added to java.util.Arrays class that uses the JSR 166 Fork/Join parallelism common pool to provide sorting of arrays. It is an overloaded method.</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)" onClick={() => dispatch({ type: '10' })}>
-                        Stream Filter
-                        </a>
-                        <p>Java stream provides a method filter() to filter stream elements on the basis of given predicate. Suppose, you want to get only even elements of your list, you can do this easily with the help of filter() method.</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)" onClick={() => dispatch({ type: '11' })}>
-                            IO Enhancements
-                        </a>
-                        <p>In Java 8, there are several improvements to the java.nio.charset.Charset and extended charset implementations. It includes the following:</p>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)" onClick={() => dispatch({ type: '12' })}>
-                            Concurrency Enhancements
-                        </a>
-                        <p>The java.util.concurrent package added two new interfaces and four new classes.</p>
                     </li>
                 </ul>
 
@@ -141,8 +95,7 @@ const Java8Home = (props) => {
     function renderMethodRef() {
         return (
             <div>
-                <h6>Method Reference</h6>
-                <div>TODO</div>
+                <J8MethodRef/>
             </div>
         )
     }
@@ -150,8 +103,7 @@ const Java8Home = (props) => {
     function renderFunctionalInterface() {
         return (
             <div>
-                <h6>Functional interfaces</h6>
-                <div>TODO</div>
+                <J8Functional/>
             </div>
         )
     }
@@ -159,8 +111,7 @@ const Java8Home = (props) => {
     function renderDefaultMethods() {
         return (
             <div>
-                <h6>Default Methods</h6>
-                <div>TODO</div>
+                <J9PrivateInterface/>
             </div>
         )
     }
@@ -168,80 +119,31 @@ const Java8Home = (props) => {
     function renderBase64EncodeDecode() {
         return (
             <div>
-                <h6>Base64 Encode Decode</h6>
-                <div>TODO</div>
+                <Java15HiddenClass/>
             </div>
         )
     }
     // case 5
-    function renderDateTime() {
+    function renderOptionalClass() {
         return (
             <div>
-                <h6>Date/Time API</h6>
-                <div>TODO</div>
+                <J8Optional/>
             </div>
         )
     }
     // case 6
-    function renderOptionalClass() {
+    function renderLambda() {
         return (
             <div>
-                <h6>Optional Class</h6>
-                <div>TODO</div>
+                <J8Lambda/>
             </div>
         )
     }
     // case 7
-    function renderCollectorClass() {
+    function renderStream() {
         return (
             <div>
-                <h6>Collector Class</h6>
-                <div>TODO</div>
-            </div>
-        )
-    }
-    // case 8
-    function renderForEach() {
-        return (
-            <div>
-                <h6>forEach()</h6>
-                <div>TODO</div>
-            </div>
-        )
-    }
-    // case 9
-    function renderParallelArraySort() {
-        return (
-            <div>
-                <h6>Parallel Array Sort</h6>
-                <div>TODO</div>
-            </div>
-        )
-    }
-    // case 10
-    function renderFilter() {
-        return (
-            <div>
-                <h6>Stream Filter</h6>
-                <div>TODO</div>
-            </div>
-        )
-    }
-    // case 11
-    function renderIO() {
-        return (
-            <div>
-                <h6>IO Enhancements</h6>
-                <div>TODO</div>
-            </div>
-        )
-    }
-    // case 12
-    function renderConcurency() {
-        return (
-            <div>
-                <h6>Concurrency Enhancements</h6>
-                <div>TODO</div>
+                <Java8Stream/>
             </div>
         )
     }
@@ -257,12 +159,12 @@ const Java8Home = (props) => {
                             </a>
                         </li>
                         <li>
-                            <a href="/algoes/#/java8/lambda/">
+                            <a href="javascript:void(0)" onClick={() => dispatch({ type: '6' })}>
                                 Lambda Expression
                             </a>
                         </li>
                         <li>
-                            <a href="/algoes/#/java8/stream/">
+                            <a href="javascript:void(0)" onClick={() => dispatch({ type: '7' })}>
                                 Stream API
                             </a>
                         </li>
@@ -288,42 +190,7 @@ const Java8Home = (props) => {
                         </li>
                         <li>
                             <a href="javascript:void(0)" onClick={() => dispatch({ type: '5' })}>
-                                Date/Time API
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" onClick={() => dispatch({ type: '6' })}>
                                 Optional class
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" onClick={() => dispatch({ type: '7' })}>
-                                Collectors class
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" onClick={() => dispatch({ type: '8' })}>
-                                ForEach() method
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" onClick={() => dispatch({ type: '9' })}>
-                                Parallel array sorting
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" onClick={() => dispatch({ type: '10' })}>
-                            Stream Filter
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" onClick={() => dispatch({ type: '11' })}>
-                                IO Enhancements
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" onClick={() => dispatch({ type: '12' })}>
-                                Concurrency Enhancements
                             </a>
                         </li>
                     </ul>

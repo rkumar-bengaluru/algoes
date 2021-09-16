@@ -1,5 +1,14 @@
 import { useEffect, useReducer } from "react";
 
+import J11ChaCha20 from "./j11chacha20";
+import J11HttpClient from "./j11httpclient";
+import J11KeyGen from "./j11keygen";
+import J11Lauch from "./j11launch";
+import J11LocalVar from "./j11localvar";
+import J11Nac from "./j11nac";
+import J11TLS from "./j11tls";
+import J11Unicode from "./j11unicode";
+
 const Java11Home = (props) => {
     const java11State = { current: '', prev: '' };
     const [state, dispatch] = useReducer(java11Reducer, java11State);
@@ -40,8 +49,7 @@ const Java11Home = (props) => {
     function render01() {
         return (
             <div>
-                <h6>Nest-Based Access Control</h6>
-                <div>TODO</div>
+                <J11Nac/>
             </div>
         )
     }
@@ -59,8 +67,7 @@ const Java11Home = (props) => {
     function render03() {
         return (
             <div>
-                <h6>HTTP Client (Standard)</h6>
-                <div>TODO</div>
+                <J11HttpClient/>
             </div>
         )
     }
@@ -68,8 +75,7 @@ const Java11Home = (props) => {
     function render04() {
         return (
             <div>
-                <h6>Local-Variable Syntax for Lambda Parameters</h6>
-                <div>TODO</div>
+                <J11LocalVar/>
             </div>
         )
     }
@@ -77,8 +83,7 @@ const Java11Home = (props) => {
     function render05() {
         return (
             <div>
-                <h6>Key Agreement with Curve25519 and Curve448</h6>
-                <div>TODO</div>
+                <J11KeyGen/>
             </div>
         )
     }
@@ -86,8 +91,7 @@ const Java11Home = (props) => {
     function render06() {
         return (
             <div>
-                <h6>Unicode 10</h6>
-                <div>TODO</div>
+                <J11Unicode/>
             </div>
         )
     }
@@ -104,8 +108,7 @@ const Java11Home = (props) => {
     function render08() {
         return (
             <div>
-                <h6>ChaCha20 and Poly1305 Cryptographic Algorithms</h6>
-                <div>TODO</div>
+                <J11ChaCha20/>
             </div>
         )
     }
@@ -113,8 +116,7 @@ const Java11Home = (props) => {
     function render09() {
         return (
             <div>
-                <h6>Launch Single-File Source-Code Programs</h6>
-                <div>TODO</div>
+               <J11Lauch/>
             </div>
         )
     }

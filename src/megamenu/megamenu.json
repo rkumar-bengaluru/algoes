@@ -207,7 +207,7 @@
                         },
                         {
                             "name": "Warnings for Value-Based Classes",
-                            "url": "/algoes/#/java16/"
+                            "url": "/algoes/#/java16/valuebased"
                         },
                         {
                             "name": "Foreign-Memory Access API (Third Incubator)",
@@ -219,7 +219,7 @@
                         },
                         {
                             "name": "Pattern Matching for instanceof",
-                            "url": "/algoes/#/java16/"
+                            "url": "/algoes/#/java16/patternmatch"
                         },
                         {
                             "name": "Records",
@@ -240,7 +240,7 @@
                         },
                         {
                             "name": "Edwards-Curve Digital Signature Algorithm (EdDSA)",
-                            "url": "/algoes/#/java15/"
+                            "url": "/algoes/#/java15/eddsa"
                         },
                         {
                             "name": "Hidden Classes",
@@ -269,11 +269,11 @@
                         },
                         {
                             "name": "Helpful NullPointerExceptions",
-                            "url": "/algoes/#/java14/"
+                            "url": "/algoes/#/java14/nullpointer"
                         },
                         {
                             "name": "Switch Expressions (Standard)",
-                            "url": "/algoes/#/java14/"
+                            "url": "/algoes/#/java14/switchexp"
                         },
                         {
                             "name": "Record (Preview)",
@@ -290,7 +290,7 @@
                         },
                         {
                             "name": "Nest-Based Access Control",
-                            "url": "/algoes/#/java11/"
+                            "url": "/algoes/#/java11/nac"
                         },
                         {
                             "name": "Dynamic Class-File Constants",
@@ -298,19 +298,19 @@
                         },
                         {
                             "name": " HTTP Client (Standard)",
-                            "url": "/algoes/#/java11/"
+                            "url": "/algoes/#/java11/httpclient"
                         },
                         {
                             "name": "Local-Variable Syntax for Lambda Parameters",
-                            "url": "/algoes/#/java11/"
+                            "url": "/algoes/#/java11/localvar"
                         },
                         {
                             "name": "Key Agreement with Curve25519 and Curve448",
-                            "url": "/algoes/#/java11/"
+                            "url": "/algoes/#/java11/keygen"
                         },
                         {
                             "name": "Unicode 10",
-                            "url": "/algoes/#/java11/"
+                            "url": "/algoes/#/java11/unicode"
                         },
                         {
                             "name": "Flight Recorder",
@@ -318,11 +318,11 @@
                         },
                         {
                             "name": "ChaCha20 and Poly1305 Cryptographic Algorithms",
-                            "url": "/algoes/#/java11/"
+                            "url": "/algoes/#/java11/chacha20"
                         },
                         {
                             "name": "Launch Single-File Source-Code Programs",
-                            "url": "/algoes/#/java11/"
+                            "url": "/algoes/#/java11/launch"
                         }
                     ]
                 },
@@ -339,27 +339,27 @@
                         },
                         {
                             "name": "Interface Private Methods",
-                            "url": "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/private"
                         },
                         {
                             "name": "Try With Resouces",
-                            "url": "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/tryresource"
                         },
                         {
                             "name": "Anonymous Classes Improvement",
-                            "url": "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/anonymous"
                         },
                         {
                             "name": "Java @SafeVarargs Annotation",
-                            "url": "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/safe"
                         },
                         {
                             "name": "Java Collection Factory Methods",
-                            "url": "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/factory"
                         },
                         {
                             "name": "Java Process API Improvement",
-                            "url": "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/process"
                         },
                         {
                             "name": "Java New Version-String Scheme",
@@ -371,7 +371,7 @@
                         },
                         {
                             "name": "Java 9 Stream API Improvements",
-                            "url": "/algoes/#/java9/"
+                            "url": "/algoes/#/java9/stream"
                         }
                     ]
                 },
@@ -392,51 +392,23 @@
                         },
                         {
                             "name": "Method references",
-                            "url": "/algoes/#/java8/"
+                            "url": "/algoes/#/java8/methodref"
                         },
                         {
                             "name": "Functional interfaces",
-                            "url": "/algoes/#/java8/"
+                            "url": "/algoes/#/java8/functional"
                         },
                         {
                             "name": "Default methods",
-                            "url": "/algoes/#/java8/"
+                            "url": "/algoes/#/java8/default"
                         },
                         {
                             "name": "Base64 Encode Decode",
-                            "url": "/algoes/#/java8/"
-                        },
-                        {
-                            "name": "Date/Time API",
-                            "url": "/algoes/#/java8/"
+                            "url": "/algoes/#/java8/base64"
                         },
                         {
                             "name": "Optional class",
-                            "url": "/algoes/#/java8/"
-                        },
-                        {
-                            "name": "Collectors class",
-                            "url": "/algoes/#/java8/"
-                        },
-                        {
-                            "name": "ForEach() method",
-                            "url": "/algoes/#/java8/"
-                        },
-                        {
-                            "name": "Parallel array sorting",
-                            "url": "/algoes/#/java8/"
-                        },
-                        {
-                            "name": "Stream Filter",
-                            "url": "/algoes/#/java8/"
-                        },
-                        {
-                            "name": "IO Enhancements",
-                            "url": "/algoes/#/java8/"
-                        },
-                        {
-                            "name": "Concurrency Enhancements",
-                            "url": "/algoes/#/java8/"
+                            "url": "/algoes/#/java8/optional"
                         }
                     ]
                 }

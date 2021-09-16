@@ -1,5 +1,13 @@
 import { useEffect, useReducer, useState } from "react";
 
+import J9Anonymous from "./j9anonymous";
+import J9Factory from "./j9factory";
+import J9PrivateInterface from "./j9privateinterface";
+import J9Process from "./j9process";
+import J9SafeVar from "./j9safevar";
+import J9Stream from "./j9stream";
+import J9TryResource from "./j9tryresource";
+
 const Java9Home = (props) => {
 
     const initialState = { current: '' };
@@ -53,8 +61,7 @@ const Java9Home = (props) => {
     function renderInterfacePrivateMethod() {
         return (
             <div className="container">
-                <h6>Interface Private Methods</h6>
-                <div>TODO</div>
+                <J9PrivateInterface/>
             </div>
         )
     }
@@ -62,8 +69,7 @@ const Java9Home = (props) => {
     function renderTryResouces() {
         return (
             <div className="container">
-                <h6>Try With Resouces</h6>
-                <div>TODO</div>
+                <J9TryResource/>
             </div>
         )
     }
@@ -71,8 +77,7 @@ const Java9Home = (props) => {
     function renderAnonymous() {
         return (
             <div className="container">
-                <h6>Anonymous Class</h6>
-                <div>TODO</div>
+                <J9Anonymous/>
             </div>
         )
     }
@@ -80,8 +85,7 @@ const Java9Home = (props) => {
     function renderSafeVarargs() {
         return (
             <div className="container">
-                <h6>Java @SafeVarargs Annotation</h6>
-                <div>TODO</div>
+                <J9SafeVar/>
             </div>
         )
     }
@@ -89,8 +93,7 @@ const Java9Home = (props) => {
     function renderCollectionFactory() {
         return (
             <div className="container">
-                <h6>Java Collection Factory Methods</h6>
-                <div>TODO</div>
+                <J9Factory/>
             </div>
         )
     }
@@ -98,8 +101,7 @@ const Java9Home = (props) => {
     function renderProcessApi() {
         return (
             <div className="container">
-                <h6>Java Process API Improvement</h6>
-                <div>TODO</div>
+                <J9Process/>
             </div>
         )
     }
@@ -134,8 +136,7 @@ const Java9Home = (props) => {
     function renderStreamApi() {
         return (
             <div className="container">
-                <h6>Java 9 Stream API Improvement</h6>
-                <div>TODO</div>
+                <J9Stream/>
             </div>
         )
     }
@@ -211,7 +212,7 @@ const Java9Home = (props) => {
                         <a href='javascript:void(0)' onClick={() => dispath({ type: '11' })}>
                             Java 9 Stream API Improvement
                         </a>
-                        <p>Java control panel is used to control Java applications that are embedded in browser. This control panel maintains the settings that manage Java application embedded in browser.</p>
+                        <p>In Java 9, Stream API has improved and new methods are added to the Stream interface</p>
                     </li>
 
                 </ul>

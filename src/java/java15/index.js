@@ -1,8 +1,8 @@
 import { useEffect, useReducer } from "react";
 
-import Java15HiddenClass from './hidden';
-import Java15TextBlock from "./textblock";
-
+import Java15HiddenClass from './j15hidden';
+import Java15TextBlock from "./j15textblock";
+import J15EDSA from "./j15eddsa";
 const Java15Home = (props) => {
     const initialState = { current: '', prev: '' };
     const [state, dispatch] = useReducer(reducer, initialState);
@@ -34,8 +34,7 @@ const Java15Home = (props) => {
     function render01() {
         return (
             <div>
-                <h6>Edwards-Curve Digital Signature Algorithm (EdDSA)</h6>
-                <div>TODO</div>
+                <J15EDSA/>
             </div>
         )
     }

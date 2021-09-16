@@ -1,5 +1,7 @@
 import { useEffect, useReducer } from "react";
-import Java14RecordClass from './record';
+import Java14RecordClass from './j14record';
+import J14NullPointer from "./j14nullpointer";
+import J14SwitchExp from "./j14switchexp";
 
 const Java14Home = (props) => {
     const java14State = { prev: '', current: '' };
@@ -59,16 +61,14 @@ const Java14Home = (props) => {
     function render04() {
         return (
             <div>
-                <h6>Helpful NullPointerExceptions</h6>
-                <div>TODO</div>
+                <J14NullPointer/>
             </div>
         )
     }
     function render05() {
         return (
             <div>
-                <h6>Switch Expressions (Standard)</h6>
-                <div>TODO</div>
+                <J14SwitchExp/>
             </div>
         )
     }
