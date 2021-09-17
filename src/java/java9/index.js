@@ -53,7 +53,28 @@ const Java9Home = (props) => {
         return (
             <div className="container">
                 <h6>Platform Module System</h6>
-                <div>TODO</div>
+                <p>A modular system provides capabilities similar to OSGi framework's system. Modules have a concept of dependencies, can export a public API and keep implementation details hidden/private.</p>
+                <p>One of the main motivations here is to provide modular JVM, which can run on devices with a lot less available memory. The JVM could run with only those modules and APIs which are required by the application.</p>                
+                <h6>Greeting Module</h6>
+                <p>This first example is a module named com.greetings that simply prints "Greetings!". The module consists of two source files: the module declaration (module-info.java) and the main class.</p>
+                <p>By convention, the source code for the module is in a directory that is the name of the module.</p>
+                <code>src/com.greetings/com/greetings/Main.java</code>
+                <code>src/com.greetings/module-info.java</code>
+                <p>module-info.java</p>
+                <code>module com.greetings { }</code>
+                <p>Main.java</p>
+                <code>package com.greetings;</code><br/>
+                <code>public class Main &#123;</code><br/>
+                <code>public static void main(String[] args) &#123;</code><br/>
+                <code>System.out.println("Greetings!");</code><br/>
+                <code>&#125;</code><br/>
+                <code>&#125;</code>
+                <p>Build</p>
+                <code>mkdir -p mods/com.greetings</code><br/>
+                <code>javac -d mods/com.greetings src/com.greetings/module-info.java src/com.greetings/com/greetings/Main.java</code>
+                <p>Running</p>
+                <code>java --module-path mods -m com.greetings/com.greetings.Main</code>
+
             </div>
         )
     }
@@ -110,7 +131,9 @@ const Java9Home = (props) => {
         return (
             <div className="container">
                 <h6>Java New Version-String Scheme</h6>
-                <div>TODO</div>
+                <p>Java version-string is a format that contains version specific information. This version-string consists of major, minor, security and patch update releases.</p>
+                <p>In Java 9, a new version-string scheme is introduced that looks like the below.</p>
+                <code>$MAJOR.$MINOR.$SECURITY.$PATCH</code>
             </div>
         )
     }
@@ -119,7 +142,7 @@ const Java9Home = (props) => {
         return (
             <div className="container">
                 <h6>JShell: The Java Shell (REPL)</h6>
-                <div>TODO</div>
+                <p>It is an interactive Java Shell tool, it allows us to execute Java code from the shell and shows output immediately. JShell is a REPL (Read Evaluate Print Loop) tool and run from the command line.</p>
             </div>
         )
     }
@@ -128,7 +151,9 @@ const Java9Home = (props) => {
         return (
             <div className="container">
                 <h6>Java 9 Control Panel</h6>
-                <div>TODO</div>
+                <p>Java control panel is used to control Java applications that are embedded in browser. This control panel maintains the settings that manage Java application embedded in browser.</p>
+                <p>In Java 9, control panel was rewritten as a JavaFX application and the storage location has changed. To start control panel, enter jcontrol to the terminal (cmd for windows) and it will open a window that looks below.</p>
+
             </div>
         )
     }

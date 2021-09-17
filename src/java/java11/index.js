@@ -100,7 +100,9 @@ const Java11Home = (props) => {
         return (
             <div>
                 <h6>Flight Recorder</h6>
-                <div>TODO</div>
+                <p>Java Flight Recorder (JFR) was a commercial product in Oracle JDK, now it is open source in OpenJDK 11. This JFR is a profiling tool that used to diagnose a running Java application. The below command starts a 60 seconds JFR recording on a Java application, dumps the recorded data into a ‘.jfr’ file.</p>
+                <code>java -XX:StartFlightRecording=duration=60s,settings=profile,filename=app.jfr MyApp</code>
+                <p>You can use <a target="_blank" href="https://www.oracle.com/java/technologies/javase/products-jmc8-downloads.html">Java Mission Control(JMC)</a> to profile the flight recorder file.</p>
             </div>
         )
     }
@@ -125,7 +127,8 @@ const Java11Home = (props) => {
         return (
             <div>
                 <h6>A Scalable Low-Latency Garbage Collector (Experimental)</h6>
-                <div>TODO</div>
+                <p>The Z Garbage Collector (ZGC) is an experimental garbage collector; it has low pause times not exceed 10ms. This ZCG support only on Linux/64.</p>
+                <p>This ZGC garbage collector is a product feature in Java 15 <a target="_blank" href="https://openjdk.java.net/jeps/377">JEP 377</a>.</p>
             </div>
         )
     }

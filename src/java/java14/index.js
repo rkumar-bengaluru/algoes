@@ -55,6 +55,9 @@ const Java14Home = (props) => {
             <div>
                 <h6> Non-Volatile Mapped Byte Buffers</h6>
                 <p>Improved FileChannel API to create MappedByteBuffer that access to non-volatile memory (NVM) – a memory that can retrieve stored data even after having been power cycled. For example, this feature ensures that any changes which might still be in the cache are written back to memory.</p>
+                <p>Add new method writebackMemory to class jdk.internal.misc.Unsafe</p>
+                <code>public void writebackMemory(long address, long length)</code>
+                <p>A call to this method ensures that any modifications to memory in the address range starting at address and continuing up to (but not necessarily including) address + length are guaranteed to have been written back from cache to memory.</p>
             </div>
         )
     }
