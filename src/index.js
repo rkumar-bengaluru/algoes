@@ -54,6 +54,9 @@ import J8Functional from "./java/java8/j8functional";
 import J8MethodRef from "./java/java8/j8methodref";
 import J8Optional from "./java/java8/j8optional";
 //
+// spring
+import SpringHome from './spring';
+//
 import ReactHome from './react';
 import ReactUseStateHooks from './react/hooks';
 import JavaScriptASynchAwait from './react/javascript/asynchawait'
@@ -118,6 +121,9 @@ ReactDOM.render(
         <Route exact path="/java8/default" component={J9PrivateInterface} />
         <Route exact path="/java8/base64" component={Java15HiddenClass} />
         {/* {java ends} */}
+        {/* {spring.io starts} */}
+        <Route exact path="/spring/" component={SpringHome} />
+        {/* {spring.io ends} */}
         <Route exact path="/react/" component={ReactHome} />
         <Route exact path="/react/useState" component={ReactUseStateHooks} />
         <Route exact path="/react/asyncAwait" component={JavaScriptASynchAwait} />

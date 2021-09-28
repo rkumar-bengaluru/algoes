@@ -416,6 +416,166 @@
         },
         {
             "@type": "Offer",
+            "name": "Spring.io",
+            "availability": "https://schema.org/InStock",
+            "url": "/algoes/#/spring/",
+            "subMenus": [
+                {
+                    "name": "Spring Boot",
+                    "action" : "0",
+                    "links": [
+                        {
+                            "name": "Restful Controllers",
+                            "url": "",
+                            "action" : "1"
+                        },
+                        {
+                            "name": "RestTemplate",
+                            "url": "",
+                            "action" : "2"
+                        },
+                        {
+                            "name": "Actuator",
+                            "url": "",
+                            "action" : "3"
+                        },
+                        {
+                            "name": "Scheduling",
+                            "url": "",
+                            "action" : "4"
+                        },
+                        {
+                            "name": "Batch",
+                            "url": "",
+                            "action" : "5"
+                        },
+                        {
+                            "name": "Transaction",
+                            "url": "",
+                            "action" : "6"
+                        },
+                        {
+                            "name": "Security",
+                            "url": "",
+                            "action" : "7"
+                        },
+                        {
+                            "name": "Asynchronous Java",
+                            "url": "",
+                            "action" : "8"
+                        },
+                        {
+                            "name": "WebSocket",
+                            "url": "",
+                            "action" : "9"
+                        },
+                        {
+                            "name": "Caching",
+                            "url": "",
+                            "action" : "10"
+                        }
+                    ]
+                },
+                {
+                    "name": "Spring Data",
+                    "action" : "11",
+                    "links": [
+                        {
+                            "name": "JDBCTemplate",
+                            "url": "",
+                            "action" : "12"
+                        },
+                        {
+                            "name": "JPA",
+                            "url": "",
+                            "action" : "13"
+                        },
+                        {
+                            "name": "MongoDB",
+                            "url": "",
+                            "action" : "14"
+                        },
+                        {
+                            "name": "MySQL",
+                            "url": "",
+                            "action" : "15"
+                        }
+                    ]
+                },
+                {
+                    "name": "Messaging",
+                    "action" : "16",
+                    "links": [
+                        {
+                            "name": "Redis",
+                            "url": "",
+                            "action" : "17"
+                        },
+                        {
+                            "name": "RabbitMQ",
+                            "url": "",
+                            "action" : "18"
+                        },
+                        {
+                            "name": "JMS",
+                            "url": "",
+                            "action" : "19"
+                        }
+                    ]
+                },
+                {
+                    "name": "Container",
+                    "action" : "20",
+                    "links": [
+                        {
+                            "name": "Docker",
+                            "url": "",
+                            "action" : "21"
+                        }
+                        ,
+                        {
+                            "name": "Kubernetes",
+                            "url": "",
+                            "action" : "22"
+                        }
+                    ]
+                },
+                {
+                    "name": "Reactive",
+                    "action" : "23",
+                    "links": [
+                        {
+                            "name": "Reactive Controller",
+                            "url": "",
+                            "action" : "24"
+                        },
+                        {
+                            "name": "Reactive Client",
+                            "url": "",
+                            "action" : "25"
+                        },
+                        {
+                            "name": "Reactive JDBC",
+                            "url": "",
+                            "action" : "26"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cloud",
+                    "action" : "27",
+                    "links": [
+                        {
+                            "name": "Circuit Breaker",
+                            "url": "",
+                            "action" : "28"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Offer",
             "name": "React",
             "availability": "https://schema.org/InStock",
             "url": "/algoes/#/react/",
