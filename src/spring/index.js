@@ -2,9 +2,10 @@ import { useEffect, useReducer, useState } from "react"
 import menus from '../megamenu/megamenu.json';
 import SpringIntro from "./home";
 import SpringController from "./controller";
+import WebFlux from "./webflux";
 const SpringHome = () => {
 
-    const springView = { current: <SpringIntro/>, prev: '' };
+    const springView = { current: <SpringIntro />, prev: '' };
     const [state, dispatch] = useReducer(springReducer, springView);
     const [springMenu, setSpringMenu] = useState([]);
 
@@ -19,10 +20,12 @@ const SpringHome = () => {
     function springReducer(state, action) {
         console.log(action.type);
         switch (action.type) {
-            case '0' :
-                return { prev: state.current, current: <SpringIntro/> };
-            case '1' :
-                return { prev: state.current, current: <SpringController/> };
+            case '0':
+                return { prev: state.current, current: <SpringIntro /> };
+            case '1':
+                return { prev: state.current, current: <SpringController /> };
+            case '2':
+                return { prev: state.current, current: <WebFlux /> };
             default:
                 return { prev: state.current, current: 'TODO' };
         }
@@ -40,7 +43,7 @@ const SpringHome = () => {
                             <ul>
                                 {e.links.map((item, index) => {
                                     return (
-                                        <a href="javascript:void(0)" onClick={() => dispatch({type: item.action})}>
+                                        <a href="javascript:void(0)" onClick={() => dispatch({ type: item.action })}>
                                             <li>{item.name}</li>
                                         </a>
                                     )

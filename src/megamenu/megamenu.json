@@ -430,8 +430,8 @@
                             "action" : "1"
                         },
                         {
-                            "name": "RestTemplate",
-                            "url": "",
+                            "name": "WebFlux",
+                            "url": "/algoes/#/spring/webflux",
                             "action" : "2"
                         },
                         {

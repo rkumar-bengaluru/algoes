@@ -57,6 +57,7 @@ import J8Optional from "./java/java8/j8optional";
 // spring
 import SpringHome from './spring';
 import SpringController from './spring/controller';
+import WebFlux from './spring/webflux';
 //
 import ReactHome from './react';
 import ReactUseStateHooks from './react/hooks';
@@ -125,6 +126,7 @@ ReactDOM.render(
         {/* {spring.io starts} */}
         <Route exact path="/spring/" component={SpringHome} />
         <Route exact path="/spring/controller" component={SpringController} />
+        <Route exact path="/spring/webflux" component={WebFlux} />
         {/* {spring.io ends} */}
         <Route exact path="/react/" component={ReactHome} />
         <Route exact path="/react/useState" component={ReactUseStateHooks} />
