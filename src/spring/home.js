@@ -11,7 +11,7 @@ const SpringIntro = () => {
                 <div className="col">
                     <ul>
                         <li>@LocalShopApplication - Springboot application</li>
-                        <li>@OrderController &amp; @AnalyticsController - RESTful Web Service</li>
+                        <li><a href="/algoes/#/spring/controller">@OrderController &amp; @AnalyticsController - RESTful Web Service</a></li>
                         <li>@OrderService &amp; @AnalyticsService - Business Service Facade</li>
                         <li>@RestTemplate - Rest Client</li>
                         <li>@WebFlux - sync, async, and streaming scenarios </li>
