@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 36,
+            "item": {
+                "@id": "/algoes/#/spring/hateaos",
+                "name": "Hateaos!",
+                "date": "29 Sep 2021",
+                "url": "/algoes/#/spring/hateaos"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 35,
             "item": {
                 "@id": "/algoes/#/spring/",

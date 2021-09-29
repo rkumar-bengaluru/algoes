@@ -3,6 +3,7 @@ import menus from '../megamenu/megamenu.json';
 import SpringIntro from "./home";
 import SpringController from "./controller";
 import WebFlux from "./webflux";
+import Hateaos from "./hateaos"
 const SpringHome = () => {
 
     const springView = { current: <SpringIntro />, prev: '' };
@@ -26,6 +27,8 @@ const SpringHome = () => {
                 return { prev: state.current, current: <SpringController /> };
             case '2':
                 return { prev: state.current, current: <WebFlux /> };
+            case '11':
+                return { prev: state.current, current: <Hateaos /> };
             default:
                 return { prev: state.current, current: 'TODO' };
         }

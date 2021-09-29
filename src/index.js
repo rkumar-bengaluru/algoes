@@ -58,6 +58,7 @@ import J8Optional from "./java/java8/j8optional";
 import SpringHome from './spring';
 import SpringController from './spring/controller';
 import WebFlux from './spring/webflux';
+import Hateaos from './spring/hateaos'
 //
 import ReactHome from './react';
 import ReactUseStateHooks from './react/hooks';
@@ -127,6 +128,7 @@ ReactDOM.render(
         <Route exact path="/spring/" component={SpringHome} />
         <Route exact path="/spring/controller" component={SpringController} />
         <Route exact path="/spring/webflux" component={WebFlux} />
+        <Route exact path="/spring/hateaos" component={Hateaos} />
         {/* {spring.io ends} */}
         <Route exact path="/react/" component={ReactHome} />
         <Route exact path="/react/useState" component={ReactUseStateHooks} />

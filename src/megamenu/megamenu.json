@@ -435,6 +435,11 @@
                             "action" : "2"
                         },
                         {
+                            "name": "Hateaos",
+                            "url": "/algoes/#/spring/hateaos",
+                            "action" : "11"
+                        },
+                        {
                             "name": "Actuator",
                             "url": "",
                             "action" : "3"
