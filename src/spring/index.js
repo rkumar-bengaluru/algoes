@@ -1,9 +1,10 @@
-import { useEffect, useReducer, useState } from "react"
+import { useEffect, useReducer, useState, lazy, Suspense } from "react"
 import menus from '../megamenu/megamenu.json';
 import SpringIntro from "./home";
 import SpringController from "./controller";
 import WebFlux from "./webflux";
-import Hateaos from "./hateaos"
+import Hateaos from "./hateaos";
+const SpringScheduling = lazy(() => import('./scheduling'));
 const SpringHome = () => {
 
     const springView = { current: <SpringIntro />, prev: '' };
@@ -27,11 +28,23 @@ const SpringHome = () => {
                 return { prev: state.current, current: <SpringController /> };
             case '2':
                 return { prev: state.current, current: <WebFlux /> };
+            case '4':
+                return {
+                    prev: state.current, current: renderScheduling()
+                }
             case '11':
                 return { prev: state.current, current: <Hateaos /> };
             default:
                 return { prev: state.current, current: 'TODO' };
         }
+    }
+
+    function renderScheduling() {
+        return (
+            <Suspense fallback={<div>loading...</div>}>
+                <SpringScheduling />
+            </Suspense>
+        )
     }
 
     function renderMenu() {
@@ -40,14 +53,14 @@ const SpringHome = () => {
                 {springMenu.map((e, i) => {
                     return (
                         <div>
-                            <a href="javascript:void(0)" onClick={() => dispatch({ type: e.action })}>
-                                <li>{e.name}</li>
+                            <a key={i} href="javascript:void(0)" onClick={() => dispatch({ type: e.action })}>
+                                <li key={i} >{e.name}</li>
                             </a>
                             <ul>
                                 {e.links.map((item, index) => {
                                     return (
-                                        <a href="javascript:void(0)" onClick={() => dispatch({ type: item.action })}>
-                                            <li>{item.name}</li>
+                                        <a key={index} href="javascript:void(0)" onClick={() => dispatch({ type: item.action })}>
+                                            <li key={index}>{item.name}</li>
                                         </a>
                                     )
                                 })}

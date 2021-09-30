@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Switch } from 'react-router-dom';
+
 import AppLayout from './layout';
 import App from './app';
 import Algorithm from './algorithm';
@@ -58,86 +59,92 @@ import J8Optional from "./java/java8/j8optional";
 import SpringHome from './spring';
 import SpringController from './spring/controller';
 import WebFlux from './spring/webflux';
-import Hateaos from './spring/hateaos'
+import Hateaos from './spring/hateaos';
+
 //
 import ReactHome from './react';
 import ReactUseStateHooks from './react/hooks';
 import JavaScriptASynchAwait from './react/javascript/asynchawait'
 import NodeJsHome from './nodejs';
 import AwsHome from './aws';
+// lazy loading
+const SpringScheduling = lazy(() => import('./spring/scheduling'));
 
 // http://localhost:3000/algoes/#/regex/
 // <Route exact path="/regex" component={RegEx} />
 ReactDOM.render(
   <HashRouter>
     <AppLayout>
-      <Switch>
-        <Route exact path="/" component={App} />
-        <Route exact path="/algorithm/" component={Algo} />
-        <Route exact path="/designpatterns/" component={DesignPatternHome} />
-        <Route exact path="/designpatterns/singleton" component={singleton} />
-        {/* {java 16} */}
-        <Route exact path="/java16/" component={Java16Home} />
-        <Route exact path="/java16/vectorapi" component={Java16VectorApi} />
-        <Route exact path="/java16/linkerapi" component={Java16LinkerApi} />
-        <Route exact path="/java16/memoryapi" component={Java16ForeignMemoryApi} />
-        <Route exact path="/java16/sealed" component={Java16SealedInterface} />
-        <Route exact path="/java16/record" component={Java16RecordClass} />
-        <Route exact path="/java16/valuebased" component={J16ValueBased} />
-        <Route exact path="/java16/patternmatch" component={J16PatternMatch} />
-        {/* {java 15} */}
-        <Route exact path="/java15/" component={Java15Home} />
-        <Route exact path="/java15/textblock" component={Java15TextBlock} />
-        <Route exact path="/java15/hidden" component={Java15HiddenClass} />
-        <Route exact path="/java15/eddsa" component={J15EDSA} />
-        {/* {java 14} */}
-        <Route exact path="/java14/" component={Java14Home} />
-        <Route exact path="/java14/record" component={Java14RecordClass} />
-        <Route exact path="/java14/nullpointer" component={J14NullPointer} />
-        <Route exact path="/java14/switchexp" component={J14SwitchExp} />
-        {/* {java 11} */}
-        <Route exact path="/java11/" component={Java11Home} />
-        <Route exact path="/java11/chacha20" component={J11ChaCha20} />
-        <Route exact path="/java11/httpclient" component={J11HttpClient} />
-        <Route exact path="/java11/keygen" component={J11KeyGen} />
-        <Route exact path="/java11/launch" component={J11Lauch} />
-        <Route exact path="/java11/localvar" component={J11LocalVar} />
-        <Route exact path="/java11/nac" component={J11Nac} />
-        <Route exact path="/java11/tls" component={J11TLS} />
-        <Route exact path="/java11/unicode" component={J11Unicode} />
-        {/* {java 9} */}
-        <Route exact path="/java9/" component={Java9Home} />
-        <Route exact path="/java9/anonymous" component={J9Anonymous} />
-        <Route exact path="/java9/factory" component={J9Factory} />
-        <Route exact path="/java9/private" component={J9PrivateInterface} />
-        <Route exact path="/java9/process" component={J9Process} />
-        <Route exact path="/java9/safe" component={J9SafeVar} />
-        <Route exact path="/java9/stream" component={J9Stream} />
-        <Route exact path="/java9/tryresource" component={J9TryResource} />
-        {/* {java 8} */}
-        <Route exact path="/java8/" component={Java8Home} />
-        <Route exact path="/java8/lambda" component={J8Lambda} />
-        <Route exact path="/java8/stream" component={Java8Stream} />
-        <Route exact path="/java8/functional" component={J8Functional} />
-        <Route exact path="/java8/methodref" component={J8MethodRef} />
-        <Route exact path="/java8/optional" component={J8Optional} />
-        <Route exact path="/java8/default" component={J9PrivateInterface} />
-        <Route exact path="/java8/base64" component={Java15HiddenClass} />
-        {/* {java ends} */}
-        {/* {spring.io starts} */}
-        <Route exact path="/spring/" component={SpringHome} />
-        <Route exact path="/spring/controller" component={SpringController} />
-        <Route exact path="/spring/webflux" component={WebFlux} />
-        <Route exact path="/spring/hateaos" component={Hateaos} />
-        {/* {spring.io ends} */}
-        <Route exact path="/react/" component={ReactHome} />
-        <Route exact path="/react/useState" component={ReactUseStateHooks} />
-        <Route exact path="/react/asyncAwait" component={JavaScriptASynchAwait} />
-        <Route exact path="/nodejs/" component={NodeJsHome} />
-        <Route exact path="/aws/" component={AwsHome} />
-        <Route exact path="/algorithm/:id" component={Algorithm} />
-        <Route exact path="/search/" component={Search} />
-      </Switch>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route exact path="/" component={App} />
+          <Route exact path="/algorithm/" component={Algo} />
+          <Route exact path="/designpatterns/" component={DesignPatternHome} />
+          <Route exact path="/designpatterns/singleton" component={singleton} />
+          {/* {java 16} */}
+          <Route exact path="/java16/" component={Java16Home} />
+          <Route exact path="/java16/vectorapi" component={Java16VectorApi} />
+          <Route exact path="/java16/linkerapi" component={Java16LinkerApi} />
+          <Route exact path="/java16/memoryapi" component={Java16ForeignMemoryApi} />
+          <Route exact path="/java16/sealed" component={Java16SealedInterface} />
+          <Route exact path="/java16/record" component={Java16RecordClass} />
+          <Route exact path="/java16/valuebased" component={J16ValueBased} />
+          <Route exact path="/java16/patternmatch" component={J16PatternMatch} />
+          {/* {java 15} */}
+          <Route exact path="/java15/" component={Java15Home} />
+          <Route exact path="/java15/textblock" component={Java15TextBlock} />
+          <Route exact path="/java15/hidden" component={Java15HiddenClass} />
+          <Route exact path="/java15/eddsa" component={J15EDSA} />
+          {/* {java 14} */}
+          <Route exact path="/java14/" component={Java14Home} />
+          <Route exact path="/java14/record" component={Java14RecordClass} />
+          <Route exact path="/java14/nullpointer" component={J14NullPointer} />
+          <Route exact path="/java14/switchexp" component={J14SwitchExp} />
+          {/* {java 11} */}
+          <Route exact path="/java11/" component={Java11Home} />
+          <Route exact path="/java11/chacha20" component={J11ChaCha20} />
+          <Route exact path="/java11/httpclient" component={J11HttpClient} />
+          <Route exact path="/java11/keygen" component={J11KeyGen} />
+          <Route exact path="/java11/launch" component={J11Lauch} />
+          <Route exact path="/java11/localvar" component={J11LocalVar} />
+          <Route exact path="/java11/nac" component={J11Nac} />
+          <Route exact path="/java11/tls" component={J11TLS} />
+          <Route exact path="/java11/unicode" component={J11Unicode} />
+          {/* {java 9} */}
+          <Route exact path="/java9/" component={Java9Home} />
+          <Route exact path="/java9/anonymous" component={J9Anonymous} />
+          <Route exact path="/java9/factory" component={J9Factory} />
+          <Route exact path="/java9/private" component={J9PrivateInterface} />
+          <Route exact path="/java9/process" component={J9Process} />
+          <Route exact path="/java9/safe" component={J9SafeVar} />
+          <Route exact path="/java9/stream" component={J9Stream} />
+          <Route exact path="/java9/tryresource" component={J9TryResource} />
+          {/* {java 8} */}
+          <Route exact path="/java8/" component={Java8Home} />
+          <Route exact path="/java8/lambda" component={J8Lambda} />
+          <Route exact path="/java8/stream" component={Java8Stream} />
+          <Route exact path="/java8/functional" component={J8Functional} />
+          <Route exact path="/java8/methodref" component={J8MethodRef} />
+          <Route exact path="/java8/optional" component={J8Optional} />
+          <Route exact path="/java8/default" component={J9PrivateInterface} />
+          <Route exact path="/java8/base64" component={Java15HiddenClass} />
+          {/* {java ends} */}
+          {/* {spring.io starts} */}
+          <Route exact path="/spring/" component={SpringHome} />
+          <Route exact path="/spring/controller" component={SpringController} />
+          <Route exact path="/spring/webflux" component={WebFlux} />
+          <Route exact path="/spring/hateaos" component={Hateaos} />
+          <Route exact path="/spring/scheduling" component={SpringScheduling} />
+          {/* {spring.io ends} */}
+          <Route exact path="/react/" component={ReactHome} />
+          <Route exact path="/react/useState" component={ReactUseStateHooks} />
+          <Route exact path="/react/asyncAwait" component={JavaScriptASynchAwait} />
+          <Route exact path="/nodejs/" component={NodeJsHome} />
+          <Route exact path="/aws/" component={AwsHome} />
+          <Route exact path="/algorithm/:id" component={Algorithm} />
+          <Route exact path="/search/" component={Search} />
+        </Switch>
+      </Suspense>
     </AppLayout>
   </HashRouter>
   , document.getElementById('root'));
