@@ -5,6 +5,7 @@ import SpringController from "./controller";
 import WebFlux from "./webflux";
 import Hateaos from "./hateaos";
 const SpringScheduling = lazy(() => import('./scheduling'));
+const WebSocket = lazy(() => import('./websocket/index'));
 const SpringHome = () => {
 
     const springView = { current: <SpringIntro />, prev: '' };
@@ -32,6 +33,8 @@ const SpringHome = () => {
                 return {
                     prev: state.current, current: renderScheduling()
                 }
+            case '9':
+                return {prev: state.current, current: <WebSocket/>}
             case '11':
                 return { prev: state.current, current: <Hateaos /> };
             default:

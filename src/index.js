@@ -69,7 +69,8 @@ import NodeJsHome from './nodejs';
 import AwsHome from './aws';
 // lazy loading
 const SpringScheduling = lazy(() => import('./spring/scheduling'));
-
+const WebSocket = lazy(() => import('./spring/websocket/index'));
+const ReactUseContext = lazy(() => import('./react/usecontext'));
 // http://localhost:3000/algoes/#/regex/
 // <Route exact path="/regex" component={RegEx} />
 ReactDOM.render(
@@ -135,10 +136,12 @@ ReactDOM.render(
           <Route exact path="/spring/webflux" component={WebFlux} />
           <Route exact path="/spring/hateaos" component={Hateaos} />
           <Route exact path="/spring/scheduling" component={SpringScheduling} />
+          <Route exact path="/spring/websocket" component={WebSocket} />
           {/* {spring.io ends} */}
           <Route exact path="/react/" component={ReactHome} />
           <Route exact path="/react/useState" component={ReactUseStateHooks} />
           <Route exact path="/react/asyncAwait" component={JavaScriptASynchAwait} />
+          <Route exact path="/react/usecontext" component={ReactUseContext} />
           <Route exact path="/nodejs/" component={NodeJsHome} />
           <Route exact path="/aws/" component={AwsHome} />
           <Route exact path="/algorithm/:id" component={Algorithm} />

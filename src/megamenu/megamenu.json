@@ -471,7 +471,7 @@
                         },
                         {
                             "name": "WebSocket",
-                            "url": "",
+                            "url": "/algoes/#/spring/websocket",
                             "action" : "9"
                         },
                         {
@@ -600,6 +600,10 @@
                         {
                             "name": "useState",
                             "url": "/algoes/#/react/useState"
+                        },
+                        {
+                            "name": "useContext",
+                            "url": "/algoes/#/react/usecontext"
                         }
                     ]
                 }
