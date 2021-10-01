@@ -586,11 +586,11 @@
             "url": "/algoes/#/react/",
             "subMenus": [
                 {
-                    "name": "JavaScript",
+                    "name": "Concepts",
                     "links": [
                         {
-                            "name": "Asynch Await",
-                            "url": "/algoes/#/react/asyncAwait"
+                            "name": "Context",
+                            "url": "/algoes/#/react/usecontext"
                         }
                     ]
                 },
@@ -604,6 +604,15 @@
                         {
                             "name": "useContext",
                             "url": "/algoes/#/react/usecontext"
+                        }
+                    ]
+                },
+                {
+                    "name": "JavaScript",
+                    "links": [
+                        {
+                            "name": "Asynch Await",
+                            "url": "/algoes/#/react/asyncAwait"
                         }
                     ]
                 }
