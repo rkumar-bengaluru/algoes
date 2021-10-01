@@ -4,6 +4,26 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 38,
+            "item": {
+                "@id": "/algoes/#/react/usecontext",
+                "name": "useContext!",
+                "date": "01 Oct 2021",
+                "url": "/algoes/#/react/usecontext"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 37,
+            "item": {
+                "@id": "/algoes/#/spring/websocket",
+                "name": "WebSocket!",
+                "date": "30 Sep 2021",
+                "url": "/algoes/#/spring/websocket"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 36,
             "item": {
                 "@id": "/algoes/#/spring/hateaos",
