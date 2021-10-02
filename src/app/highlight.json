@@ -4,6 +4,26 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 40,
+            "item": {
+                "@id": "/algoes/#/react/errorboundary",
+                "name": "Error Boundary!",
+                "date": "02 Oct 2021",
+                "url": "/algoes/#/react/errorboundary"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 39,
+            "item": {
+                "@id": "/algoes/#/spring/router",
+                "name": "Router Functions!",
+                "date": "02 Oct 2021",
+                "url": "/algoes/#/spring/router"
+            }
+        },
+         {
+            "@type": "ListItem",
             "position": 38,
             "item": {
                 "@id": "/algoes/#/react/usecontext",
