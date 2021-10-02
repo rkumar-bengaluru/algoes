@@ -555,8 +555,8 @@
                             "action" : "24"
                         },
                         {
-                            "name": "Reactive Client",
-                            "url": "",
+                            "name": "Reactive Router",
+                            "url": "/algoes/#/spring/router",
                             "action" : "25"
                         },
                         {
@@ -591,6 +591,10 @@
                         {
                             "name": "Context",
                             "url": "/algoes/#/react/usecontext"
+                        },
+                        {
+                            "name": "ErrorBoundary & Code Splitting",
+                            "url": "/algoes/#/react/errorboundary"
                         }
                     ]
                 },

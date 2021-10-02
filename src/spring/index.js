@@ -4,8 +4,11 @@ import SpringIntro from "./home";
 import SpringController from "./controller";
 import WebFlux from "./webflux";
 import Hateaos from "./hateaos";
+import LSErrorBoundary from "../error";
 const SpringScheduling = lazy(() => import('./scheduling'));
 const WebSocket = lazy(() => import('./websocket/index'));
+const SpringRouter = lazy(() => import('./router'));
+
 const SpringHome = () => {
 
     const springView = { current: <SpringIntro />, prev: '' };
@@ -34,13 +37,24 @@ const SpringHome = () => {
                     prev: state.current, current: renderScheduling()
                 }
             case '9':
-                return {prev: state.current, current: <WebSocket/>}
+                return { prev: state.current, current: <WebSocket /> }
             case '11':
                 return { prev: state.current, current: <Hateaos /> };
+            case '25':
+                return { prev: state.current, current: () => {
+                    return (
+                        <LSErrorBoundary>
+                            <Suspense fallback={() => {return <h1>Error happened in children.</h1>}}>
+                                <SpringRouter/>
+                            </Suspense>
+                        </LSErrorBoundary>
+                    )
+                } };
             default:
                 return { prev: state.current, current: 'TODO' };
         }
     }
+
 
     function renderScheduling() {
         return (
