@@ -595,6 +595,10 @@
                         {
                             "name": "ErrorBoundary & Code Splitting",
                             "url": "/algoes/#/react/errorboundary"
+                        },
+                        {
+                            "name": "Forwarding Refs",
+                            "url": "/algoes/#/react/refforwarding"
                         }
                     ]
                 },

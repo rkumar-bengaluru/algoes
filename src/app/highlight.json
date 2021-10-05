@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 41,
+            "item": {
+                "@id": "/algoes/#/react/refforwarding",
+                "name": "Forwarding Refs!",
+                "date": "05 Oct 2021",
+                "url": "/algoes/#/react/refforwarding"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 40,
             "item": {
                 "@id": "/algoes/#/react/errorboundary",
