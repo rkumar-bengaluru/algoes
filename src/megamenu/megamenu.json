@@ -599,6 +599,10 @@
                         {
                             "name": "Forwarding Refs",
                             "url": "/algoes/#/react/refforwarding"
+                        },
+                        {
+                            "name": "Higher-Order Components",
+                            "url": "/algoes/#/react/hoc"
                         }
                     ]
                 },
