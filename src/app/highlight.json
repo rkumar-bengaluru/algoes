@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 42,
+            "item": {
+                "@id": "/algoes/#/react/hoc",
+                "name": "Higher-Order Components!",
+                "date": "06 Oct 2021",
+                "url": "/algoes/#/react/hoc"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 41,
             "item": {
                 "@id": "/algoes/#/react/refforwarding",
