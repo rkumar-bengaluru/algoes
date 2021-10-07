@@ -1,20 +1,25 @@
 import { useState } from "react";
 import { UnControlled as CodeMirror } from "react-codemirror2"
 export const Express = () => {
-    const defaultCode = "const express = require('express')\nconst app = express();\nconst port = process.env.PORT;\nconst path = require('path');\nvar logger = require('./src/logger/logger');\napp.use(\n\texpress.static(\n\t\tpath.join(__dirname, '../client/build')\n\t)\n);\napp.listen(port, function () {\n\tlogger.debug('Server started on port: ' + port);\n});\n";
+    const defaultCode = "const express = require('express')\nconst app = express();\nconst path = require('path');\nrequire('dotenv').config();\n\napp.use(\n\texpress.static(\n\t\tpath.join(__dirname, '../../client/build')\n\t)\n);\n\nconst port = process.env.PORT;\napp.listen(port, function () {\n\tconsole.log('Server started on port: ' + port);\n});\n";
     const defaultHeading = "express.static(root, [options])";
     const defaultDescription = "This is a built-in middleware function in Express. It serves static files and is based on serve-static.";
-    const [code,setCode] = useState(defaultCode);
+    const [code, setCode] = useState(defaultCode);
     const [heading, setHeading] = useState(defaultHeading);
     const [description, setDescription] = useState(defaultDescription);
-    
-    function showCode(e,f) {
+
+    function showCode(e, f) {
         e.preventDefault();
-        switch(f) {
+        switch (f) {
             case 'static':
                 setCode(defaultCode);
                 setHeading(defaultHeading);
                 setDescription(defaultDescription);
+                break;
+            case 'Router':
+                setCode("// apirouter.js\nvar express = require('express');\nvar router = express.Router();\n\nrouter.get('/', function (req, res) {\n\tres.status(200).json({response : \"Hello World!\"});\n});\n\nmodule.exports = router;\n\n// usage\n// main.js\nvar api = require('apirouter');\napp.use('/api',api);\n");
+                setHeading('express.Router([options])');
+                setDescription('Creates a new router object.You can add middleware and HTTP method routes (such as get, put, post, and so on) to router just like an application.');
                 break;
             default:
                 break;
@@ -46,11 +51,11 @@ export const Express = () => {
                 </div>
             </div>
             <h6>{heading}</h6>
-                <p>{description}</p>
+            <p>{description}</p>
             <div className="row">
-                <CodeMirror 
+                <CodeMirror
                     value={code}
-                    options={{lineNumbers:true,mode:"javascript"}}/>
+                    options={{ lineNumbers: true, mode: "javascript" }} />
             </div>
         </>
     )
