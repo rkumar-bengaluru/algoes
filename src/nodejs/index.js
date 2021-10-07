@@ -15,9 +15,11 @@ class NodeJsHome extends React.Component {
     }
 
     showCode(name) {
+       
         switch(name) {
             case 'Express':
                 this.setState({currentComponent : <ExpressHome/>});
+                break;
             case 'express()':
                 this.setState({currentComponent: <Express/>});
                 break;
