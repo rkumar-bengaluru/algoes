@@ -20,3 +20,6 @@
     height : 600px;
 }
 .CodeMirror { min-height: 100% }
+.hide {
+    display: none;
+}

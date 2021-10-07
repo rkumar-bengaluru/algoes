@@ -637,11 +637,36 @@
             "url": "/algoes/#/nodejs/",
             "subMenus": [
                 {
-                    "name": "Stage 0",
+                    "name": "Express",
                     "links": [
                         {
-                            "name": "Streams",
-                            "url": "/algoes/#/nodejs/streams"
+                            "name": "object()",
+                            "url": "/algoes/#/nodejs/express"
+                        },
+                        {
+                            "name": "Application",
+                            "url": "/algoes/#/nodejs/express/application"
+                        },
+                        {
+                            "name": "Router",
+                            "url": "/algoes/#/nodejs/express/router"
+                        },
+                        {
+                            "name": "Request",
+                            "url": "/algoes/#/nodejs/express/request"
+                        },
+                        {
+                            "name": "Response",
+                            "url": "/algoes/#/nodejs/express/response"
+                        }
+                    ]
+                },
+                {
+                    "name": "Test",
+                    "links": [
+                        {
+                            "name": "object()",
+                            "url": "/algoes/#/nodejs/express"
                         }
                     ]
                 }
