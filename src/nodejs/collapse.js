@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export function collapseFeature(ComponentToEnable) {
+export function collapseFeature(ComponentToCollapse) {
 
     return class Collapse extends Component {
         constructor(props) {
@@ -31,7 +31,7 @@ export function collapseFeature(ComponentToEnable) {
                             <i className="fa fa-minus m-2" aria-hidden="true"></i>
                         </a>
                     }
-                    <ComponentToEnable {...this.props} />
+                    <ComponentToCollapse {...this.props} />
                     <ul>
                         {this.state.expand === true && this.state.childs.map((child, index) => {
                             return (

@@ -29,14 +29,14 @@ class NodeJsHome extends React.Component {
                 <h2>Node Js</h2>
                 <p>As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications.</p>
                 <div className="row">
-                    <div className="col-sm-2">
+                    <div className="col-sm-3">
                         {this.state.nodejs.subMenus.map((element,index) => {
                             return (
                                 <CollapsableComponent key={index} name={element.name} childs={element.links} showCode={this.showCode}/>
                             )
                         })}
                     </div>
-                    <div className="col-sm-10 border">
+                    <div className="col-sm-9 border">
                         {this.state.currentComponent}
                     </div>
                 </div>
