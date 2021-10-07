@@ -2,6 +2,8 @@ import React from "react";
 import menus from '../megamenu/megamenu.json';
 import CollapsableComponent from "./collapsable";
 import ExpressHome from "./express/home";
+import {Express} from './express/express';
+
 class NodeJsHome extends React.Component {
 
     constructor(props) {
@@ -16,6 +18,8 @@ class NodeJsHome extends React.Component {
         switch(name) {
             case 'Express':
                 this.setState({currentComponent : <ExpressHome/>});
+            case 'express()':
+                this.setState({currentComponent: <Express/>});
                 break;
             default:
                 this.setState({currentComponent : <div>{name}</div>});

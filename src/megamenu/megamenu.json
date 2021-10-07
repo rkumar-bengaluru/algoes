@@ -640,7 +640,7 @@
                     "name": "Express",
                     "links": [
                         {
-                            "name": "object()",
+                            "name": "express()",
                             "url": "/algoes/#/nodejs/express"
                         },
                         {
