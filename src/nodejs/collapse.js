@@ -37,6 +37,11 @@ export function collapseFeature(ComponentToCollapse) {
                             return (
                                 <>
                                     <li key={index}><a key={index} href="/algoes" onClick={(e) => this.showCode(e, child.name)}>{child.name}</a></li>
+                                    <ul>
+                                        {this.state.expand === true && this.state.childs.map((c, i) => {
+                                            <li key={i}><a key={i} href="/algoes" onClick={(e) => this.showCode(e, c.name)}>{c.name}</a></li>
+                                        })}
+                                    </ul>
                                 </>
                             )
                         })}
