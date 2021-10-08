@@ -75,6 +75,8 @@ const SpringRouter = lazy(() => import ('./spring/router'));
 const ReactErrorBoundary = lazy(() => import('./react/errorboundary'));
 const RefForwarding = lazy(() => import('./react/ref/chatroom'));
 const ReactHoc = lazy(() => import('./react/hoc/hocdemo'));
+const Express = lazy(() => import('./nodejs/express/express'));
+
 // http://localhost:3000/algoes/#/regex/
 // <Route exact path="/regex" component={RegEx} />
 ReactDOM.render(
@@ -152,6 +154,8 @@ ReactDOM.render(
           <Route exact path="/react/hoc" component={ReactHoc} />
            {/* {react ends} */}
           <Route exact path="/nodejs/" component={NodeJsHome} />
+          <Route exact path="/nodejs/express" component={Express} />
+
           <Route exact path="/aws/" component={AwsHome} />
           <Route exact path="/algorithm/:id" component={Algorithm} />
           <Route exact path="/search/" component={Search} />

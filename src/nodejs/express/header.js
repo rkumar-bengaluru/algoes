@@ -15,7 +15,7 @@ const ExpressHeader = (props) => {
                 <tbody>
                     {props.options.map((opt, index) => {
                         return (
-                            <tr>
+                            <tr key={index}>
                                 <td>{opt.name}</td>
                                 <td>{opt.description}</td>
                                 <td>{opt.type}</td>

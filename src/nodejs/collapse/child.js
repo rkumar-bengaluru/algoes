@@ -1,23 +1,19 @@
-import React, { Component } from "react";
+import React,{Component} from 'react';
 
-export function collapseFeature(ComponentToCollapse) {
-
-    return class Collapse extends Component {
+function childCollapse(WrappedComponent) {
+    return class ChildCollpse extends Component {
         constructor(props) {
             super(props);
             this.state = { expand: false, name: props.name, childs: props.childs };
+            this.showComponent = this.showComponent.bind(this);
         }
         expand(e) {
             e.preventDefault();
             this.setState({ expand: !this.state.expand });
         }
-        collapse(e) {
+        showComponent(e, name) {
             e.preventDefault();
-            this.setState({ expand: !this.state.expand });
-        }
-        showCode(e, name) {
-            e.preventDefault();
-            this.props.showCode(name);
+            this.props.showComponent(name);
         }
         render() {
             return (
@@ -31,18 +27,11 @@ export function collapseFeature(ComponentToCollapse) {
                             <i className="fa fa-minus m-2" aria-hidden="true"></i>
                         </a>
                     }
-                    <ComponentToCollapse {...this.props} />
+                    <WrappedComponent name={this.props.name} showComponent={this.props.showComponent}/>
                     <ul>
                         {this.state.expand === true && this.state.childs.map((child, index) => {
                             return (
-                                <>
-                                    <li key={index}><a key={index} href="/algoes" onClick={(e) => this.showCode(e, child.name)}>{child.name}</a></li>
-                                    <ul>
-                                        {this.state.expand === true && this.state.childs.map((c, i) => {
-                                            <li key={i}><a key={i} href="/algoes" onClick={(e) => this.showCode(e, c.name)}>{c.name}</a></li>
-                                        })}
-                                    </ul>
-                                </>
+                                <li key={index}><a key={index} href="/algoes" onClick={(e) => this.showComponent(e, child.name)}>{child.name}</a></li>
                             )
                         })}
                     </ul>
@@ -51,4 +40,4 @@ export function collapseFeature(ComponentToCollapse) {
         }
     }
 }
-export default collapseFeature;
+export default childCollapse;

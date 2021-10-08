@@ -422,158 +422,157 @@
             "subMenus": [
                 {
                     "name": "Spring Boot",
-                    "action" : "0",
+                    "action": "0",
                     "links": [
                         {
                             "name": "Restful Controllers",
                             "url": "/algoes/#/spring/controller",
-                            "action" : "1"
+                            "action": "1"
                         },
                         {
                             "name": "WebFlux",
                             "url": "/algoes/#/spring/webflux",
-                            "action" : "2"
+                            "action": "2"
                         },
                         {
                             "name": "Hateaos",
                             "url": "/algoes/#/spring/hateaos",
-                            "action" : "11"
+                            "action": "11"
                         },
                         {
                             "name": "Actuator",
                             "url": "",
-                            "action" : "3"
+                            "action": "3"
                         },
                         {
                             "name": "Scheduling",
                             "url": "/algoes/#/spring/scheduling",
-                            "action" : "4"
+                            "action": "4"
                         },
                         {
                             "name": "Batch",
                             "url": "",
-                            "action" : "5"
+                            "action": "5"
                         },
                         {
                             "name": "Transaction",
                             "url": "",
-                            "action" : "6"
+                            "action": "6"
                         },
                         {
                             "name": "Security",
                             "url": "",
-                            "action" : "7"
+                            "action": "7"
                         },
                         {
                             "name": "Asynchronous Java",
                             "url": "",
-                            "action" : "8"
+                            "action": "8"
                         },
                         {
                             "name": "WebSocket",
                             "url": "/algoes/#/spring/websocket",
-                            "action" : "9"
+                            "action": "9"
                         },
                         {
                             "name": "Caching",
                             "url": "",
-                            "action" : "10"
+                            "action": "10"
                         }
                     ]
                 },
                 {
                     "name": "Spring Data",
-                    "action" : "11",
+                    "action": "11",
                     "links": [
                         {
                             "name": "JDBCTemplate",
                             "url": "",
-                            "action" : "12"
+                            "action": "12"
                         },
                         {
                             "name": "JPA",
                             "url": "",
-                            "action" : "13"
+                            "action": "13"
                         },
                         {
                             "name": "MongoDB",
                             "url": "",
-                            "action" : "14"
+                            "action": "14"
                         },
                         {
                             "name": "MySQL",
                             "url": "",
-                            "action" : "15"
+                            "action": "15"
                         }
                     ]
                 },
                 {
                     "name": "Messaging",
-                    "action" : "16",
+                    "action": "16",
                     "links": [
                         {
                             "name": "Redis",
                             "url": "",
-                            "action" : "17"
+                            "action": "17"
                         },
                         {
                             "name": "RabbitMQ",
                             "url": "",
-                            "action" : "18"
+                            "action": "18"
                         },
                         {
                             "name": "JMS",
                             "url": "",
-                            "action" : "19"
+                            "action": "19"
                         }
                     ]
                 },
                 {
                     "name": "Container",
-                    "action" : "20",
+                    "action": "20",
                     "links": [
                         {
                             "name": "Docker",
                             "url": "",
-                            "action" : "21"
-                        }
-                        ,
+                            "action": "21"
+                        },
                         {
                             "name": "Kubernetes",
                             "url": "",
-                            "action" : "22"
+                            "action": "22"
                         }
                     ]
                 },
                 {
                     "name": "Reactive",
-                    "action" : "23",
+                    "action": "23",
                     "links": [
                         {
                             "name": "Reactive Controller",
                             "url": "",
-                            "action" : "24"
+                            "action": "24"
                         },
                         {
                             "name": "Reactive Router",
                             "url": "/algoes/#/spring/router",
-                            "action" : "25"
+                            "action": "25"
                         },
                         {
                             "name": "Reactive JDBC",
                             "url": "",
-                            "action" : "26"
+                            "action": "26"
                         }
                     ]
                 },
                 {
                     "name": "Cloud",
-                    "action" : "27",
+                    "action": "27",
                     "links": [
                         {
                             "name": "Circuit Breaker",
                             "url": "",
-                            "action" : "28"
+                            "action": "28"
                         }
                     ]
                 }
@@ -641,23 +640,81 @@
                     "links": [
                         {
                             "name": "express()",
-                            "url": "/algoes/#/nodejs/express"
+                            "url": "/algoes/#/nodejs/express",
+                            "sublinks": [
+                                {
+                                    "name": "express.static",
+                                    "url": "/algoes/#/nodejs/express/static"
+                                },
+                                {
+                                    "name": "express.router",
+                                    "url": "/algoes/#/nodejs/express/router"
+                                },
+                                {
+                                    "name": "express.encodeUrl",
+                                    "url": "/algoes/#/nodejs/express/encode"
+                                },
+                                {
+                                    "name": "express.json",
+                                    "url": "/algoes/#/nodejs/express/json"
+                                },
+                                {
+                                    "name": "express.raw",
+                                    "url": "/algoes/#/nodejs/express/raw"
+                                },
+                                {
+                                    "name": "express.text",
+                                    "url": "/algoes/#/nodejs/express/test"
+                                }
+                            ]
                         },
                         {
                             "name": "Application",
-                            "url": "/algoes/#/nodejs/express/application"
+                            "url": "/algoes/#/nodejs/express/application",
+                            "sublinks": [
+                                {
+                                    "name": "static"
+                                },
+                                {
+                                    "name": "router"
+                                }
+                            ]
                         },
                         {
                             "name": "Router",
-                            "url": "/algoes/#/nodejs/express/router"
+                            "url": "/algoes/#/nodejs/express/router",
+                            "sublinks": [
+                                {
+                                    "name": "static"
+                                },
+                                {
+                                    "name": "router"
+                                }
+                            ]
                         },
                         {
                             "name": "Request",
-                            "url": "/algoes/#/nodejs/express/request"
+                            "url": "/algoes/#/nodejs/express/request",
+                            "sublinks": [
+                                {
+                                    "name": "static"
+                                },
+                                {
+                                    "name": "router"
+                                }
+                            ]
                         },
                         {
                             "name": "Response",
-                            "url": "/algoes/#/nodejs/express/response"
+                            "url": "/algoes/#/nodejs/express/response",
+                            "sublinks": [
+                                {
+                                    "name": "static"
+                                },
+                                {
+                                    "name": "router"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -666,7 +723,8 @@
                     "links": [
                         {
                             "name": "object()",
-                            "url": "/algoes/#/nodejs/express"
+                            "url": "/algoes/#/nodejs/express",
+                            "sublinks": []
                         }
                     ]
                 }
