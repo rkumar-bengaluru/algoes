@@ -1,0 +1,23 @@
+{
+    "@type": "Offer",
+    "name": "Axios",
+    "availability": "https://schema.org/InStock",
+    "url": "/algoes/#/nodejs/axios",
+    "subMenus": [
+        {
+            "name": "Axios",
+            "links": [
+                {
+                    "name": "api",
+                    "url": "/algoes/#/nodejs/axios/api",
+                    "sublinks": []
+                },
+                {
+                    "name": "instance",
+                    "url": "/algoes/#/nodejs/axios/instance",
+                    "sublinks": []
+                }
+            ]
+        }
+    ]
+}
