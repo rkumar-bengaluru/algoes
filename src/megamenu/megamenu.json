@@ -624,6 +624,10 @@
                         {
                             "name": "Asynch Await",
                             "url": "/algoes/#/react/asyncAwait"
+                        },
+                        {
+                            "name": "Web Component",
+                            "url": "/algoes/#/react/webcomponent"
                         }
                     ]
                 }
