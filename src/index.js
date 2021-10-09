@@ -77,6 +77,7 @@ const RefForwarding = lazy(() => import('./react/ref/chatroom'));
 const ReactHoc = lazy(() => import('./react/hoc/hocdemo'));
 const Express = lazy(() => import('./nodejs/express/express'));
 const WordCountDemo = lazy(() => import('./react/component/wordcountdemo'));
+const AxiosFramework = lazy(() => import('./nodejs/axios/axios'));
 
 // http://localhost:3000/algoes/#/regex/
 // <Route exact path="/regex" component={RegEx} />
@@ -157,6 +158,7 @@ ReactDOM.render(
            {/* {react ends} */}
           <Route exact path="/nodejs/" component={NodeJsHome} />
           <Route exact path="/nodejs/express" component={Express} />
+          <Route exact path="/nodejs/axios" component={AxiosFramework} />
 
           <Route exact path="/aws/" component={AwsHome} />
           <Route exact path="/algorithm/:id" component={Algorithm} />

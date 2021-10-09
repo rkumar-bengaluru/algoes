@@ -5,6 +5,7 @@
   "homepage": "https://rkumar-bengaluru.github.io/algoes",
   "dependencies": {
     "app-root-path": "^3.0.0",
+    "codeflask": "^1.4.1",
     "codemirror": "^5.62.0",
     "env-cmd": "^10.1.0",
     "faker": "^5.5.3",
