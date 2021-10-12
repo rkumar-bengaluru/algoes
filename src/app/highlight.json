@@ -4,6 +4,26 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 49,
+            "item": {
+                "@id": "/algoes/#/react/usereducer",
+                "name": "React useReducer!",
+                "date": "11 Oct 2021",
+                "url": "/algoes/#/react/useReducer"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 48,
+            "item": {
+                "@id": "/algoes/#/react/useeffect",
+                "name": "React useEffect!",
+                "date": "11 Oct 2021",
+                "url": "/algoes/#/react/useeffect"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 47,
             "item": {
                 "@id": "/algoes/#/react/testing",

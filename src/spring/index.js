@@ -33,11 +33,15 @@ const SpringHome = () => {
             case '2':
                 return { prev: state.current, current: <WebFlux /> };
             case '4':
-                return {
-                    prev: state.current, current: renderScheduling()
-                }
+                return { prev: state.current, current: () => {
+                    return (
+                        <Suspense fallback={<div>loading...</div>}>
+                            <SpringScheduling />
+                        </Suspense>
+                    )
+                }};
             case '9':
-                return { prev: state.current, current: <WebSocket /> }
+                return { prev: state.current, current: <WebSocket /> };
             case '11':
                 return { prev: state.current, current: <Hateaos /> };
             case '25':
@@ -53,15 +57,6 @@ const SpringHome = () => {
             default:
                 return { prev: state.current, current: 'TODO' };
         }
-    }
-
-
-    function renderScheduling() {
-        return (
-            <Suspense fallback={<div>loading...</div>}>
-                <SpringScheduling />
-            </Suspense>
-        )
     }
 
     function renderMenu() {

@@ -79,6 +79,8 @@ const Express = lazy(() => import('./nodejs/express/express'));
 const WordCountDemo = lazy(() => import('./react/component/wordcountdemo'));
 const AxiosFramework = lazy(() => import('./nodejs/axios/axios'));
 const ReactTesting = lazy(() => import('./test/index'));
+const ReactUseEffect = lazy(() => import('./react/useEffect'));
+const ReactUseReducer = lazy(() => import('./react/usereducer'));
 
 // http://localhost:3000/algoes/#/regex/
 // <Route exact path="/regex" component={RegEx} />
@@ -157,6 +159,8 @@ ReactDOM.render(
           <Route exact path="/react/hoc" component={ReactHoc} />
           <Route exact path="/react/webcomponent" component={WordCountDemo} />
           <Route exact path="/react/testing" component={ReactTesting} />
+          <Route exact path="/react/useeffect" component={ReactUseEffect} />
+          <Route exact path="/react/usereducer" component={ReactUseReducer} />
            {/* {react ends} */}
           <Route exact path="/nodejs/" component={NodeJsHome} />
           <Route exact path="/nodejs/express" component={Express} />

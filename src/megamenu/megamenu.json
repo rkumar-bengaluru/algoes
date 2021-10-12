@@ -615,6 +615,14 @@
                         {
                             "name": "useContext",
                             "url": "/algoes/#/react/usecontext"
+                        },
+                        {
+                            "name": "useEffect",
+                            "url": "/algoes/#/react/useeffect"
+                        },
+                        {
+                            "name": "useReducer",
+                            "url": "/algoes/#/react/usereducer"
                         }
                     ]
                 },
