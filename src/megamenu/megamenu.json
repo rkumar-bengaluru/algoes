@@ -623,6 +623,10 @@
                         {
                             "name": "useReducer",
                             "url": "/algoes/#/react/usereducer"
+                        },
+                        {
+                            "name": "useMemo",
+                            "url": "/algoes/#/react/usememo"
                         }
                     ]
                 },

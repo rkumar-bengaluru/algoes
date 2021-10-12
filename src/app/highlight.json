@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 50,
+            "item": {
+                "@id": "/algoes/#/react/usememo",
+                "name": "React useMemo!",
+                "date": "11 Oct 2021",
+                "url": "/algoes/#/react/usememo"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 49,
             "item": {
                 "@id": "/algoes/#/react/usereducer",
