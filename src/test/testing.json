@@ -1,0 +1,23 @@
+{
+    "@type": "Offer",
+    "name": "React Testing",
+    "availability": "https://schema.org/InStock",
+    "url": "/algoes/#/react/testing",
+    "subMenus": [
+        {
+            "name": "React Tesing",
+            "links": [
+                {
+                    "name": "text match",
+                    "url": "/algoes/#/react/testing/text",
+                    "sublinks": []
+                },
+                {
+                    "name": "UserEvent",
+                    "url": "/algoes/#/react/testing/userevt",
+                    "sublinks": []
+                }
+            ]
+        }
+    ]
+}

@@ -628,6 +628,10 @@
                         {
                             "name": "Web Component",
                             "url": "/algoes/#/react/webcomponent"
+                        },
+                        {
+                            "name": "React Testing",
+                            "url": "/algoes/#/react/testing"
                         }
                     ]
                 }
