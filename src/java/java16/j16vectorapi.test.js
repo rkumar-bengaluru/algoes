@@ -1,4 +1,4 @@
-import VectorApi from "./vectorapi";
+import VectorApi from "./j16vectorapi";
 import React from 'react';
 import renderer from 'react-test-renderer';
 

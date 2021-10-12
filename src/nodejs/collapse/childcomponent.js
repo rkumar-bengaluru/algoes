@@ -16,7 +16,7 @@ export class ChildComponent extends Component {
     render() {
         return (
             <>
-                <a href="/algoes" onClick={(e) => this.showComponent(e, this.state.name)}>{this.state.name}</a>
+                <a href="/algoes"  onClick={(e) => this.showComponent(e, this.state.name)}>{this.state.name}</a>
             </>
         )
     }

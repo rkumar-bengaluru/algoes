@@ -15,11 +15,11 @@ export function parentCollapse(WrappedComponent) {
             return (
                 <>
                     {this.state.expand === false ?
-                        <a href="/algoes" onClick={(e) => this.expand(e)}>
+                        <a data-testid={this.props.name} href="/algoes" onClick={(e) => this.expand(e)}>
                             <i className="fa fa-plus m-2" aria-hidden="true"></i>
                         </a>
                         :
-                        <a href="/algoes" onClick={(e) => this.expand(e)}>
+                        <a data-testid={this.props.name} href="/algoes" onClick={(e) => this.expand(e)}>
                             <i className="fa fa-minus m-2" aria-hidden="true"></i>
                         </a>
                     }
