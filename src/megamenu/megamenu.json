@@ -646,6 +646,15 @@
                             "url": "/algoes/#/react/testing"
                         }
                     ]
+                },
+                {
+                    "name": "Application",
+                    "links": [
+                        {
+                            "name": "Tik Tok",
+                            "url": "/algoes/#/react/tiktok"
+                        }
+                    ]
                 }
             ]
         },

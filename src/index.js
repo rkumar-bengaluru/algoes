@@ -71,7 +71,7 @@ import AwsHome from './aws';
 const SpringScheduling = lazy(() => import('./spring/scheduling'));
 const WebSocket = lazy(() => import('./spring/websocket/index'));
 const ReactUseContext = lazy(() => import('./react/usecontext'));
-const SpringRouter = lazy(() => import ('./spring/router'));
+const SpringRouter = lazy(() => import('./spring/router'));
 const ReactErrorBoundary = lazy(() => import('./react/errorboundary'));
 const RefForwarding = lazy(() => import('./react/ref/chatroom'));
 const ReactHoc = lazy(() => import('./react/hoc/hocdemo'));
@@ -82,6 +82,7 @@ const ReactTesting = lazy(() => import('./test/index'));
 const ReactUseEffect = lazy(() => import('./react/useEffect'));
 const ReactUseReducer = lazy(() => import('./react/usereducer'));
 const ReactUseMemo = lazy(() => import('./react/useMemo'));
+const ReactTikTok = lazy(() => import('./react/tictok/game'));
 
 // http://localhost:3000/algoes/#/regex/
 // <Route exact path="/regex" component={RegEx} />
@@ -163,7 +164,8 @@ ReactDOM.render(
           <Route exact path="/react/useeffect" component={ReactUseEffect} />
           <Route exact path="/react/usereducer" component={ReactUseReducer} />
           <Route exact path="/react/usememo" component={ReactUseMemo} />
-           {/* {react ends} */}
+          <Route exact path="/react/tiktok" component={ReactTikTok} />
+          {/* {react ends} */}
           <Route exact path="/nodejs/" component={NodeJsHome} />
           <Route exact path="/nodejs/express" component={Express} />
           <Route exact path="/nodejs/axios" component={AxiosFramework} />
