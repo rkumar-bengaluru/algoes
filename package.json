@@ -4,6 +4,7 @@
   "private": false,
   "homepage": "https://rkumar-bengaluru.github.io/algoes",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.2",
     "app-root-path": "^3.0.0",
     "codeflask": "^1.4.1",
     "codemirror": "^5.62.0",
@@ -20,6 +21,7 @@
     "react-helmet": "^6.1.0",
     "react-html-attributes": "^1.4.6",
     "react-lunr": "^1.1.0",
+    "react-redux": "^7.2.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-test-renderer": "^17.0.2",

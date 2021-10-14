@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 52,
+            "item": {
+                "@id": "/algoes/#/react/redux",
+                "name": "Redux!",
+                "date": "14 Oct 2021",
+                "url": "/algoes/#/react/redux"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 51,
             "item": {
                 "@id": "/algoes/#/react/tiktok",

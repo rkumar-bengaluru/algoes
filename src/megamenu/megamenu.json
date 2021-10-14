@@ -653,6 +653,10 @@
                         {
                             "name": "Tik Tok",
                             "url": "/algoes/#/react/tiktok"
+                        },
+                        {
+                            "name": "Redux",
+                            "url": "/algoes/#/react/redux"
                         }
                     ]
                 }

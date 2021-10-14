@@ -83,6 +83,7 @@ const ReactUseEffect = lazy(() => import('./react/useEffect'));
 const ReactUseReducer = lazy(() => import('./react/usereducer'));
 const ReactUseMemo = lazy(() => import('./react/useMemo'));
 const ReactTikTok = lazy(() => import('./react/tictok/game'));
+const ReactRedux = lazy(() => import('./react/redux/index'));
 
 // http://localhost:3000/algoes/#/regex/
 // <Route exact path="/regex" component={RegEx} />
@@ -165,6 +166,7 @@ ReactDOM.render(
           <Route exact path="/react/usereducer" component={ReactUseReducer} />
           <Route exact path="/react/usememo" component={ReactUseMemo} />
           <Route exact path="/react/tiktok" component={ReactTikTok} />
+          <Route exact path="/react/redux" component={ReactRedux} />
           {/* {react ends} */}
           <Route exact path="/nodejs/" component={NodeJsHome} />
           <Route exact path="/nodejs/express" component={Express} />
