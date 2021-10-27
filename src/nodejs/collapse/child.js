@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 
 function childCollapse(WrappedComponent) {
     return class ChildCollpse extends Component {
@@ -27,13 +27,17 @@ function childCollapse(WrappedComponent) {
                             <i className="fa fa-minus m-2" aria-hidden="true"></i>
                         </a>
                     }
-                    <WrappedComponent name={this.props.name} showComponent={this.props.showComponent}/>
+                    <WrappedComponent name={this.props.name} showComponent={this.props.showComponent} />
                     <ul>
-                        {this.state.expand === true && this.state.childs.map((child, index) => {
-                            return (
-                                <li key={index}><a key={index} href="/algoes" onClick={(e) => this.showComponent(e, child.name)}>{child.name}</a></li>
-                            )
-                        })}
+                        {this.state.childs != undefined &&
+                            <>
+                                {this.state.expand === true && this.state.childs.map((child, index) => {
+                                    return (
+                                        <li key={index}><a key={index} href="/algoes" onClick={(e) => this.showComponent(e, child.name)}>{child.name}</a></li>
+                                    )
+                                })}
+                            </>
+                        }
                     </ul>
                 </>
             )
