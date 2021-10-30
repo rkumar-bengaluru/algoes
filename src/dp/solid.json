@@ -1,0 +1,20 @@
+{
+    "name" : "Solid Design Priniciples",
+    "items" : [
+        {
+            "name" : "Single Responsibility Priniciple"
+        },
+        {
+            "name" : "Open Closed Principle"
+        },
+        {
+            "name" : "Liskov Substituion Principle"
+        },
+        {
+            "name" : "Interface Segregation Principle"
+        },
+        {
+            "name" : "Dependency Inversion Principle"
+        }
+    ]
+}

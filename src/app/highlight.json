@@ -6,6 +6,16 @@
             "@type": "ListItem",
             "position": 52,
             "item": {
+                "@id": "/algoes/#/designpatterns/solid",
+                "name": "Solid Principles!",
+                "date": "28 Oct 2021",
+                "url": "/algoes/#/designpatterns/solid"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 52,
+            "item": {
                 "@id": "/algoes/#/react/redux",
                 "name": "Redux!",
                 "date": "14 Oct 2021",

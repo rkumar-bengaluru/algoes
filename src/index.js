@@ -84,6 +84,8 @@ const ReactUseReducer = lazy(() => import('./react/usereducer'));
 const ReactUseMemo = lazy(() => import('./react/useMemo'));
 const ReactTikTok = lazy(() => import('./react/tictok/game'));
 const ReactRedux = lazy(() => import('./react/redux/index'));
+const Kurbernetes = lazy(() => import('./spring/kubernetes'));
+const Solid = lazy(() => import('./dp/solid'));
 
 // http://localhost:3000/algoes/#/regex/
 // <Route exact path="/regex" component={RegEx} />
@@ -96,6 +98,7 @@ ReactDOM.render(
           <Route exact path="/algorithm/" component={Algo} />
           <Route exact path="/designpatterns/" component={DesignPatternHome} />
           <Route exact path="/designpatterns/singleton" component={singleton} />
+          <Route exact path="/designpatterns/solid" component={Solid} />
           {/* {java 16} */}
           <Route exact path="/java16/" component={Java16Home} />
           <Route exact path="/java16/vectorapi" component={Java16VectorApi} />
@@ -171,7 +174,8 @@ ReactDOM.render(
           <Route exact path="/nodejs/" component={NodeJsHome} />
           <Route exact path="/nodejs/express" component={Express} />
           <Route exact path="/nodejs/axios" component={AxiosFramework} />
-
+          {/* {kuubernetes} */}
+          <Route exact path='/technology/kubernetes' component={Kurbernetes}/>
           <Route exact path="/aws/" component={AwsHome} />
           <Route exact path="/algorithm/:id" component={Algorithm} />
           <Route exact path="/search/" component={Search} />
