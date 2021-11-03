@@ -9,6 +9,7 @@ const SpringScheduling = lazy(() => import('./scheduling'));
 const WebSocket = lazy(() => import('./websocket/index'));
 const SpringRouter = lazy(() => import('./router'));
 const SpringCloud = lazy(() => import('./cloud/index'));
+const EurekaServer = lazy(() => import('./cloud/discovery'));
 
 const SpringHome = () => {
 
@@ -34,29 +35,35 @@ const SpringHome = () => {
             case '2':
                 return { prev: state.current, current: <WebFlux /> };
             case '4':
-                return { prev: state.current, current: () => {
-                    return (
-                        <Suspense fallback={<div>loading...</div>}>
-                            <SpringScheduling />
-                        </Suspense>
-                    )
-                }};
+                return {
+                    prev: state.current, current: () => {
+                        return (
+                            <Suspense fallback={<div>loading...</div>}>
+                                <SpringScheduling />
+                            </Suspense>
+                        )
+                    }
+                };
             case '9':
                 return { prev: state.current, current: <WebSocket /> };
             case '11':
                 return { prev: state.current, current: <Hateaos /> };
             case '29':
-                    return { prev: state.current, current: <SpringCloud/> };
+                return { prev: state.current, current: <SpringCloud /> };
+            case '34':
+                return { prev: state.current, current: <EurekaServer /> };
             case '25':
-                return { prev: state.current, current: () => {
-                    return (
-                        <LSErrorBoundary>
-                            <Suspense fallback={() => {return <h1>Error happened in children.</h1>}}>
-                                <SpringRouter/>
-                            </Suspense>
-                        </LSErrorBoundary>
-                    )
-                } };
+                return {
+                    prev: state.current, current: () => {
+                        return (
+                            <LSErrorBoundary>
+                                <Suspense fallback={() => { return <h1>Error happened in children.</h1> }}>
+                                    <SpringRouter />
+                                </Suspense>
+                            </LSErrorBoundary>
+                        )
+                    }
+                };
             default:
                 return { prev: state.current, current: 'TODO' };
         }

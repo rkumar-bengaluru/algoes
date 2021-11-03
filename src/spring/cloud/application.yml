@@ -1,0 +1,16 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: SEATMAP
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl: 
+      defaultZone: http://bmt.eurekaserver01.com,
+                   http://bmt.eurekaserver02.com
+  instance:
+    hostname: localhost
+  
+
