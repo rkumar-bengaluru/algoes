@@ -1,0 +1,2 @@
+(this.webpackJsonpalgoes=this.webpackJsonpalgoes||[]).push([[21],{107:function(e,i,r){"use strict";r.r(i);var c=r(0);i.default=function(){return Object(c.jsxs)("div",{className:"container-fluid",children:[Object(c.jsx)("h5",{children:"Spring Discovery Service"}),Object(c.jsx)("p",{children:"Service Discovery: an embedded Eureka server can be created with declarative Java configuration"}),Object(c.jsx)("div",{className:"row",children:Object(c.jsx)("img",{width:"900px",src:"/algoes/img/spring.io/eureka-server.png"})})]})}}}]);
+//# sourceMappingURL=21.590e615e.chunk.js.map
