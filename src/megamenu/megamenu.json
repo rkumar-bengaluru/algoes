@@ -445,9 +445,14 @@
                             "action": "34"
                         },
                         {
+                            "name": "Hystrix Dashboard",
+                            "url": "/algoes/#/spring/hystrix",
+                            "action": "36"
+                        },
+                        {
                             "name": "Distributed Logging",
                             "url": "/algoes/#/spring/logging",
-                            "action": "35"
+                            "action": "37"
                         }
                     ]
                 },

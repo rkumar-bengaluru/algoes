@@ -1,0 +1,18 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: bmt.hysterix-dashboard
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl: 
+      defaultZone: http://bmt.eurekaserver01.com,
+                   http://bmt.eurekaserver02.com
+  instance:
+    hostname: localhost
