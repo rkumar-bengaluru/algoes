@@ -10,6 +10,8 @@ const WebSocket = lazy(() => import('./websocket/index'));
 const SpringRouter = lazy(() => import('./router'));
 const SpringCloud = lazy(() => import('./cloud/index'));
 const EurekaServer = lazy(() => import('./cloud/discovery'));
+const SpringGateway = lazy(() => import('./cloud/gateway'));
+const SpringConfigServer = lazy(() => import('./cloud/configsrv'));
 
 const SpringHome = () => {
 
@@ -50,6 +52,10 @@ const SpringHome = () => {
                 return { prev: state.current, current: <Hateaos /> };
             case '29':
                 return { prev: state.current, current: <SpringCloud /> };
+            case '31':
+                return { prev: state.current, current: <SpringGateway /> };
+            case '32':
+                return { prev: state.current, current: <SpringConfigServer /> };
             case '34':
                 return { prev: state.current, current: <EurekaServer /> };
             case '25':

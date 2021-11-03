@@ -430,11 +430,6 @@
                             "action": "29"
                         },
                         {
-                            "name": "MicroService",
-                            "url": "/algoes/#/spring/microsvcs",
-                            "action": "30"
-                        },
-                        {
                             "name": "Api Gateway",
                             "url": "/algoes/#/spring/gateway",
                             "action": "31"
@@ -443,11 +438,6 @@
                             "name": "Config Server",
                             "url": "/algoes/#/spring/config",
                             "action": "32"
-                        },
-                        {
-                            "name": "Circuit Breaker",
-                            "url": "/algoes/#/spring/hystrix",
-                            "action": "33"
                         },
                         {
                             "name": "Service Discovery",

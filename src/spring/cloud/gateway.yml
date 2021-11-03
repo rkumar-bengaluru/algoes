@@ -1,0 +1,47 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: BMT-API-GATEWAY
+cloud:
+  gateway:
+    routes:
+      - id: BOOKING-SERVICE 
+        url: lb://BOOKING-SERVICE 
+        predicates:
+          - Path=/booking/**
+        filters:
+          - name: CircuitBreaker
+              args:
+                name: BOOKING-SERVICE
+                fallbackuri: forward:/bookingFailback
+          - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 10
+                redis-rate-limiter.burstCapacity: 20
+                redis-rate-limiter.requestedTokens: 1
+      - id: SEATMAP-SERVICE
+        url: lb://SEATMAP-SERVICE 
+        predicates:
+          - Path=/seatmap/**
+hystrix:
+  command:
+    failbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl: 
+      defaultZone: http://bmt.eurekaserver01.com,
+                   http://bmt.eurekaserver02.com
+  instance:
+    hostname: localhost

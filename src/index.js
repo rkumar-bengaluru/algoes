@@ -84,7 +84,6 @@ const ReactUseReducer = lazy(() => import('./react/usereducer'));
 const ReactUseMemo = lazy(() => import('./react/useMemo'));
 const ReactTikTok = lazy(() => import('./react/tictok/game'));
 const ReactRedux = lazy(() => import('./react/redux/index'));
-const Kurbernetes = lazy(() => import('./spring/kubernetes'));
 const Solid = lazy(() => import('./dp/solid'));
 
 // http://localhost:3000/algoes/#/regex/
@@ -175,7 +174,6 @@ ReactDOM.render(
           <Route exact path="/nodejs/express" component={Express} />
           <Route exact path="/nodejs/axios" component={AxiosFramework} />
           {/* {kuubernetes} */}
-          <Route exact path='/technology/kubernetes' component={Kurbernetes}/>
           <Route exact path="/aws/" component={AwsHome} />
           <Route exact path="/algorithm/:id" component={Algorithm} />
           <Route exact path="/search/" component={Search} />
