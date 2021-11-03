@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 53,
+            "item": {
+                "@id": "/algoes/#/spring/",
+                "name": "Spring Cloud!",
+                "date": "03 Nov 2021",
+                "url": "/algoes/#/spring/"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 52,
             "item": {
                 "@id": "/algoes/#/designpatterns/solid",

@@ -421,6 +421,47 @@
             "url": "/algoes/#/spring/",
             "subMenus": [
                 {
+                    "name": "Cloud",
+                    "action": "27",
+                    "links": [
+                        {
+                            "name": "Intro",
+                            "url": "/algoes/#/spring/cloud",
+                            "action": "29"
+                        },
+                        {
+                            "name": "MicroService",
+                            "url": "/algoes/#/spring/microsvcs",
+                            "action": "30"
+                        },
+                        {
+                            "name": "Api Gateway",
+                            "url": "/algoes/#/spring/gateway",
+                            "action": "31"
+                        },
+                        {
+                            "name": "Config Server",
+                            "url": "/algoes/#/spring/config",
+                            "action": "32"
+                        },
+                        {
+                            "name": "Circuit Breaker",
+                            "url": "/algoes/#/spring/hystrix",
+                            "action": "33"
+                        },
+                        {
+                            "name": "Service Discovery",
+                            "url": "/algoes/#/spring/discovery",
+                            "action": "34"
+                        },
+                        {
+                            "name": "Distributed Logging",
+                            "url": "/algoes/#/spring/logging",
+                            "action": "35"
+                        }
+                    ]
+                },
+                {
                     "name": "Spring Boot",
                     "action": "0",
                     "links": [
@@ -564,18 +605,8 @@
                             "action": "26"
                         }
                     ]
-                },
-                {
-                    "name": "Cloud",
-                    "action": "27",
-                    "links": [
-                        {
-                            "name": "Circuit Breaker",
-                            "url": "",
-                            "action": "28"
-                        }
-                    ]
                 }
+                
             ]
         },
         {

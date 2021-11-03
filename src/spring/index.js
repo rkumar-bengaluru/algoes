@@ -8,10 +8,11 @@ import LSErrorBoundary from "../error";
 const SpringScheduling = lazy(() => import('./scheduling'));
 const WebSocket = lazy(() => import('./websocket/index'));
 const SpringRouter = lazy(() => import('./router'));
+const SpringCloud = lazy(() => import('./cloud/index'));
 
 const SpringHome = () => {
 
-    const springView = { current: <SpringIntro />, prev: '' };
+    const springView = { current: <SpringCloud />, prev: '' };
     const [state, dispatch] = useReducer(springReducer, springView);
     const [springMenu, setSpringMenu] = useState([]);
 
@@ -44,6 +45,8 @@ const SpringHome = () => {
                 return { prev: state.current, current: <WebSocket /> };
             case '11':
                 return { prev: state.current, current: <Hateaos /> };
+            case '29':
+                    return { prev: state.current, current: <SpringCloud/> };
             case '25':
                 return { prev: state.current, current: () => {
                     return (
