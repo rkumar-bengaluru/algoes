@@ -1,0 +1,4 @@
+cloud:
+  config:
+    enabled: true
+    uri: lb:/BMT-CONFIG-SERVER 

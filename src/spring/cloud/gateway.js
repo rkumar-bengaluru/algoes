@@ -11,6 +11,37 @@ const SpringGateway = () => {
             <div className="row">
                 <img width="900px" src='/algoes/img/spring.io/gateway.jpg'></img>
             </div>
+            <div className="row">
+                <h5>@EnableEurekaClient</h5>
+                <p>When a client registers with Eureka, it provides meta-data about itself — such as host, port, health indicator URL, home page, and other details. Eureka receives heartbeat messages from each instance belonging to a service. If the heartbeat fails over a configurable timetable, the instance is normally removed from the registry.</p>
+                <p>In this example <strong>BMT-API-GATEWAY is registered to EurekaServer</strong></p>
+            </div>
+            <div className="row">
+                <h5>@EnableHystrix</h5>
+                <p>Hystrix is an implementation of the Circuit Breaker pattern by Netflix. The @EnableHystrix annotation require a specific implementation, if Hystrix is not on the classpath it will fail.</p>
+            </div>
+            <div className="row">
+                <h5>@EnableCircuitBreaker</h5>
+                <p>The @EnableCircuitBreaker annotation will scan the classpath for any compatible Circuit Breaker implementation.@EnableCircuitBreaker allows for the evolution of the Spring Cloud..</p>
+            </div>
+            <div className="row">
+                <h5>RequestRateLimiter </h5>
+                <p>RequestRateLimiter is one of the many gateway filters. The implementation determines whether a request is allowed to proceed or has exceeded its limit. </p>
+                <ul>
+                    <li>
+                        <h6>redis-rate-limiter.replenishRate</h6>
+                        <p>decides how many requests per second a user is allowed to send without any dropped requests.This is the rate that the token bucket is filled.</p>
+                    </li>
+                    <li>
+                        <h6>redis-rate-limiter.burstCapacity</h6>
+                        <p>is the maximum number of requests a user is allowed to do in a single second. This is the number of tokens the token bucket can hold. Setting this value to zero will block all requests.</p>
+                    </li>
+                    <li>
+                        <h6>redis-rate-limiter.requestedTokens</h6>
+                        <p>the requestedTokens property sets how many tokens a request costs.</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 }

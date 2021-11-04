@@ -1,0 +1,19 @@
+input {
+  file {
+    type => "java"
+    path => "{location-to-log-file}"
+    codec => multiline {
+      pattern => "^%{YEAR}-%{MONTHNUM}-%{MONTHDAY} %{TIME}.*"
+      negate => "true"
+      what => "previous"
+    }
+  }
+}
+
+output {
+ 
+  # Sending properly parsed log events to elasticsearch
+  elasticsearch {
+    hosts => ["{ELASTIC-SEARCH-HOST}"]
+  }
+}

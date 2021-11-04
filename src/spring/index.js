@@ -13,6 +13,7 @@ const EurekaServer = lazy(() => import('./cloud/discovery'));
 const SpringGateway = lazy(() => import('./cloud/gateway'));
 const SpringConfigServer = lazy(() => import('./cloud/configsrv'));
 const SpringHystrixDashboard = lazy(() => import('./cloud/hystrix'));
+const SpringDistributedLogging = lazy(() => import('./cloud/logging'));
 const SpringHome = () => {
 
     const springView = { current: <SpringCloud />, prev: '' };
@@ -60,6 +61,8 @@ const SpringHome = () => {
                 return { prev: state.current, current: <EurekaServer /> };
             case '36':
                 return { prev: state.current, current: <SpringHystrixDashboard /> };
+            case '37':
+                return { prev: state.current, current: <SpringDistributedLogging /> };
             case '25':
                 return {
                     prev: state.current, current: () => {

@@ -1,0 +1,13 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: BMT-CONFIG-SERVER
+cloud:
+  config:
+    server:
+      git:
+        uri: https://github.com/bmt/config-server
+        cloud-on-start: true
+
+
