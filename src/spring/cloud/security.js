@@ -15,7 +15,13 @@ const SpringSecurity = () => {
                         <p>Each Request must contain username and password</p>
                     </li>
                     <li>
-                        <a href="" onClick={(e) => eventHandler(e, 2)}>Form Basic Authentication</a>
+                        <a href="" onClick={(e) => eventHandler(e, 2)}>Custom Form Login</a>
+                        <p>
+                            Customize Spring boot form login configuration.
+                        </p>
+                    </li>
+                    <li>
+                        <a href="" onClick={(e) => eventHandler(e, 7)}>Form Basic Authentication</a>
                         <p>User authenticate once, the server attaches JESSIONID, subsequent request
                             is authenticated based on the JESSIONID.
                         </p>
@@ -66,21 +72,115 @@ const SpringSecurity = () => {
                     <img width="900px" src='/algoes/img/spring.io/basic-auth.jpg'></img>
                 </div>
                 <div className="row">
-                    <p>There are 2 Roles (ADMIN and PUBLIC). ADMIN can access partner resource 
+                    <p>There are 2 Roles (ADMIN and PUBLIC). ADMIN can access partner resource
                         and search resource, however PUBLIC role can only access search resource.
                     </p>
                 </div>
                 <code>http.authorizeRequests()
-			.antMatchers("/search/**")
-			.hasAnyRole(UserRoles.ADMIN.name(),UserRoles.PUBLIC.name())
-			.antMatchers("/partner/**")
-			.hasRole(UserRoles.ADMIN.name());</code>
+                    .antMatchers("/search/**")
+                    .hasAnyRole(UserRoles.ADMIN.name(),UserRoles.PUBLIC.name())
+                    .antMatchers("/partner/**")
+                    .hasRole(UserRoles.ADMIN.name());</code>
                 <div className="row">
                     <a href="" onClick={(e) => eventHandler(e, 0)}>Back</a>
                 </div>
 
             </>
 
+        )
+    }
+
+    const formLogin = () => {
+        return (
+            <>
+                <h5>Custom Form Login</h5>
+                <p>Form based authentication with custom login, logout and rememberMe configuration.</p>
+                <div className="row">
+                    <img width="900px" src='/algoes/img/spring.io/form-login.jpg'></img>
+                </div>
+            </>
+        )
+    }
+
+    const permissionAuthentication = () => {
+        return (
+            <>
+                <h5>Permission/Authority Authorization</h5>
+                <div className="row">
+                    <img width="500px" src='/algoes/img/spring.io/authority.jpg'></img>
+                </div>
+                <div className="row">
+                    <img width="900px" src='/algoes/img/spring.io/form-authentication.jpg'></img>
+                </div>
+            </>
+        )
+    }
+
+    const csrf = () => {
+        return (
+            <>
+                <h5>Cross Site Request Forgery(CSRF)</h5>
+                <div className="row">
+                    <img width="900px" src='/algoes/img/spring.io/csrf.jpg'></img>
+                </div>
+            </>
+        )
+    }
+
+    const provider = () => {
+        return (
+            <>
+                <h5>Authentication Provider</h5>
+                <div className="row">
+                    <img width="900px" src='/algoes/img/spring.io/provider.jpg'></img>
+                </div>
+            </>
+        )
+    }
+
+    const jwtf = () => {
+        return (
+            <>
+                <h5>JWT Authentication Filter</h5>
+                <div className="row">
+                    <img width="900px" src='/algoes/img/spring.io/jwtf.jpg'></img>
+                </div>
+                <h6>Encoded</h6>
+                <div className="row">
+                    <img width="500px" src='/algoes/img/spring.io/jwt-enc.jpg'></img>
+                </div>
+                <h6>Decoded</h6>
+                <div className="row">
+                    <img width="500px" src='/algoes/img/spring.io/jwt-header.jpg'></img>
+                </div>
+                <div className="row">
+                    <img width="500px" src='/algoes/img/spring.io/jwt-pay.jpg'></img>
+                </div>
+                <div className="row">
+                    <img width="500px" src='/algoes/img/spring.io/jwt-sig.jpg'></img>
+                </div>
+            </>
+        )
+    }
+
+    const jwtv = () => {
+        return (
+            <>
+                <h5>JWT Verifier Filter</h5>
+                <div className="row">
+                    <img width="900px" src='/algoes/img/spring.io/jwtv.jpg'></img>
+                </div>
+                <h6>Decoded</h6>
+                <div className="row">
+                    <img width="500px" src='/algoes/img/spring.io/jwt-header.jpg'></img>
+                </div>
+                <div className="row">
+                    <img width="500px" src='/algoes/img/spring.io/jwt-pay.jpg'></img>
+                </div>
+                <div className="row">
+                    <img width="500px" src='/algoes/img/spring.io/jwt-sig.jpg'></img>
+                </div>
+            </>
         )
     }
 
@@ -93,6 +193,24 @@ const SpringSecurity = () => {
                 break;
             case 1:
                 setDef(basicAuth);
+                break;
+            case 2:
+                setDef(formLogin);
+                break;
+            case 3:
+                setDef(csrf);
+                break;
+            case 4:
+                setDef(provider);
+                break;
+            case 5:
+                setDef(jwtf);
+                break;
+            case 6:
+                setDef(jwtv);
+                break;
+            case 7:
+                setDef(permissionAuthentication);
                 break;
             default:
                 setDef(<code>TODO</code>);
