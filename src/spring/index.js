@@ -14,6 +14,7 @@ const SpringGateway = lazy(() => import('./cloud/gateway'));
 const SpringConfigServer = lazy(() => import('./cloud/configsrv'));
 const SpringHystrixDashboard = lazy(() => import('./cloud/hystrix'));
 const SpringDistributedLogging = lazy(() => import('./cloud/logging'));
+const SpringSecurity = lazy(() => import('./cloud/security'));
 const SpringHome = () => {
 
     const springView = { current: <SpringCloud />, prev: '' };
@@ -63,6 +64,8 @@ const SpringHome = () => {
                 return { prev: state.current, current: <SpringHystrixDashboard /> };
             case '37':
                 return { prev: state.current, current: <SpringDistributedLogging /> };
+            case '38':
+                return { prev: state.current, current: <SpringSecurity /> };
             case '25':
                 return {
                     prev: state.current, current: () => {

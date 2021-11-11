@@ -4,6 +4,15 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 54,
+            "item": {
+                "@id": "/algoes/#/spring/",
+                "name": "Spring Security!",
+                "date": "10 Nov 2021",
+                "url": "/algoes/#/spring/"
+            }
+        },{
+            "@type": "ListItem",
             "position": 53,
             "item": {
                 "@id": "/algoes/#/spring/",

@@ -12,7 +12,7 @@ const SpringConfigServer = () => {
                         <h6>Default</h6>
                         <p>The default implementation of EnvironmentRepository uses a Git backend, which is very convenient for managing upgrades and physical environments and for auditing changes</p>
                     </li>
-                    <li>
+                    <li>    
                         <h6>File System Backend</h6>
                         <p>There is also a “native” profile in the Config Server that does not use Git but loads the config files from the local classpath or file system (any static URL you want to point to with spring.cloud.config.server.native.searchLocations). To use the native profile, launch the Config Server with spring.profiles.active=native.</p>
                     </li>

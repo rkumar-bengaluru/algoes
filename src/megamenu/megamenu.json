@@ -453,6 +453,11 @@
                             "name": "Distributed Logging",
                             "url": "/algoes/#/spring/logging",
                             "action": "37"
+                        },
+                        {
+                            "name": "Security",
+                            "url": "/algoes/#/spring/security",
+                            "action": "38"
                         }
                     ]
                 },
