@@ -1,7 +1,3 @@
--- find sales by employee
-select sum(total_sales),emp_id from works_with 
-	group by emp_id;
-
 -- find employee order by max salary
 select * from employee
 	order by salary desc;

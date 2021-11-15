@@ -10,14 +10,11 @@ join employee e
 on b.mgr_id=e.emp_id;
 
 select e.emp_id,e.first_name,b.branch_name from 
-branch b
-left join employee e
+employee e
+left join branch b
 on b.mgr_id=e.emp_id;
 
-select e.emp_id,e.first_name,b.branch_name from 
-branch b
-right join employee e
-on b.mgr_id=e.emp_id;
+
 
 select e.emp_id,e.first_name,b.branch_name from 
 branch b
