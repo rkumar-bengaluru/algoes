@@ -85,6 +85,7 @@ const ReactUseMemo = lazy(() => import('./react/useMemo'));
 const ReactTikTok = lazy(() => import('./react/tictok/game'));
 const ReactRedux = lazy(() => import('./react/redux/index'));
 const Solid = lazy(() => import('./dp/solid'));
+const SQL = lazy(() => import('./db/sql'));
 
 // http://localhost:3000/algoes/#/regex/
 // <Route exact path="/regex" component={RegEx} />
@@ -177,6 +178,9 @@ ReactDOM.render(
           <Route exact path="/aws/" component={AwsHome} />
           <Route exact path="/algorithm/:id" component={Algorithm} />
           <Route exact path="/search/" component={Search} />
+          {/* {db} */}
+          <Route exact path="/db" component={SQL}/>
+          <Route exact path="/db/mysql" component={SQL}/>
         </Switch>
       </Suspense>
     </AppLayout>

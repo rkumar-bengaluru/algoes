@@ -79,7 +79,7 @@ const SpringHome = () => {
                     }
                 };
             default:
-                return { prev: state.current, current: 'TODO' };
+                return { prev: state.current, current: <SpringIntro /> };
         }
     }
 

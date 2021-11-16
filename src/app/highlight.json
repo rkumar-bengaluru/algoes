@@ -4,6 +4,15 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 55,
+            "item": {
+                "@id": "/algoes/#/db/mysql",
+                "name": "MySQL!",
+                "date": "16 Nov 2021",
+                "url": "/algoes/#/db/mysql"
+            }
+        },{
+            "@type": "ListItem",
             "position": 54,
             "item": {
                 "@id": "/algoes/#/spring/",

@@ -796,6 +796,60 @@
         },
         {
             "@type": "Offer",
+            "name": "Database",
+            "availability": "https://schema.org/InStock",
+            "url": "/algoes/#/db/",
+            "subMenus": [
+                {
+                    "name": "MySQL",
+                    "action" : "0",
+                    "links": [
+                        {
+                            "name": "ER Diagram",
+                            "url": "/algoes/#/db/mysql/er",
+                            "action" : "1"
+                        },
+                        {
+                            "name": "Query",
+                            "url": "/algoes/#/db/mysql/query",
+                            "action" : "2"
+                        },
+                        {
+                            "name": "Function",
+                            "url": "/algoes/#/db/mysql/function",
+                            "action" : "3"
+                        },
+                        {
+                            "name": "Wild Cards & Union",
+                            "url": "/algoes/#/db/mysql/wc",
+                            "action" : "4"
+                        },
+                        {
+                            "name": "Inner Join",
+                            "url": "/algoes/#/db/mysql/ij",
+                            "action" : "5"
+                        },
+                        {
+                            "name": "Left Join",
+                            "url": "/algoes/#/db/mysql/lj",
+                            "action" : "6"
+                        },
+                        {
+                            "name": "Right Join",
+                            "url": "/algoes/#/db/mysql/rj",
+                            "action" : "7"
+                        },
+                        {
+                            "name": "Trigger",
+                            "url": "/algoes/#/db/mysql/tr",
+                            "action" : "8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Offer",
             "name": "AWS",
             "availability": "https://schema.org/InStock",
             "url": "/algoes/#/aws/",
