@@ -1,5 +1,8 @@
 import { useEffect, useReducer, useState } from "react";
 import menus from '../megamenu/megamenu.json';
+import { lazy } from "react";
+
+const Sharding = lazy(() => import('./sharding'));
 
 const SQL = () => {
     const dbView = { current: dbHome(), prev: '' };
@@ -35,6 +38,8 @@ const SQL = () => {
                 return { prev: state.current, current: dbRJ() };
             case '8':
                 return { prev: state.current, current: dbTR() };
+            case '9':
+                return { prev: state.current, current: <Sharding /> };
             default:
                 return { prev: state.current, current: <div>TODO</div> };
         }

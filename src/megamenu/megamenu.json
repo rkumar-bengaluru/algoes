@@ -426,37 +426,37 @@
                     "links": [
                         {
                             "name": "Intro",
-                            "url": "/algoes/#/spring/cloud",
+                            "url": "/algoes/#/spring/",
                             "action": "29"
                         },
                         {
                             "name": "Api Gateway",
-                            "url": "/algoes/#/spring/gateway",
+                            "url": "/algoes/#/spring/",
                             "action": "31"
                         },
                         {
                             "name": "Config Server",
-                            "url": "/algoes/#/spring/config",
+                            "url": "/algoes/#/spring/",
                             "action": "32"
                         },
                         {
                             "name": "Service Discovery",
-                            "url": "/algoes/#/spring/discovery",
+                            "url": "/algoes/#/spring/",
                             "action": "34"
                         },
                         {
                             "name": "Hystrix Dashboard",
-                            "url": "/algoes/#/spring/hystrix",
+                            "url": "/algoes/#/spring/",
                             "action": "36"
                         },
                         {
                             "name": "Distributed Logging",
-                            "url": "/algoes/#/spring/logging",
+                            "url": "/algoes/#/spring/",
                             "action": "37"
                         },
                         {
                             "name": "Security",
-                            "url": "/algoes/#/spring/security",
+                            "url": "/algoes/#/spring/",
                             "action": "38"
                         }
                     ]
@@ -467,17 +467,17 @@
                     "links": [
                         {
                             "name": "Restful Controllers",
-                            "url": "/algoes/#/spring/controller",
+                            "url": "/algoes/#/spring/",
                             "action": "1"
                         },
                         {
                             "name": "WebFlux",
-                            "url": "/algoes/#/spring/webflux",
+                            "url": "/algoes/#/spring/",
                             "action": "2"
                         },
                         {
                             "name": "Hateaos",
-                            "url": "/algoes/#/spring/hateaos",
+                            "url": "/algoes/#/spring/",
                             "action": "11"
                         },
                         {
@@ -487,7 +487,7 @@
                         },
                         {
                             "name": "Scheduling",
-                            "url": "/algoes/#/spring/scheduling",
+                            "url": "/algoes/#/spring/",
                             "action": "4"
                         },
                         {
@@ -512,7 +512,7 @@
                         },
                         {
                             "name": "WebSocket",
-                            "url": "/algoes/#/spring/websocket",
+                            "url": "/algoes/#/spring/",
                             "action": "9"
                         },
                         {
@@ -596,7 +596,7 @@
                         },
                         {
                             "name": "Reactive Router",
-                            "url": "/algoes/#/spring/router",
+                            "url": "/algoes/#/spring/",
                             "action": "25"
                         },
                         {
@@ -806,43 +806,54 @@
                     "links": [
                         {
                             "name": "ER Diagram",
-                            "url": "/algoes/#/db/mysql/er",
+                            "url": "/algoes/#/db/",
                             "action" : "1"
                         },
                         {
                             "name": "Query",
-                            "url": "/algoes/#/db/mysql/query",
+                            "url": "/algoes/#/db/",
                             "action" : "2"
                         },
                         {
                             "name": "Function",
-                            "url": "/algoes/#/db/mysql/function",
+                            "url": "/algoes/#/db/",
                             "action" : "3"
                         },
                         {
                             "name": "Wild Cards & Union",
-                            "url": "/algoes/#/db/mysql/wc",
+                            "url": "/algoes/#/db/",
                             "action" : "4"
                         },
                         {
                             "name": "Inner Join",
-                            "url": "/algoes/#/db/mysql/ij",
+                            "url": "/algoes/#/db/",
                             "action" : "5"
                         },
                         {
                             "name": "Left Join",
-                            "url": "/algoes/#/db/mysql/lj",
+                            "url": "/algoes/#/db/",
                             "action" : "6"
                         },
                         {
                             "name": "Right Join",
-                            "url": "/algoes/#/db/mysql/rj",
+                            "url": "/algoes/#/db/",
                             "action" : "7"
                         },
                         {
                             "name": "Trigger",
-                            "url": "/algoes/#/db/mysql/tr",
+                            "url": "/algoes/#/db/",
                             "action" : "8"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sharding",
+                    "action" : "9",
+                    "links": [
+                        {
+                            "name": "Intro",
+                            "url": "/algoes/#/db",
+                            "action" : "9"
                         }
                     ]
                 }
