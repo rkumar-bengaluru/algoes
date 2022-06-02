@@ -416,6 +416,25 @@
         },
         {
             "@type": "Offer",
+            "name": "GoLang",
+            "availability": "https://schema.org/InStock",
+            "url": "/algoes/#/golang/",
+            "subMenus": [
+                {
+                    "name": "Cloud",
+                    "action": "27",
+                    "links": [
+                        {
+                            "name": "Intro",
+                            "url": "/algoes/#/spring/",
+                            "action": "29"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Offer",
             "name": "Spring.io",
             "availability": "https://schema.org/InStock",
             "url": "/algoes/#/spring/",

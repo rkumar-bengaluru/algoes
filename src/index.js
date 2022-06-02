@@ -60,7 +60,9 @@ import SpringHome from './spring';
 import SpringController from './spring/controller';
 import WebFlux from './spring/webflux';
 import Hateaos from './spring/hateaos';
-
+//
+// GoLang
+import GoLangHome from './golang';
 //
 import ReactHome from './react';
 import ReactUseStateHooks from './react/hooks';
@@ -147,6 +149,9 @@ ReactDOM.render(
           <Route exact path="/java8/default" component={J9PrivateInterface} />
           <Route exact path="/java8/base64" component={Java15HiddenClass} />
           {/* {java ends} */}
+          {/* {golang starts} */}
+          <Route exact path="/golang/" component={GoLangHome} />
+          {/* {golang ends} */}
           {/* {spring.io starts} */}
           <Route exact path="/spring/" component={SpringHome} />
           <Route exact path="/spring/controller" component={SpringController} />
