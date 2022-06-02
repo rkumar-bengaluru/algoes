@@ -4,6 +4,16 @@
     "itemListElement": [
         {
             "@type": "ListItem",
+            "position": 57,
+            "item": {
+                "@id": "/algoes/#/go/msort",
+                "name": "Go Lang Merge Sort!",
+                "date": "22 Nov 2021",
+                "url": "/algoes/#/go/msort"
+            }
+        },
+        {
+            "@type": "ListItem",
             "position": 56,
             "item": {
                 "@id": "/algoes/#/db/mysql",

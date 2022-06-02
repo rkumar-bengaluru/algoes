@@ -88,6 +88,7 @@ const ReactTikTok = lazy(() => import('./react/tictok/game'));
 const ReactRedux = lazy(() => import('./react/redux/index'));
 const Solid = lazy(() => import('./dp/solid'));
 const SQL = lazy(() => import('./db/sql'));
+const GoMSort = lazy(() => import('./go/msort'));
 
 // http://localhost:3000/algoes/#/regex/
 // <Route exact path="/regex" component={RegEx} />
@@ -186,6 +187,8 @@ ReactDOM.render(
           {/* {db} */}
           <Route exact path="/db" component={SQL}/>
           <Route exact path="/db/mysql" component={SQL}/>
+          {/* {go} */}
+          <Route exact path="/go/msort" component={GoMSort}/>
         </Switch>
       </Suspense>
     </AppLayout>
